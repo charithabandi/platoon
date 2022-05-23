@@ -1,0 +1,2983 @@
+cscope 15 $HOME/src/plexe-plexe-3.0/src/plexe/apps               0000017481
+	@BaseApp.cc
+
+21 
+	~"¶exe/­ps/Ba£Aµ.h
+"
+
+23 
+	~"vešs/moduËs/mes§ges/Ba£F¿me1609_4_m.h
+"
+
+24 
+	~"vešs/ba£/mes§ges/MacPkt_m.h
+"
+
+25 
+	~"vešs/moduËs/mac/›“80211p/Mac1609_4.h
+"
+
+26 
+	~"vešs/ba£/utžs/FšdModuË.h
+"
+
+28 
+	~"¶exe/´ÙocÞs/Ba£PrÙocÞ.h
+"
+
+29 
+	~"¶exe/PËxeMªag”.h
+"
+
+31 
+usšg
+ 
+Çme¥aû
+ 
+	gvešs
+;
+
+33 
+Çme¥aû
+ 
+	g¶exe
+ {
+
+35 
+Defše_ModuË
+(
+Ba£Aµ
+);
+
+37 
+	gBa£Aµ
+::
+š™Ÿlize
+(
+¡age
+)
+
+40 
+Ba£AµlLay”
+::
+š™Ÿlize
+(
+¡age
+);
+
+42 ià(
+	g¡age
+ == 0) {
+
+45 
+di¡ªûOut
+.
+£tName
+("distance");
+
+47 
+	g»lS³edOut
+.
+£tName
+("relativeSpeed");
+
+49 
+	gnodeIdOut
+.
+£tName
+("nodeId");
+
+51 
+	g¥“dOut
+.
+£tName
+("speed");
+
+53 
+	gposxOut
+.
+£tName
+("posx");
+
+54 
+	gposyOut
+.
+£tName
+("posy");
+
+56 
+	gacûË¿tiÚOut
+.
+£tName
+("acceleration");
+
+57 
+	gcÚŒÞËrAcûË¿tiÚOut
+.
+£tName
+("controllerAcceleration");
+
+60 ià(
+	g¡age
+ == 1) {
+
+61 
+mobž™y
+ = 
+vešs
+::
+T¿CIMobž™yAcûss
+().
+g‘
+(
+g‘P¬’tModuË
+());
+
+62 
+	gŒaci
+ = 
+mobž™y
+->
+g‘CommªdIÁ”çû
+();
+
+63 
+	gŒaciVehiþe
+ = 
+mobž™y
+->
+g‘VehiþeCommªdIÁ”çû
+();
+
+64 autØ
+	g¶exe
+ = 
+FšdModuË
+<
+PËxeMªag”
+*>::
+fšdGlob®ModuË
+();
+
+65 
+ASSERT
+(
+¶exe
+);
+
+66 
+	g¶exeT¿ci
+ = 
+¶exe
+->
+g‘CommªdIÁ”çû
+();
+
+67 
+	g¶exeT¿ciVehiþe
+.
+»£t
+(
+Ãw
+ 
+Œaci
+::
+CommªdIÁ”çû
+::
+Vehiþe
+(
+¶exeT¿ci
+, 
+mobž™y
+->
+g‘Ex‹º®Id
+()));
+
+68 
+	gpos™iÚH–³r
+ = 
+FšdModuË
+<
+Ba£Pos™iÚH–³r
+*>::
+fšdSubModuË
+(
+g‘P¬’tModuË
+());
+
+69 
+	g´ÙocÞ
+ = 
+FšdModuË
+<
+Ba£PrÙocÞ
+*>::
+fšdSubModuË
+(
+g‘P¬’tModuË
+());
+
+70 
+	gmyId
+ = 
+pos™iÚH–³r
+->
+g‘Id
+();
+
+73 
+	g´ÙocÞ
+->
+»gi¡”AµliÿtiÚ
+(
+Ba£PrÙocÞ
+::
+BEACON_TYPE
+, 
+g©e
+("lowerLayerIn"), gate("lowerLayerOut"), gate("lowerControlIn"), gate("lowerControlOut"));
+
+75 
+	g»cÜdD©a
+ = 
+Ãw
+ 
+cMes§ge
+("recordData");
+
+77 
+SimTime
+ 
+	grounded
+ = SimTime(
+æoÜ
+(
+simTime
+().
+dbl
+(è* 1000 + 100), 
+SIMTIME_MS
+);
+
+78 
+scheduËAt
+(
+rounded
+, 
+»cÜdD©a
+);
+
+82 
+	gBa£Aµ
+::~
+Ba£Aµ
+()
+
+84 
+ÿnûlAndD–‘e
+(
+»cÜdD©a
+);
+
+85 
+	g»cÜdD©a
+ = 
+nuÎ±r
+;
+
+86 
+ÿnûlAndD–‘e
+(
+¡ÝSimuÏtiÚ
+);
+
+87 
+	g¡ÝSimuÏtiÚ
+ = 
+nuÎ±r
+;
+
+90 
+	gBa£Aµ
+::
+hªdËLow”Msg
+(
+cMes§ge
+* 
+msg
+)
+
+92 
+Ba£F¿me1609_4
+* 
+äame
+ = 
+check_ªd_ÿ¡
+<Ba£F¿me1609_4*>(
+msg
+);
+
+94 
+cPack‘
+* 
+	g’c
+ = 
+äame
+->
+deÿpsuÏ‹
+();
+
+95 
+ASSERT2
+(
+’c
+, "received‡ BaseFrame1609_4 with‚othing inside");
+
+97 ià(
+	g’c
+->
+g‘Kšd
+(è=ð
+Ba£PrÙocÞ
+::
+BEACON_TYPE
+) {
+
+98 
+ÚPÏtoÚB—cÚ
+(
+check_ªd_ÿ¡
+<
+PÏtoÚšgB—cÚ
+*>(
+’c
+));
+
+101 
+”rÜ
+("received unknown messageype");
+
+104 
+d–‘e
+ 
+	gäame
+;
+
+107 
+	gBa£Aµ
+::
+logVehiþeD©a
+(
+boÞ
+ 
+üashed
+)
+
+110 
+di¡ªû
+, 
+	g»lS³ed
+;
+
+111 
+VEHICLE_DATA
+ 
+	gd©a
+;
+
+112 
+	g¶exeT¿ciVehiþe
+->
+g‘Rad¬M—su»m’ts
+(
+di¡ªû
+, 
+»lS³ed
+);
+
+113 
+	g¶exeT¿ciVehiþe
+->
+g‘VehiþeD©a
+(&
+d©a
+);
+
+114 ià(
+	güashed
+) {
+
+115 
+	gdi¡ªû
+ = 0;
+
+116 
+	g¡ÝSimuÏtiÚ
+ = 
+Ãw
+ 
+cMes§ge
+("stopSimulation");
+
+117 
+scheduËAt
+(
+simTime
+(è+ 
+SimTime
+(1, 
+SIMTIME_MS
+), 
+¡ÝSimuÏtiÚ
+);
+
+120 
+	gdi¡ªûOut
+.
+»cÜd
+(
+di¡ªû
+);
+
+121 
+	g»lS³edOut
+.
+»cÜd
+(
+»lS³ed
+);
+
+122 
+	gnodeIdOut
+.
+»cÜd
+(
+myId
+);
+
+123 
+	gacûË¿tiÚOut
+.
+»cÜd
+(
+d©a
+.
+acûË¿tiÚ
+);
+
+124 
+	gcÚŒÞËrAcûË¿tiÚOut
+.
+»cÜd
+(
+d©a
+.
+u
+);
+
+125 
+	g¥“dOut
+.
+»cÜd
+(
+d©a
+.
+¥“d
+);
+
+126 
+	gposxOut
+.
+»cÜd
+(
+d©a
+.
+pos™iÚX
+);
+
+127 
+	gposyOut
+.
+»cÜd
+(
+d©a
+.
+pos™iÚY
+);
+
+130 
+	gBa£Aµ
+::
+hªdËLow”CÚŒÞ
+(
+cMes§ge
+* 
+msg
+)
+
+132 
+d–‘e
+ 
+msg
+;
+
+135 
+	gBa£Aµ
+::
+£ndF¿me
+(
+cPack‘
+* 
+msg
+, 
+de¡š©iÚ
+)
+
+137 
+Ba£F¿me1609_4
+* 
+	gäame
+ = 
+Ãw
+ BaseFrame1609_4();
+
+138 
+	gäame
+->
+£tRec›ÁAdd»ss
+(
+de¡š©iÚ
+);
+
+139 
+	gäame
+->
+’ÿpsuÏ‹
+(
+msg
+);
+
+140 
+£ndDown
+(
+äame
+);
+
+143 
+	gBa£Aµ
+::
+hªdËS–fMsg
+(
+cMes§ge
+* 
+msg
+)
+
+145 ià(
+msg
+ =ð
+»cÜdD©a
+) {
+
+147 
+logVehiþeD©a
+(
+¶exeT¿ciVehiþe
+->
+isC¿shed
+());
+
+149 
+scheduËAt
+(
+simTime
+(è+ 
+SimTime
+(100, 
+SIMTIME_MS
+), 
+»cÜdD©a
+);
+
+151 ià(
+	gmsg
+ =ð
+¡ÝSimuÏtiÚ
+) {
+
+152 
+’dSimuÏtiÚ
+();
+
+156 
+	gBa£Aµ
+::
+ÚPÏtoÚB—cÚ
+(cÚ¡ 
+PÏtoÚšgB—cÚ
+* 
+pb
+)
+
+158 ià(
+pos™iÚH–³r
+->
+isInSamePÏtoÚ
+(
+pb
+->
+g‘VehiþeId
+())) {
+
+160 ià(
+pb
+->
+g‘VehiþeId
+(è=ð
+pos™iÚH–³r
+->
+g‘L—d”Id
+()) {
+
+161 
+¶exeT¿ciVehiþe
+->
+£tL—d”VehiþeD©a
+(
+pb
+->
+g‘CÚŒÞËrAcûË¿tiÚ
+(),…b->
+g‘AcûË¿tiÚ
+(),…b->
+g‘S³ed
+(),…b->
+g‘Pos™iÚX
+(),…b->
+g‘Pos™iÚY
+(),…b->
+g‘Time
+());
+
+164 ià(
+	gpb
+->
+g‘VehiþeId
+(è=ð
+pos™iÚH–³r
+->
+g‘FrÚtId
+()) {
+
+165 
+¶exeT¿ciVehiþe
+->
+£tFrÚtVehiþeD©a
+(
+pb
+->
+g‘CÚŒÞËrAcûË¿tiÚ
+(),…b->
+g‘AcûË¿tiÚ
+(),…b->
+g‘S³ed
+(),…b->
+g‘Pos™iÚX
+(),…b->
+g‘Pos™iÚY
+(),…b->
+g‘Time
+());
+
+168 
+VEHICLE_DATA
+ 
+	gvehiþeD©a
+;
+
+169 
+	gvehiþeD©a
+.
+	gšdex
+ = 
+pos™iÚH–³r
+->
+g‘Memb”Pos™iÚ
+(
+pb
+->
+g‘VehiþeId
+());
+
+170 
+	gvehiþeD©a
+.
+	gacûË¿tiÚ
+ = 
+pb
+->
+g‘AcûË¿tiÚ
+();
+
+171 
+	gvehiþeD©a
+.
+	gËngth
+ = 
+pb
+->
+g‘L’gth
+();
+
+172 
+	gvehiþeD©a
+.
+	gpos™iÚX
+ = 
+pb
+->
+g‘Pos™iÚX
+();
+
+173 
+	gvehiþeD©a
+.
+	gpos™iÚY
+ = 
+pb
+->
+g‘Pos™iÚY
+();
+
+174 
+	gvehiþeD©a
+.
+	g¥“d
+ = 
+pb
+->
+g‘S³ed
+();
+
+175 
+	gvehiþeD©a
+.
+	gtime
+ = 
+pb
+->
+g‘Time
+();
+
+176 
+	gvehiþeD©a
+.
+	gu
+ = 
+pb
+->
+g‘CÚŒÞËrAcûË¿tiÚ
+();
+
+177 
+	gvehiþeD©a
+.
+	g¥“dX
+ = 
+pb
+->
+g‘S³edX
+();
+
+178 
+	gvehiþeD©a
+.
+	g¥“dY
+ = 
+pb
+->
+g‘S³edY
+();
+
+179 
+	gvehiþeD©a
+.
+	gªgË
+ = 
+pb
+->
+g‘AngË
+();
+
+181 
+	g¶exeT¿ciVehiþe
+->
+£tVehiþeD©a
+(&
+vehiþeD©a
+);
+
+183 
+d–‘e
+ 
+	gpb
+;
+
+	@BaseApp.h
+
+21 #iâdeà
+BASEAPP_H_
+
+
+22 
+	#BASEAPP_H_
+
+
+	)
+
+24 
+	~"vešs/ba£/moduËs/Ba£AµlLay”.h
+"
+
+25 
+	~"vešs/moduËs/mobž™y/Œaci/T¿CIMobž™y.h
+"
+
+27 
+	~"¶exe/CC_CÚ¡.h
+"
+
+28 
+	~"¶exe/mes§ges/PÏtoÚšgB—cÚ_m.h
+"
+
+29 
+	~"¶exe/mobž™y/CommªdIÁ”çû.h
+"
+
+30 
+	~"¶exe/utž™›s/Ba£Pos™iÚH–³r.h
+"
+
+32 
+Çme¥aû
+ 
+	g¶exe
+ {
+
+34 
+þass
+ 
+	gBa£PrÙocÞ
+;
+
+36 þas 
+	cBa£Aµ
+ : 
+public
+ 
+vešs
+::
+Ba£AµlLay”
+ {
+
+38 
+public
+:
+
+39 
+vœtu®
+ 
+š™Ÿlize
+(
+¡age
+è
+ov”ride
+;
+
+41 
+	g´Ùeùed
+:
+
+43 
+myId
+;
+
+45 
+	gvešs
+::
+T¿CIMobž™y
+* 
+mobž™y
+;
+
+46 
+	gvešs
+::
+T¿CICommªdIÁ”çû
+* 
+Œaci
+;
+
+47 
+	gvešs
+::
+T¿CICommªdIÁ”çû
+::
+Vehiþe
+* 
+ŒaciVehiþe
+;
+
+48 
+	gŒaci
+::
+CommªdIÁ”çû
+* 
+¶exeT¿ci
+;
+
+49 
+	g¡d
+::
+unique_±r
+<
+Œaci
+::
+CommªdIÁ”çû
+::
+Vehiþe
+> 
+¶exeT¿ciVehiþe
+;
+
+52 
+Ba£Pos™iÚH–³r
+* 
+	gpos™iÚH–³r
+;
+
+55 
+Ba£PrÙocÞ
+* 
+	g´ÙocÞ
+;
+
+60 
+vœtu®
+ 
+logVehiþeD©a
+(
+boÞ
+ 
+üashed
+ = 
+çl£
+);
+
+64 
+cOutVeùÜ
+ 
+	gnodeIdOut
+;
+
+66 
+cOutVeùÜ
+ 
+	gdi¡ªûOut
+, 
+	g»lS³edOut
+;
+
+68 
+cOutVeùÜ
+ 
+	g¥“dOut
+, 
+	gposxOut
+, 
+	gposyOut
+;
+
+70 
+cOutVeùÜ
+ 
+	gacûË¿tiÚOut
+, 
+	gcÚŒÞËrAcûË¿tiÚOut
+;
+
+73 
+cMes§ge
+* 
+	g»cÜdD©a
+;
+
+75 
+cMes§ge
+* 
+	g¡ÝSimuÏtiÚ
+;
+
+77 
+	gpublic
+:
+
+78 
+Ba£Aµ
+()
+
+80 
+»cÜdD©a
+ = 0;
+
+81 
+	g¡ÝSimuÏtiÚ
+ = 
+nuÎ±r
+;
+
+83 
+	gvœtu®
+ ~
+Ba£Aµ
+();
+
+91 
+£ndF¿me
+(
+cPack‘
+* 
+msg
+, 
+de¡š©iÚ
+);
+
+93 
+	g´Ùeùed
+:
+
+94 
+vœtu®
+ 
+hªdËLow”Msg
+(
+cMes§ge
+* 
+msg
+è
+ov”ride
+;
+
+95 
+vœtu®
+ 
+hªdËS–fMsg
+(
+cMes§ge
+* 
+msg
+è
+	gov”ride
+;
+
+96 
+vœtu®
+ 
+hªdËLow”CÚŒÞ
+(
+cMes§ge
+* 
+msg
+è
+	gov”ride
+;
+
+101 
+vœtu®
+ 
+ÚPÏtoÚB—cÚ
+(cÚ¡ 
+PÏtoÚšgB—cÚ
+* 
+pb
+);
+
+	@GeneralPlatooningApp.cc
+
+22 
+	~"¶exe/­ps/G’”®PÏtoÚšgAµ.h
+"
+
+24 
+	~"¶exe/´ÙocÞs/Ba£PrÙocÞ.h
+"
+
+25 
+	~"vešs/moduËs/mobž™y/Œaci/T¿CICÞÜ.h
+"
+
+26 
+	~"vešs/moduËs/mobž™y/Œaci/T¿CISûÇrioMªag”.h
+"
+
+27 
+	~"vešs/moduËs/mes§ges/Ba£F¿me1609_4_m.h
+"
+
+28 
+	~"vešs/moduËs/utž™y/CÚ¡s80211p.h
+"
+
+29 
+	~"vešs/moduËs/mac/›“80211p/Mac1609_4.h
+"
+
+30 
+	~"¶exe/mes§ges/PËxeIÁ”çûCÚŒÞInfo_m.h
+"
+
+31 
+	~"vešs/ba£/utžs/FšdModuË.h
+"
+
+33 
+usšg
+ 
+Çme¥aû
+ 
+	gvešs
+;
+
+35 
+Çme¥aû
+ 
+	g¶exe
+ {
+
+37 
+Defše_ModuË
+(
+G’”®PÏtoÚšgAµ
+);
+
+39 
+	gG’”®PÏtoÚšgAµ
+::
+š™Ÿlize
+(
+¡age
+)
+
+41 
+Ba£Aµ
+::
+š™Ÿlize
+(
+¡age
+);
+
+43 ià(
+	g¡age
+ == 1) {
+
+45 
+´ÙocÞ
+->
+»gi¡”AµliÿtiÚ
+(
+MANEUVER_TYPE
+, 
+g©e
+("lowerLayerIn"), gate("lowerLayerOut"), gate("lowerControlIn"), gate("lowerControlOut"));
+
+47 
+fšdHo¡
+()->
+subsüibe
+(
+Mac1609_4
+::
+sigR‘r›sExûeded
+, 
+this
+);
+
+49 
+	g¡d
+::
+¡ršg
+ 
+jošMªeuv”Name
+ = 
+·r
+("jošMªeuv”").
+¡d¡ršgV®ue
+();
+
+50 ià(
+	gjošMªeuv”Name
+ == "JoinAtBack")
+
+51 
+jošMªeuv”
+ = 
+Ãw
+ 
+JošAtBack
+(
+this
+);
+
+53 
+throw
+ 
+Ãw
+ 
+cRuÁimeE¼Ü
+("Invalid join maneuver implementation chosen");
+
+55 
+	g¡d
+::
+¡ršg
+ 
+m”geMªeuv”Name
+ = 
+·r
+("m”geMªeuv”").
+¡d¡ršgV®ue
+();
+
+56 ià(
+	gm”geMªeuv”Name
+ == "MergeAtBack")
+
+57 
+m”geMªeuv”
+ = 
+Ãw
+ 
+M”geAtBack
+(
+this
+);
+
+59 
+throw
+ 
+Ãw
+ 
+cRuÁimeE¼Ü
+("Invalid merge maneuver implementation chosen");
+
+61 
+	gsûÇrio
+ = 
+FšdModuË
+<
+Ba£SûÇrio
+*>::
+fšdSubModuË
+(
+g‘P¬’tModuË
+());
+
+65 
+	gG’”®PÏtoÚšgAµ
+::
+hªdËS–fMsg
+(
+cMes§ge
+* 
+msg
+)
+
+67 ià(
+jošMªeuv”
+ && jošMªeuv”->
+hªdËS–fMsg
+(
+msg
+)) ;
+
+68 ià(
+	gm”geMªeuv”
+ && m”geMªeuv”->
+hªdËS–fMsg
+(
+msg
+)) ;
+
+69 
+	gBa£Aµ
+::
+hªdËS–fMsg
+(
+msg
+);
+
+72 
+boÞ
+ 
+	gG’”®PÏtoÚšgAµ
+::
+isJošAÎowed
+() const
+
+74  ((
+rÞe
+ =ð
+PÏtoÚRÞe
+::
+LEADER
+ ||„Þ=ðPÏtoÚRÞe::
+NONE
+è&& !
+šMªeuv”
+);
+
+77 
+ACTIVE_CONTROLLER
+ 
+	gG’”®PÏtoÚšgAµ
+::
+g‘CÚŒÞËr
+()
+
+79  
+sûÇrio
+->
+g‘CÚŒÞËr
+();
+
+82 
+	gG’”®PÏtoÚšgAµ
+::
+g‘T¬g‘Di¡ªû
+(
+¥“d
+)
+
+84  
+sûÇrio
+->
+g‘T¬g‘Di¡ªû
+(
+¥“d
+);
+
+87 
+	gG’”®PÏtoÚšgAµ
+::
+¡¬tJošMªeuv”
+(
+¶©oÚId
+, 
+Ëad”Id
+, 
+pos™iÚ
+)
+
+89 
+ASSERT
+(
+g‘PÏtoÚRÞe
+(è=ð
+PÏtoÚRÞe
+::
+NONE
+);
+
+90 
+ASSERT
+(!
+isInMªeuv”
+());
+
+92 
+JošMªeuv”P¬am‘”s
+ 
+	g·¿ms
+;
+
+93 
+	g·¿ms
+.
+	g¶©oÚId
+ = 
+¶©oÚId
+;
+
+94 
+	g·¿ms
+.
+	gËad”Id
+ = 
+Ëad”Id
+;
+
+95 
+	g·¿ms
+.
+	gpos™iÚ
+ = 
+pos™iÚ
+;
+
+96 
+	gjošMªeuv”
+->
+¡¬tMªeuv”
+(&
+·¿ms
+);
+
+99 
+	gG’”®PÏtoÚšgAµ
+::
+¡¬tM”geMªeuv”
+(
+¶©oÚId
+, 
+Ëad”Id
+, 
+pos™iÚ
+)
+
+101 
+ASSERT
+(
+g‘PÏtoÚRÞe
+(è=ð
+PÏtoÚRÞe
+::
+LEADER
+);
+
+102 
+ASSERT
+(!
+isInMªeuv”
+());
+
+104 
+JošMªeuv”P¬am‘”s
+ 
+	g·¿ms
+;
+
+105 
+	g·¿ms
+.
+	g¶©oÚId
+ = 
+¶©oÚId
+;
+
+106 
+	g·¿ms
+.
+	gËad”Id
+ = 
+Ëad”Id
+;
+
+107 
+	g·¿ms
+.
+	gpos™iÚ
+ = 
+pos™iÚ
+;
+
+108 
+	gm”geMªeuv”
+->
+¡¬tMªeuv”
+(&
+·¿ms
+);
+
+111 
+	gG’”®PÏtoÚšgAµ
+::
+£ndUniÿ¡
+(
+cPack‘
+* 
+msg
+, 
+de¡š©iÚ
+)
+
+113 
+EÁ”_M‘hod_Sž’t
+();
+
+114 
+ke
+(
+msg
+);
+
+115 
+Ba£F¿me1609_4
+* 
+	gäame
+ = 
+Ãw
+ Ba£F¿me1609_4("Ba£F¿me1609_4", 
+msg
+->
+g‘Kšd
+());
+
+116 
+	gäame
+->
+£tRec›ÁAdd»ss
+(
+de¡š©iÚ
+);
+
+117 
+	gäame
+->
+£tChªÃlNumb”
+(
+¡©ic_ÿ¡
+<>(
+ChªÃl
+::
+cch
+));
+
+118 
+	gäame
+->
+’ÿpsuÏ‹
+(
+msg
+);
+
+120 
+PËxeIÁ”çûCÚŒÞInfo
+* 
+	gù¾
+ = 
+Ãw
+ PlexeInterfaceControlInfo();
+
+121 
+	gù¾
+->
+£tIÁ”çûs
+(
+PËxeRadioIÁ”çûs
+::
+VEINS_11P
+);
+
+122 
+	gäame
+->
+£tCÚŒÞInfo
+(
+ù¾
+);
+
+123 
+£ndDown
+(
+äame
+);
+
+126 
+	gG’”®PÏtoÚšgAµ
+::
+hªdËLow”Msg
+(
+cMes§ge
+* 
+msg
+)
+
+128 
+Ba£F¿me1609_4
+* 
+äame
+ = 
+check_ªd_ÿ¡
+<Ba£F¿me1609_4*>(
+msg
+);
+
+130 
+cPack‘
+* 
+	g’c
+ = 
+äame
+->
+g‘EnÿpsuÏ‹dPack‘
+();
+
+131 
+ASSERT2
+(
+’c
+, "received‡ BaseFrame1609_4s with‚othing inside");
+
+133 ià(
+	g’c
+->
+g‘Kšd
+(è=ð
+MANEUVER_TYPE
+) {
+
+134 
+Mªeuv”Mes§ge
+* 
+mm
+ = 
+check_ªd_ÿ¡
+<Mªeuv”Mes§ge*>(
+äame
+->
+deÿpsuÏ‹
+());
+
+135 ià(
+Upd©ePÏtoÚD©a
+* 
+	gmsg
+ = 
+dyÇmic_ÿ¡
+<Upd©ePÏtoÚD©a*>(
+mm
+)) {
+
+136 
+hªdËUpd©ePÏtoÚD©a
+(
+msg
+);
+
+137 
+d–‘e
+ 
+	gmsg
+;
+
+139 ià(
+Upd©ePÏtoÚFÜm©iÚ
+* 
+	gmsg
+ = 
+dyÇmic_ÿ¡
+<Upd©ePÏtoÚFÜm©iÚ*>(
+mm
+)) {
+
+140 
+hªdËUpd©ePÏtoÚFÜm©iÚ
+(
+msg
+);
+
+141 
+d–‘e
+ 
+	gmsg
+;
+
+144 
+ÚMªeuv”Mes§ge
+(
+mm
+);
+
+146 
+d–‘e
+ 
+	gäame
+;
+
+149 
+	gBa£Aµ
+::
+hªdËLow”Msg
+(
+msg
+);
+
+153 
+	gG’”®PÏtoÚšgAµ
+::
+hªdËUpd©ePÏtoÚD©a
+(cÚ¡ 
+Upd©ePÏtoÚD©a
+* 
+msg
+)
+
+155 ià(
+g‘PÏtoÚRÞe
+(è!ð
+PÏtoÚRÞe
+::
+FOLLOWER
+) ;
+
+156 ià(
+	gmsg
+->
+g‘PÏtoÚId
+(è!ð
+pos™iÚH–³r
+->getPlatoonId()) ;
+
+157 ià(
+	gmsg
+->
+g‘VehiþeId
+(è!ð
+pos™iÚH–³r
+->
+g‘L—d”Id
+()) ;
+
+159 
+hªdËUpd©ePÏtoÚFÜm©iÚ
+(
+msg
+);
+
+160 
+	gLOG
+ << 
+	gpos™iÚH–³r
+->
+g‘Id
+(è<< " chªgšg…ÏtoÚ id from " <<…os™iÚH–³r->
+g‘PÏtoÚId
+(è<< "Ø" << 
+	gmsg
+->
+g‘NewPÏtoÚId
+() << "\n";
+
+161 
+	gpos™iÚH–³r
+->
+£tPÏtoÚId
+(
+msg
+->
+g‘NewPÏtoÚId
+());
+
+164 
+	gG’”®PÏtoÚšgAµ
+::
+hªdËUpd©ePÏtoÚFÜm©iÚ
+(cÚ¡ 
+Upd©ePÏtoÚFÜm©iÚ
+* 
+msg
+)
+
+166 ià(
+g‘PÏtoÚRÞe
+(è!ð
+PÏtoÚRÞe
+::
+FOLLOWER
+) ;
+
+167 ià(
+	gmsg
+->
+g‘PÏtoÚId
+(è!ð
+pos™iÚH–³r
+->getPlatoonId()) ;
+
+168 ià(
+	gmsg
+->
+g‘VehiþeId
+(è!ð
+pos™iÚH–³r
+->
+g‘L—d”Id
+()) ;
+
+171 
+	gLOG
+ << 
+	gpos™iÚH–³r
+->
+g‘Id
+() << " changing…latoon formation: ";
+
+172 
+	g¡d
+::
+veùÜ
+<> 
+f
+;
+
+173 
+	gi
+ = 0; i < 
+	gmsg
+->
+g‘PÏtoÚFÜm©iÚA¼aySize
+(); i++) {
+
+174 
+	gf
+.
+push_back
+(
+msg
+->
+g‘PÏtoÚFÜm©iÚ
+(
+i
+));
+
+175 
+	gLOG
+ << 
+	gmsg
+->
+g‘PÏtoÚFÜm©iÚ
+(
+i
+) << " ";
+
+177 
+	gLOG
+ << "\n";
+
+178 
+	gpos™iÚH–³r
+->
+£tPÏtoÚFÜm©iÚ
+(
+f
+);
+
+181 
+	gG’”®PÏtoÚšgAµ
+::
+£tPÏtoÚRÞe
+(
+PÏtoÚRÞe
+ 
+r
+)
+
+183 
+rÞe
+ = 
+r
+;
+
+186 
+	gG’”®PÏtoÚšgAµ
+::
+ÚPÏtoÚB—cÚ
+(cÚ¡ 
+PÏtoÚšgB—cÚ
+* 
+pb
+)
+
+188 
+jošMªeuv”
+->
+ÚPÏtoÚB—cÚ
+(
+pb
+);
+
+189 
+	gm”geMªeuv”
+->
+ÚPÏtoÚB—cÚ
+(
+pb
+);
+
+191 
+	gBa£Aµ
+::
+ÚPÏtoÚB—cÚ
+(
+pb
+);
+
+194 
+	gG’”®PÏtoÚšgAµ
+::
+ÚMªeuv”Mes§ge
+(
+Mªeuv”Mes§ge
+* 
+mm
+)
+
+196 ià(
+aùiveMªeuv”
+) {
+
+197 
+aùiveMªeuv”
+->
+ÚMªeuv”Mes§ge
+(
+mm
+);
+
+200 
+	gjošMªeuv”
+->
+ÚMªeuv”Mes§ge
+(
+mm
+);
+
+201 
+	gm”geMªeuv”
+->
+ÚMªeuv”Mes§ge
+(
+mm
+);
+
+203 
+d–‘e
+ 
+	gmm
+;
+
+206 
+	gG’”®PÏtoÚšgAµ
+::
+fžlMªeuv”Mes§ge
+(
+Mªeuv”Mes§ge
+* 
+msg
+, 
+vehiþeId
+, 
+¡d
+::
+¡ršg
+ 
+ex‹º®Id
+, 
+¶©oÚId
+, 
+de¡š©iÚId
+)
+
+208 
+	gmsg
+->
+£tKšd
+(
+MANEUVER_TYPE
+);
+
+209 
+	gmsg
+->
+£tVehiþeId
+(
+vehiþeId
+);
+
+210 
+	gmsg
+->
+£tEx‹º®Id
+(
+ex‹º®Id
+.
+c_¡r
+());
+
+211 
+	gmsg
+->
+£tPÏtoÚId
+(
+¶©oÚId
+);
+
+212 
+	gmsg
+->
+£tDe¡š©iÚId
+(
+de¡š©iÚId
+);
+
+215 
+Upd©ePÏtoÚD©a
+* 
+	gG’”®PÏtoÚšgAµ
+::
+ü—‹Upd©ePÏtoÚD©a
+(
+vehiþeId
+, 
+¡d
+::
+¡ršg
+ 
+ex‹º®Id
+, 
+¶©oÚId
+, 
+de¡š©iÚId
+, 
+¶©oÚS³ed
+, 
+¶©oÚLªe
+, cÚ¡ std::
+veùÜ
+<>& 
+¶©oÚFÜm©iÚ
+, 
+ÃwPÏtoÚId
+)
+
+217 
+Upd©ePÏtoÚD©a
+* 
+	gmsg
+ = 
+Ãw
+ UpdatePlatoonData("UpdatePlatoonData");
+
+218 
+fžlMªeuv”Mes§ge
+(
+msg
+, 
+vehiþeId
+, 
+ex‹º®Id
+, 
+¶©oÚId
+, 
+de¡š©iÚId
+);
+
+219 
+	gmsg
+->
+£tPÏtoÚS³ed
+(
+¶©oÚS³ed
+);
+
+220 
+	gmsg
+->
+£tPÏtoÚLªe
+(
+¶©oÚLªe
+);
+
+221 
+	gmsg
+->
+£tPÏtoÚFÜm©iÚA¼aySize
+(
+¶©oÚFÜm©iÚ
+.
+size
+());
+
+222 
+	gi
+ = 0; i < 
+	g¶©oÚFÜm©iÚ
+.
+size
+(); i++) {
+
+223 
+	gmsg
+->
+£tPÏtoÚFÜm©iÚ
+(
+i
+, 
+¶©oÚFÜm©iÚ
+[i]);
+
+225 
+	gmsg
+->
+£tNewPÏtoÚId
+(
+ÃwPÏtoÚId
+);
+
+226  
+	gmsg
+;
+
+229 
+Upd©ePÏtoÚFÜm©iÚ
+* 
+	gG’”®PÏtoÚšgAµ
+::
+ü—‹Upd©ePÏtoÚFÜm©iÚ
+(
+vehiþeId
+, 
+¡d
+::
+¡ršg
+ 
+ex‹º®Id
+, 
+¶©oÚId
+, 
+de¡š©iÚId
+, 
+¶©oÚS³ed
+, 
+¶©oÚLªe
+, cÚ¡ std::
+veùÜ
+<>& 
+¶©oÚFÜm©iÚ
+)
+
+231 
+Upd©ePÏtoÚFÜm©iÚ
+* 
+msg
+ = 
+Ãw
+ UpdatePlatoonFormation("UpdatePlatoonFormation");
+
+232 
+fžlMªeuv”Mes§ge
+(
+msg
+, 
+vehiþeId
+, 
+ex‹º®Id
+, 
+¶©oÚId
+, 
+de¡š©iÚId
+);
+
+233 
+	gmsg
+->
+£tPÏtoÚS³ed
+(
+¶©oÚS³ed
+);
+
+234 
+	gmsg
+->
+£tPÏtoÚLªe
+(
+¶©oÚLªe
+);
+
+235 
+	gmsg
+->
+£tPÏtoÚFÜm©iÚA¼aySize
+(
+¶©oÚFÜm©iÚ
+.
+size
+());
+
+236 
+	gi
+ = 0; i < 
+	g¶©oÚFÜm©iÚ
+.
+size
+(); i++) {
+
+237 
+	gmsg
+->
+£tPÏtoÚFÜm©iÚ
+(
+i
+, 
+¶©oÚFÜm©iÚ
+[i]);
+
+239  
+	gmsg
+;
+
+242 
+	gG’”®PÏtoÚšgAµ
+::
+»ûiveSigÇl
+(
+cCompÚ’t
+* 
+¤c
+, 
+simsigÇl_t
+ 
+id
+, 
+cObjeù
+* 
+v®ue
+, cObjeù* 
+d‘ažs
+)
+
+244 ià(
+	gid
+ =ð
+Mac1609_4
+::
+sigR‘r›sExûeded
+) {
+
+245 
+Ba£F¿me1609_4
+* 
+äame
+ = 
+check_ªd_ÿ¡
+<Ba£F¿me1609_4*>(
+v®ue
+);
+
+246 
+Mªeuv”Mes§ge
+* 
+	gmm
+ = 
+check_ªd_ÿ¡
+<Mªeuv”Mes§ge*>(
+äame
+->
+g‘EnÿpsuÏ‹dPack‘
+());
+
+247 ià(
+	gäame
+) {
+
+248 
+	gjošMªeuv”
+->
+ÚFažedT¿nsmissiÚA‰em±
+(
+mm
+);
+
+249 
+	gm”geMªeuv”
+->
+ÚFažedT¿nsmissiÚA‰em±
+(
+mm
+);
+
+254 
+	gG’”®PÏtoÚšgAµ
+::
+scheduËS–fMsg
+(
+simtime_t
+ 
+t
+, 
+cMes§ge
+* 
+msg
+)
+
+256 
+scheduËAt
+(
+t
+, 
+msg
+);
+
+259 
+	gG’”®PÏtoÚšgAµ
+::~
+G’”®PÏtoÚšgAµ
+()
+
+261 
+d–‘e
+ 
+jošMªeuv”
+;
+
+262 
+d–‘e
+ 
+	gm”geMªeuv”
+;
+
+	@GeneralPlatooningApp.h
+
+22 #iâdeà
+GENERALPLATOONAPP_H_
+
+
+23 
+	#GENERALPLATOONAPP_H_
+
+
+	)
+
+25 
+	~<®gÜ™hm
+>
+
+26 
+	~<memÜy
+>
+
+28 
+	~"¶exe/­ps/Ba£Aµ.h
+"
+
+29 
+	~"¶exe/mªeuv”/JošMªeuv”.h
+"
+
+30 
+	~"¶exe/mªeuv”/JošAtBack.h
+"
+
+31 
+	~"¶exe/mªeuv”/M”geAtBack.h
+"
+
+33 
+	~"¶exe/mes§ges/Mªeuv”Mes§ge_m.h
+"
+
+34 
+	~"¶exe/mes§ges/Upd©ePÏtoÚD©a_m.h
+"
+
+36 
+	~"¶exe/sûÇrios/Ba£SûÇrio.h
+"
+
+38 
+	~"vešs/moduËs/mobž™y/Œaci/T¿CICÚ¡ªts.h
+"
+
+39 
+	~"vešs/moduËs/utž™y/SigÇlMªag”.h
+"
+
+41 
+Çme¥aû
+ 
+	g¶exe
+ {
+
+44 þas 
+	cPÏtoÚRÞe
+ : 
+size_t
+ {
+
+45 
+NONE
+,
+
+46 
+	gLEADER
+,
+
+47 
+	gFOLLOWER
+,
+
+48 
+	gJOINER
+
+
+66 þas 
+	cG’”®PÏtoÚšgAµ
+ : 
+public
+ 
+Ba£Aµ
+ {
+
+68 
+public
+:
+
+70 
+G’”®PÏtoÚšgAµ
+()
+
+71 : 
+šMªeuv”
+(
+çl£
+)
+
+72 , 
+aùiveMªeuv”
+(
+nuÎ±r
+)
+
+73 , 
+sûÇrio
+(
+nuÎ±r
+)
+
+74 , 
+rÞe
+(
+PÏtoÚRÞe
+::
+NONE
+)
+
+75 , 
+jošMªeuv”
+(
+nuÎ±r
+)
+
+76 , 
+m”geMªeuv”
+(
+nuÎ±r
+)
+
+81 
+	gvœtu®
+ ~
+G’”®PÏtoÚšgAµ
+();
+
+89 cÚ¡ 
+	gPÏtoÚRÞe
+& 
+g‘PÏtoÚRÞe
+() const
+
+91  
+	grÞe
+;
+
+100 
+£tPÏtoÚRÞe
+(
+PÏtoÚRÞe
+ 
+r
+);
+
+103 
+vœtu®
+ 
+š™Ÿlize
+(
+¡age
+è
+	gov”ride
+;
+
+106 
+vœtu®
+ 
+hªdËS–fMsg
+(
+cMes§ge
+* 
+msg
+è
+	gov”ride
+;
+
+115 
+¡¬tJošMªeuv”
+(
+¶©oÚId
+, 
+Ëad”Id
+, 
+pos™iÚ
+);
+
+124 
+¡¬tM”geMªeuv”
+(
+¶©oÚId
+, 
+Ëad”Id
+, 
+pos™iÚ
+);
+
+127 
+abÜtJošMªeuv”
+();
+
+133 
+boÞ
+ 
+isInMªeuv”
+() const
+
+135  
+	gšMªeuv”
+;
+
+143 
+£tInMªeuv”
+(
+boÞ
+ 
+b
+, 
+Mªeuv”
+* 
+mªeuv”
+)
+
+145 
+	gšMªeuv”
+ = 
+b
+;
+
+146 ià(
+	gšMªeuv”
+)
+
+147 
+	gaùiveMªeuv”
+ = 
+mªeuv”
+;
+
+149 
+	gaùiveMªeuv”
+ = 
+nuÎ±r
+;
+
+152 
+Ba£Pos™iÚH–³r
+* 
+g‘Pos™iÚH–³r
+()
+
+154  
+	gpos™iÚH–³r
+;
+
+157 
+	gvešs
+::
+T¿CIMobž™y
+* 
+g‘Mobž™y
+()
+
+159  
+mobž™y
+;
+
+162 
+	gvešs
+::
+T¿CICommªdIÁ”çû
+* 
+g‘T¿ci
+()
+
+164  
+Œaci
+;
+
+167 
+	gvešs
+::
+T¿CICommªdIÁ”çû
+::
+Vehiþe
+* 
+g‘T¿ciVehiþe
+()
+
+169  
+ŒaciVehiþe
+;
+
+172 
+	gŒaci
+::
+CommªdIÁ”çû
+* 
+g‘PËxeT¿ci
+()
+
+174  
+¶exeT¿ci
+;
+
+177 
+	gŒaci
+::
+CommªdIÁ”çû
+::
+Vehiþe
+* 
+g‘PËxeT¿ciVehiþe
+()
+
+179  
+¶exeT¿ciVehiþe
+.
+g‘
+();
+
+189 
+vœtu®
+ 
+£ndUniÿ¡
+(
+cPack‘
+* 
+msg
+, 
+de¡š©iÚ
+);
+
+199 
+fžlMªeuv”Mes§ge
+(
+Mªeuv”Mes§ge
+* 
+msg
+, 
+vehiþeId
+, 
+¡d
+::
+¡ršg
+ 
+ex‹º®Id
+, 
+¶©oÚId
+, 
+de¡š©iÚId
+);
+
+211 
+Upd©ePÏtoÚFÜm©iÚ
+* 
+ü—‹Upd©ePÏtoÚFÜm©iÚ
+(
+vehiþeId
+, 
+¡d
+::
+¡ršg
+ 
+ex‹º®Id
+, 
+¶©oÚId
+, 
+de¡š©iÚId
+, 
+¶©oÚS³ed
+, 
+¶©oÚLªe
+, cÚ¡ std::
+veùÜ
+<>& 
+¶©oÚFÜm©iÚ
+);
+
+224 
+Upd©ePÏtoÚD©a
+* 
+ü—‹Upd©ePÏtoÚD©a
+(
+vehiþeId
+, 
+¡d
+::
+¡ršg
+ 
+ex‹º®Id
+, 
+¶©oÚId
+, 
+de¡š©iÚId
+, 
+¶©oÚS³ed
+, 
+¶©oÚLªe
+, cÚ¡ std::
+veùÜ
+<>& 
+¶©oÚFÜm©iÚ
+, 
+ÃwPÏtoÚId
+);
+
+232 
+vœtu®
+ 
+hªdËUpd©ePÏtoÚD©a
+(cÚ¡ 
+Upd©ePÏtoÚD©a
+* 
+msg
+);
+
+240 
+vœtu®
+ 
+hªdËUpd©ePÏtoÚFÜm©iÚ
+(cÚ¡ 
+Upd©ePÏtoÚFÜm©iÚ
+* 
+msg
+);
+
+242 
+boÞ
+ 
+isJošAÎowed
+() const;
+
+247 
+ACTIVE_CONTROLLER
+ 
+g‘CÚŒÞËr
+();
+
+252 
+g‘T¬g‘Di¡ªû
+(
+¥“d
+);
+
+254 
+	g´Ùeùed
+:
+
+256 
+vœtu®
+ 
+hªdËLow”Msg
+(
+cMes§ge
+* 
+msg
+è
+ov”ride
+;
+
+263 
+vœtu®
+ 
+ÚPÏtoÚB—cÚ
+(cÚ¡ 
+PÏtoÚšgB—cÚ
+* 
+pb
+è
+	gov”ride
+;
+
+270 
+vœtu®
+ 
+ÚMªeuv”Mes§ge
+(
+Mªeuv”Mes§ge
+* 
+mm
+);
+
+273 
+boÞ
+ 
+	gšMªeuv”
+;
+
+275 
+Mªeuv”
+* 
+	gaùiveMªeuv”
+;
+
+278 
+vœtu®
+ 
+»ûiveSigÇl
+(
+cCompÚ’t
+* 
+¤c
+, 
+simsigÇl_t
+ 
+id
+, 
+cObjeù
+* 
+v®ue
+, cObjeù* 
+d‘ažs
+è
+	gov”ride
+;
+
+281 
+vœtu®
+ 
+scheduËS–fMsg
+(
+simtime_t
+ 
+t
+, 
+cMes§ge
+* 
+msg
+);
+
+283 
+Ba£SûÇrio
+* 
+	gsûÇrio
+;
+
+285 
+	g´iv©e
+:
+
+287 
+PÏtoÚRÞe
+ 
+rÞe
+;
+
+289 
+JošMªeuv”
+* 
+	gjošMªeuv”
+;
+
+291 
+JošMªeuv”
+* 
+	gm”geMªeuv”
+;
+
+	@SimplePlatooningApp.cc
+
+21 
+	~"¶exe/­ps/Sim¶ePÏtoÚšgAµ.h
+"
+
+23 
+Çme¥aû
+ 
+	g¶exe
+ {
+
+25 
+Defše_ModuË
+(
+Sim¶ePÏtoÚšgAµ
+);
+
+	@SimplePlatooningApp.h
+
+21 #iâdeà
+SIMPLEPLATOONINGAPP_H_
+
+
+22 
+	#SIMPLEPLATOONINGAPP_H_
+
+
+	)
+
+24 
+	~"¶exe/­ps/Ba£Aµ.h
+"
+
+26 
+Çme¥aû
+ 
+	g¶exe
+ {
+
+28 þas 
+	cSim¶ePÏtoÚšgAµ
+ : 
+public
+ 
+Ba£Aµ
+ {
+
+30 
+public
+:
+
+31 
+Sim¶ePÏtoÚšgAµ
+()
+
+	@
+1
+.
+0
+6
+113
+BaseApp.cc
+BaseApp.h
+GeneralPlatooningApp.cc
+GeneralPlatooningApp.h
+SimplePlatooningApp.cc
+SimplePlatooningApp.h
