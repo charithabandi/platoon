@@ -123,6 +123,20 @@ void GeneralPlatooningApp::sendUnicast(cPacket* msg, int destination)
     sendDown(frame);
 }
 
+void GeneralPlatooningApp::sendBroadcast(cPacket* msg)
+{
+    Enter_Method_Silent();
+    take(msg);
+    BaseFrame1609_4* frame = new BaseFrame1609_4("BaseFrame1609_4", msg->getKind());
+    frame->setRecipientAddress(destination);
+    frame->setChannelNumber(static_cast<int>(Channel::cch));
+    frame->encapsulate(msg);
+    PlexeInterfaceControlInfo* ctrl = new PlexeInterfaceControlInfo();
+    ctrl->setInterfaces(PlexeRadioInterfaces::ALL);
+    frame->setControlInfo(ctrl);
+    sendDown(frame);
+}
+
 void GeneralPlatooningApp::handleLowerMsg(cMessage* msg)
 {
     BaseFrame1609_4* frame = check_and_cast<BaseFrame1609_4*>(msg);
