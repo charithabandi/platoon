@@ -38,7 +38,7 @@ void JoinManeuverScenario::initialize(int stage)
 void JoinManeuverScenario::setupFormation()
 {
     std::vector<int> formation;
-    for (int i = 0; i < 4; i++) formation.push_back(i);
+    for (int i = 0; i < 5; i++) formation.push_back(i);
     positionHelper->setPlatoonFormation(formation);
 }
 
@@ -78,7 +78,7 @@ void JoinManeuverScenario::prepareManeuverCars(int platoonLane)
         scheduleAt(simTime() + SimTime(10), startManeuver);
         break;
     }
-/*
+
     case 5: {
 	plexeTraciVehicle->setCruiseControlDesiredSpeed(100 / 3.6);
         plexeTraciVehicle->setFixedLane(3);
@@ -89,7 +89,7 @@ void JoinManeuverScenario::prepareManeuverCars(int platoonLane)
         scheduleAt(simTime() + SimTime(20), startManeuver);
         break;	
     }
-*/
+
     }
 }
 

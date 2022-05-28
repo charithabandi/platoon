@@ -58,6 +58,11 @@ void GeneralPlatooningApp::initialize(int stage)
         else
             throw new cRuntimeError("Invalid merge maneuver implementation chosen");
 
+		if (exitManeuverName == "ExitAtBack")
+            exitManeuver = new ExitAtBack(this);
+        else
+            throw new cRuntimeError("Invalid exit maneuver implementation chosen");
+
         scenario = FindModule<BaseScenario*>::findSubModule(getParentModule());
     }
 }
@@ -107,6 +112,17 @@ void GeneralPlatooningApp::startMergeManeuver(int platoonId, int leaderId, int p
     params.leaderId = leaderId;
     params.position = position;
     mergeManeuver->startManeuver(&params);
+}
+
+void GeneralPlatooningApp::startExitManeuver()
+{
+	ASSERT(positionHelper->getBackId() != -1) return;
+	ASSERT(!isInManeuver());
+
+	ExitManeuverParameters params;
+	params.platoonId = platoonId;
+	params.frontId = positionHelper->getFrontId();
+	exitManeuver->startExitManeuver(&params);
 }
 
 void GeneralPlatooningApp::sendUnicast(cPacket* msg, int destination)

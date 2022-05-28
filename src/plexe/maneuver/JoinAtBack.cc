@@ -263,6 +263,8 @@ void JoinAtBack::handleJoinFormation(const JoinFormation* msg)
     positionHelper->setPlatoonId(msg->getPlatoonId());
     positionHelper->setPlatoonLane(targetPlatoonData->platoonLane);
     positionHelper->setPlatoonSpeed(targetPlatoonData->platoonSpeed);
+    positionHelper->setFrontId(targetPlatoonData->platoonLeader);
+    positionHelper->setBackId(-1);
     std::vector<int> formation;
     for (unsigned i = 0; i < msg->getNewPlatoonFormationArraySize(); i++) formation.push_back(msg->getNewPlatoonFormation(i));
     positionHelper->setPlatoonFormation(formation);
@@ -291,8 +293,7 @@ void JoinAtBack::handleJoinFormationAck(const JoinFormationAck* msg)
     // the joiner has joined the platoon
     // add the joiner to the list of vehicles in the platoon
     positionHelper->setPlatoonFormation(joinerData->newFormation);
-    positionHelper->setFrontId(positionHelper->getLeaderId());
-    positionHelper->setBackId(-1);
+    positionHelper->setBackId(joinerData->joinerId);
 
     LOG << positionHelper->getId() << " received JoinFormationAck. Sending UpdatePlatoonFormation to all members\n";
     // send to all vehicles in Platoon
