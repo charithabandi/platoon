@@ -199,6 +199,16 @@ void BasePositionHelper::setPlatoonSpeed(double speed)
     platoonSpeed = speed;
 }
 
+void BasePositionHelper::setFrontId(int id)
+{
+    frontId = id;
+}
+
+void BasePositionHelper::setBackId(int id)
+{
+    backId = id;
+}
+
 const std::vector<int>& BasePositionHelper::getPlatoonFormation() const
 {
     return formation;

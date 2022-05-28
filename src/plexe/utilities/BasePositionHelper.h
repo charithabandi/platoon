@@ -135,6 +135,9 @@ public:
      */
     virtual void setPlatoonSpeed(double speed);
 
+    virtual void setFrontId(int id);
+    virtual void setBackId(int id);
+
     /**
      * Returns the platoon formation
      */

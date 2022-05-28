@@ -99,7 +99,7 @@ void JoinAtBack::onPlatoonBeacon(const PlatooningBeacon* pb)
                 // send move to position response to confirm the parameters
                 LOG << positionHelper->getId() << " sending MoveToPositionAck to platoon with id " << targetPlatoonData->platoonId << " (leader id " << targetPlatoonData->platoonLeader << ")\n";
                 MoveToPositionAck* ack = createMoveToPositionAck(positionHelper->getId(), positionHelper->getExternalId(), targetPlatoonData->platoonId, targetPlatoonData->platoonLeader, targetPlatoonData->platoonSpeed, targetPlatoonData->platoonLane, targetPlatoonData->newFormation);
-                app->sendUnicast(ack, targetPlatoonData->newFormation.at(targetPlatoonData->platoonLeader));
+                app->sendUnicast(ack, targetPlatoonData->platoonLeader);
                 joinManeuverState = JoinManeuverState::J_WAIT_JOIN;
             }
         }
@@ -257,7 +257,7 @@ void JoinAtBack::handleJoinFormation(const JoinFormation* msg)
     // switch from faked CACC to real CACC
     plexeTraciVehicle->setActiveController(app->getController());
     // set spacing to the target distance to get close to the platoon
-    if (app->getController() == CACC || app->getController() == FLATBED) plexeTraciVehicle->setCACCConstantSpacing(app->getTargetDistance(targetPlatoonData->platoonSpeed));
+    if (app->getController() == CACC || app->getController() == PLOEG || app->getController() == FLATBED) plexeTraciVehicle->setCACCConstantSpacing(app->getTargetDistance(targetPlatoonData->platoonSpeed));
 
     // update platoon information
     positionHelper->setPlatoonId(msg->getPlatoonId());
@@ -282,7 +282,7 @@ void JoinAtBack::handleJoinFormation(const JoinFormation* msg)
 // request update of formation information
 void JoinAtBack::handleJoinFormationAck(const JoinFormationAck* msg)
 {
-    if (app->getPlatoonRole() != PlatoonRole::LEADER) return;
+    //if (app->getPlatoonRole() != PlatoonRole::LEADER) return;
     if (joinManeuverState != JoinManeuverState::L_WAIT_JOINER_TO_JOIN) return;
     if (msg->getPlatoonId() != positionHelper->getPlatoonId()) return;
     if (msg->getVehicleId() != joinerData->joinerId) return;
@@ -291,6 +291,8 @@ void JoinAtBack::handleJoinFormationAck(const JoinFormationAck* msg)
     // the joiner has joined the platoon
     // add the joiner to the list of vehicles in the platoon
     positionHelper->setPlatoonFormation(joinerData->newFormation);
+    positionHelper->setFrontId(positionHelper->getLeaderId());
+    positionHelper->setBackId(-1);
 
     LOG << positionHelper->getId() << " received JoinFormationAck. Sending UpdatePlatoonFormation to all members\n";
     // send to all vehicles in Platoon

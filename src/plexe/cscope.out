@@ -1,4 +1,4 @@
-cscope 15 $HOME/src/plexe-plexe-3.0/src/plexe               0000413197
+cscope 15 $HOME/src/plexe-plexe-3.0/src/plexe               0000387505
 	@CC_Const.h
 
 21 #iâdeà
@@ -1927,1910 +1927,6 @@ PÏtoÚšgB—cÚ
 pb
 );
 
-	@apps/DistPlatooningApp.cc
-
-22 
-	~"¶exe/­ps/Di¡PÏtoÚšgAµ.h
-"
-
-24 
-	~"¶exe/´ÙocŞs/Ba£PrÙocŞ.h
-"
-
-25 
-	~"vešs/moduËs/mob™y/Œaci/T¿CICŞÜ.h
-"
-
-26 
-	~"vešs/moduËs/mob™y/Œaci/T¿CISûÇrioMªag”.h
-"
-
-27 
-	~"vešs/moduËs/mes§ges/Ba£F¿me1609_4_m.h
-"
-
-28 
-	~"vešs/moduËs/ut™y/CÚ¡s80211p.h
-"
-
-29 
-	~"vešs/moduËs/mac/›“80211p/Mac1609_4.h
-"
-
-30 
-	~"¶exe/mes§ges/PËxeIÁ”çûCÚŒŞInfo_m.h
-"
-
-31 
-	~"vešs/ba£/uts/FšdModuË.h
-"
-
-33 
-usšg
- 
-Çme¥aû
- 
-	gvešs
-;
-
-35 
-Çme¥aû
- 
-	g¶exe
- {
-
-37 
-Defše_ModuË
-(
-Di¡PÏtoÚšgAµ
-);
-
-39 
-	gDi¡PÏtoÚšgAµ
-::
-š™Ÿlize
-(
-¡age
-)
-
-41 
-Ba£Aµ
-::
-š™Ÿlize
-(
-¡age
-);
-
-43 ià(
-	g¡age
- == 1) {
-
-45 
-´ÙocŞ
-->
-»gi¡”AµliÿtiÚ
-(
-MANEUVER_TYPE
-, 
-g©e
-("lowerLayerIn"), gate("lowerLayerOut"), gate("lowerControlIn"), gate("lowerControlOut"));
-
-47 
-fšdHo¡
-()->
-subsüibe
-(
-Mac1609_4
-::
-sigR‘r›sExûeded
-, 
-this
-);
-
-49 
-	g¡d
-::
-¡ršg
- 
-jošMªeuv”Name
- = 
-·r
-("jošMªeuv”").
-¡d¡ršgV®ue
-();
-
-50 ià(
-	gjošMªeuv”Name
- == "DistJoinAtBack")
-
-51 
-jošMªeuv”
- = 
-Ãw
- 
-Di¡JošAtBack
-(
-this
-);
-
-53 
-throw
- 
-Ãw
- 
-cRuÁimeE¼Ü
-("Invalid join maneuver implementation chosen");
-
-55 
-	g¡d
-::
-¡ršg
- 
-m”geMªeuv”Name
- = 
-·r
-("m”geMªeuv”").
-¡d¡ršgV®ue
-();
-
-56 ià(
-	gm”geMªeuv”Name
- == "MergeAtBack")
-
-57 
-m”geMªeuv”
- = 
-Ãw
- 
-M”geAtBack
-(
-this
-);
-
-59 
-throw
- 
-Ãw
- 
-cRuÁimeE¼Ü
-("Invalid merge maneuver implementation chosen");
-
-61 
-	gsûÇrio
- = 
-FšdModuË
-<
-Ba£SûÇrio
-*>::
-fšdSubModuË
-(
-g‘P¬’tModuË
-());
-
-65 
-	gDi¡PÏtoÚšgAµ
-::
-hªdËS–fMsg
-(
-cMes§ge
-* 
-msg
-)
-
-67 ià(
-jošMªeuv”
- && jošMªeuv”->
-hªdËS–fMsg
-(
-msg
-)) ;
-
-68 ià(
-	gm”geMªeuv”
- && m”geMªeuv”->
-hªdËS–fMsg
-(
-msg
-)) ;
-
-69 
-	gBa£Aµ
-::
-hªdËS–fMsg
-(
-msg
-);
-
-72 
-boŞ
- 
-	gDi¡PÏtoÚšgAµ
-::
-isJošAÎowed
-() const
-
-74  ((
-rŞe
- =ğ
-PÏtoÚRŞe
-::
-LEADER
- ||„Ş=ğPÏtoÚRŞe::
-NONE
-è&& !
-šMªeuv”
-);
-
-77 
-ACTIVE_CONTROLLER
- 
-	gDi¡PÏtoÚšgAµ
-::
-g‘CÚŒŞËr
-()
-
-79  
-sûÇrio
-->
-g‘CÚŒŞËr
-();
-
-82 
-	gDi¡PÏtoÚšgAµ
-::
-g‘T¬g‘Di¡ªû
-(
-¥“d
-)
-
-84  
-sûÇrio
-->
-g‘T¬g‘Di¡ªû
-(
-¥“d
-);
-
-87 
-	gDi¡PÏtoÚšgAµ
-::
-¡¬tJošMªeuv”
-(
-¶©oÚId
-, 
-Ëad”Id
-, 
-pos™iÚ
-)
-
-89 
-ASSERT
-(
-g‘PÏtoÚRŞe
-(è=ğ
-PÏtoÚRŞe
-::
-NONE
-);
-
-90 
-ASSERT
-(!
-isInMªeuv”
-());
-
-92 
-JošMªeuv”P¬am‘”s
- 
-	g·¿ms
-;
-
-93 
-	g·¿ms
-.
-	g¶©oÚId
- = 
-¶©oÚId
-;
-
-94 
-	g·¿ms
-.
-	gËad”Id
- = 
-Ëad”Id
-;
-
-95 
-	g·¿ms
-.
-	gpos™iÚ
- = 
-pos™iÚ
-;
-
-96 
-	gjošMªeuv”
-->
-¡¬tMªeuv”
-(&
-·¿ms
-);
-
-99 
-	gDi¡PÏtoÚšgAµ
-::
-¡¬tM”geMªeuv”
-(
-¶©oÚId
-, 
-Ëad”Id
-, 
-pos™iÚ
-)
-
-101 
-ASSERT
-(
-g‘PÏtoÚRŞe
-(è=ğ
-PÏtoÚRŞe
-::
-LEADER
-);
-
-102 
-ASSERT
-(!
-isInMªeuv”
-());
-
-104 
-JošMªeuv”P¬am‘”s
- 
-	g·¿ms
-;
-
-105 
-	g·¿ms
-.
-	g¶©oÚId
- = 
-¶©oÚId
-;
-
-106 
-	g·¿ms
-.
-	gËad”Id
- = 
-Ëad”Id
-;
-
-107 
-	g·¿ms
-.
-	gpos™iÚ
- = 
-pos™iÚ
-;
-
-108 
-	gm”geMªeuv”
-->
-¡¬tMªeuv”
-(&
-·¿ms
-);
-
-111 
-	gDi¡PÏtoÚšgAµ
-::
-£ndUniÿ¡
-(
-cPack‘
-* 
-msg
-, 
-de¡š©iÚ
-)
-
-113 
-EÁ”_M‘hod_S’t
-();
-
-114 
-ke
-(
-msg
-);
-
-115 
-Ba£F¿me1609_4
-* 
-	gäame
- = 
-Ãw
- Ba£F¿me1609_4("Ba£F¿me1609_4", 
-msg
-->
-g‘Kšd
-());
-
-116 
-	gäame
-->
-£tRec›ÁAdd»ss
-(
-de¡š©iÚ
-);
-
-117 
-	gäame
-->
-£tChªÃlNumb”
-(
-¡©ic_ÿ¡
-<>(
-ChªÃl
-::
-cch
-));
-
-118 
-	gäame
-->
-’ÿpsuÏ‹
-(
-msg
-);
-
-120 
-PËxeIÁ”çûCÚŒŞInfo
-* 
-	gù¾
- = 
-Ãw
- PlexeInterfaceControlInfo();
-
-121 
-	gù¾
-->
-£tIÁ”çûs
-(
-PËxeRadioIÁ”çûs
-::
-VEINS_11P
-);
-
-122 
-	gäame
-->
-£tCÚŒŞInfo
-(
-ù¾
-);
-
-123 
-£ndDown
-(
-äame
-);
-
-126 
-	gDi¡PÏtoÚšgAµ
-::
-£ndBrßdÿ¡
-(
-cPack‘
-* 
-msg
-, 
-de¡š©iÚ
-)
-
-128 
-EÁ”_M‘hod_S’t
-();
-
-129 
-ke
-(
-msg
-);
-
-130 
-Ba£F¿me1609_4
-* 
-	gäame
- = 
-Ãw
- Ba£F¿me1609_4("Ba£F¿me1609_4", 
-msg
-->
-g‘Kšd
-());
-
-131 
-	gäame
-->
-£tRec›ÁAdd»ss
-(
-de¡š©iÚ
-);
-
-132 
-	gäame
-->
-£tChªÃlNumb”
-(
-¡©ic_ÿ¡
-<>(
-ChªÃl
-::
-cch
-));
-
-133 
-	gäame
-->
-’ÿpsuÏ‹
-(
-msg
-);
-
-135 
-PËxeIÁ”çûCÚŒŞInfo
-* 
-	gù¾
- = 
-Ãw
- PlexeInterfaceControlInfo();
-
-136 
-	gù¾
-->
-£tIÁ”çûs
-(
-PËxeRadioIÁ”çûs
-::
-ALL
-);
-
-137 
-	gäame
-->
-£tCÚŒŞInfo
-(
-ù¾
-);
-
-138 
-£ndDown
-(
-äame
-);
-
-141 
-	gDi¡PÏtoÚšgAµ
-::
-hªdËLow”Msg
-(
-cMes§ge
-* 
-msg
-)
-
-143 
-Ba£F¿me1609_4
-* 
-äame
- = 
-check_ªd_ÿ¡
-<Ba£F¿me1609_4*>(
-msg
-);
-
-145 
-cPack‘
-* 
-	g’c
- = 
-äame
-->
-g‘EnÿpsuÏ‹dPack‘
-();
-
-146 
-ASSERT2
-(
-’c
-, "received‡ BaseFrame1609_4s with‚othing inside");
-
-148 ià(
-	g’c
-->
-g‘Kšd
-(è=ğ
-MANEUVER_TYPE
-) {
-
-149 
-Mªeuv”Mes§ge
-* 
-mm
- = 
-check_ªd_ÿ¡
-<Mªeuv”Mes§ge*>(
-äame
-->
-deÿpsuÏ‹
-());
-
-150 ià(
-Upd©ePÏtoÚD©a
-* 
-	gmsg
- = 
-dyÇmic_ÿ¡
-<Upd©ePÏtoÚD©a*>(
-mm
-)) {
-
-151 
-hªdËUpd©ePÏtoÚD©a
-(
-msg
-);
-
-152 
-d–‘e
- 
-	gmsg
-;
-
-154 ià(
-Upd©ePÏtoÚFÜm©iÚ
-* 
-	gmsg
- = 
-dyÇmic_ÿ¡
-<Upd©ePÏtoÚFÜm©iÚ*>(
-mm
-)) {
-
-155 
-hªdËUpd©ePÏtoÚFÜm©iÚ
-(
-msg
-);
-
-156 
-d–‘e
- 
-	gmsg
-;
-
-159 
-ÚMªeuv”Mes§ge
-(
-mm
-);
-
-161 
-d–‘e
- 
-	gäame
-;
-
-164 
-	gBa£Aµ
-::
-hªdËLow”Msg
-(
-msg
-);
-
-168 
-	gDi¡PÏtoÚšgAµ
-::
-hªdËUpd©ePÏtoÚD©a
-(cÚ¡ 
-Upd©ePÏtoÚD©a
-* 
-msg
-)
-
-170 ià(
-g‘PÏtoÚRŞe
-(è!ğ
-PÏtoÚRŞe
-::
-FOLLOWER
-) ;
-
-171 ià(
-	gmsg
-->
-g‘PÏtoÚId
-(è!ğ
-pos™iÚH–³r
-->getPlatoonId()) ;
-
-172 ià(
-	gmsg
-->
-g‘VehişeId
-(è!ğ
-pos™iÚH–³r
-->
-g‘L—d”Id
-()) ;
-
-174 
-hªdËUpd©ePÏtoÚFÜm©iÚ
-(
-msg
-);
-
-175 
-	gLOG
- << 
-	gpos™iÚH–³r
-->
-g‘Id
-(è<< " chªgšg…ÏtoÚ id from " <<…os™iÚH–³r->
-g‘PÏtoÚId
-(è<< "Ø" << 
-	gmsg
-->
-g‘NewPÏtoÚId
-() << "\n";
-
-176 
-	gpos™iÚH–³r
-->
-£tPÏtoÚId
-(
-msg
-->
-g‘NewPÏtoÚId
-());
-
-179 
-	gDi¡PÏtoÚšgAµ
-::
-hªdËUpd©ePÏtoÚFÜm©iÚ
-(cÚ¡ 
-Upd©ePÏtoÚFÜm©iÚ
-* 
-msg
-)
-
-181 ià(
-g‘PÏtoÚRŞe
-(è!ğ
-PÏtoÚRŞe
-::
-FOLLOWER
-) ;
-
-182 ià(
-	gmsg
-->
-g‘PÏtoÚId
-(è!ğ
-pos™iÚH–³r
-->getPlatoonId()) ;
-
-183 ià(
-	gmsg
-->
-g‘VehişeId
-(è!ğ
-pos™iÚH–³r
-->
-g‘L—d”Id
-()) ;
-
-186 
-	gLOG
- << 
-	gpos™iÚH–³r
-->
-g‘Id
-() << " changing…latoon formation: ";
-
-187 
-	g¡d
-::
-veùÜ
-<> 
-f
-;
-
-188 
-	gi
- = 0; i < 
-	gmsg
-->
-g‘PÏtoÚFÜm©iÚA¼aySize
-(); i++) {
-
-189 
-	gf
-.
-push_back
-(
-msg
-->
-g‘PÏtoÚFÜm©iÚ
-(
-i
-));
-
-190 
-	gLOG
- << 
-	gmsg
-->
-g‘PÏtoÚFÜm©iÚ
-(
-i
-) << " ";
-
-192 
-	gLOG
- << "\n";
-
-193 
-	gpos™iÚH–³r
-->
-£tPÏtoÚFÜm©iÚ
-(
-f
-);
-
-196 
-	gDi¡PÏtoÚšgAµ
-::
-£tPÏtoÚRŞe
-(
-PÏtoÚRŞe
- 
-r
-)
-
-198 
-rŞe
- = 
-r
-;
-
-201 
-	gDi¡PÏtoÚšgAµ
-::
-ÚPÏtoÚB—cÚ
-(cÚ¡ 
-PÏtoÚšgB—cÚ
-* 
-pb
-)
-
-203 
-jošMªeuv”
-->
-ÚPÏtoÚB—cÚ
-(
-pb
-);
-
-204 
-	gm”geMªeuv”
-->
-ÚPÏtoÚB—cÚ
-(
-pb
-);
-
-206 
-	gBa£Aµ
-::
-ÚPÏtoÚB—cÚ
-(
-pb
-);
-
-209 
-	gDi¡PÏtoÚšgAµ
-::
-ÚMªeuv”Mes§ge
-(
-Mªeuv”Mes§ge
-* 
-mm
-)
-
-211 ià(
-aùiveMªeuv”
-) {
-
-212 
-aùiveMªeuv”
-->
-ÚMªeuv”Mes§ge
-(
-mm
-);
-
-215 
-	gjošMªeuv”
-->
-ÚMªeuv”Mes§ge
-(
-mm
-);
-
-216 
-	gm”geMªeuv”
-->
-ÚMªeuv”Mes§ge
-(
-mm
-);
-
-218 
-d–‘e
- 
-	gmm
-;
-
-221 
-	gDi¡PÏtoÚšgAµ
-::
-flMªeuv”Mes§ge
-(
-Mªeuv”Mes§ge
-* 
-msg
-, 
-vehişeId
-, 
-¡d
-::
-¡ršg
- 
-ex‹º®Id
-, 
-¶©oÚId
-, 
-de¡š©iÚId
-)
-
-223 
-	gmsg
-->
-£tKšd
-(
-MANEUVER_TYPE
-);
-
-224 
-	gmsg
-->
-£tVehişeId
-(
-vehişeId
-);
-
-225 
-	gmsg
-->
-£tEx‹º®Id
-(
-ex‹º®Id
-.
-c_¡r
-());
-
-226 
-	gmsg
-->
-£tPÏtoÚId
-(
-¶©oÚId
-);
-
-227 
-	gmsg
-->
-£tDe¡š©iÚId
-(
-de¡š©iÚId
-);
-
-230 
-Upd©ePÏtoÚD©a
-* 
-	gDi¡PÏtoÚšgAµ
-::
-ü—‹Upd©ePÏtoÚD©a
-(
-vehişeId
-, 
-¡d
-::
-¡ršg
- 
-ex‹º®Id
-, 
-¶©oÚId
-, 
-de¡š©iÚId
-, 
-¶©oÚS³ed
-, 
-¶©oÚLªe
-, cÚ¡ std::
-veùÜ
-<>& 
-¶©oÚFÜm©iÚ
-, 
-ÃwPÏtoÚId
-)
-
-232 
-Upd©ePÏtoÚD©a
-* 
-	gmsg
- = 
-Ãw
- UpdatePlatoonData("UpdatePlatoonData");
-
-233 
-flMªeuv”Mes§ge
-(
-msg
-, 
-vehişeId
-, 
-ex‹º®Id
-, 
-¶©oÚId
-, 
-de¡š©iÚId
-);
-
-234 
-	gmsg
-->
-£tPÏtoÚS³ed
-(
-¶©oÚS³ed
-);
-
-235 
-	gmsg
-->
-£tPÏtoÚLªe
-(
-¶©oÚLªe
-);
-
-236 
-	gmsg
-->
-£tPÏtoÚFÜm©iÚA¼aySize
-(
-¶©oÚFÜm©iÚ
-.
-size
-());
-
-237 
-	gi
- = 0; i < 
-	g¶©oÚFÜm©iÚ
-.
-size
-(); i++) {
-
-238 
-	gmsg
-->
-£tPÏtoÚFÜm©iÚ
-(
-i
-, 
-¶©oÚFÜm©iÚ
-[i]);
-
-240 
-	gmsg
-->
-£tNewPÏtoÚId
-(
-ÃwPÏtoÚId
-);
-
-241  
-	gmsg
-;
-
-244 
-Upd©ePÏtoÚFÜm©iÚ
-* 
-	gDi¡PÏtoÚšgAµ
-::
-ü—‹Upd©ePÏtoÚFÜm©iÚ
-(
-vehişeId
-, 
-¡d
-::
-¡ršg
- 
-ex‹º®Id
-, 
-¶©oÚId
-, 
-de¡š©iÚId
-, 
-¶©oÚS³ed
-, 
-¶©oÚLªe
-, cÚ¡ std::
-veùÜ
-<>& 
-¶©oÚFÜm©iÚ
-)
-
-246 
-Upd©ePÏtoÚFÜm©iÚ
-* 
-msg
- = 
-Ãw
- UpdatePlatoonFormation("UpdatePlatoonFormation");
-
-247 
-flMªeuv”Mes§ge
-(
-msg
-, 
-vehişeId
-, 
-ex‹º®Id
-, 
-¶©oÚId
-, 
-de¡š©iÚId
-);
-
-248 
-	gmsg
-->
-£tPÏtoÚS³ed
-(
-¶©oÚS³ed
-);
-
-249 
-	gmsg
-->
-£tPÏtoÚLªe
-(
-¶©oÚLªe
-);
-
-250 
-	gmsg
-->
-£tPÏtoÚFÜm©iÚA¼aySize
-(
-¶©oÚFÜm©iÚ
-.
-size
-());
-
-251 
-	gi
- = 0; i < 
-	g¶©oÚFÜm©iÚ
-.
-size
-(); i++) {
-
-252 
-	gmsg
-->
-£tPÏtoÚFÜm©iÚ
-(
-i
-, 
-¶©oÚFÜm©iÚ
-[i]);
-
-254  
-	gmsg
-;
-
-257 
-	gDi¡PÏtoÚšgAµ
-::
-»ûiveSigÇl
-(
-cCompÚ’t
-* 
-¤c
-, 
-simsigÇl_t
- 
-id
-, 
-cObjeù
-* 
-v®ue
-, cObjeù* 
-d‘as
-)
-
-259 ià(
-	gid
- =ğ
-Mac1609_4
-::
-sigR‘r›sExûeded
-) {
-
-260 
-Ba£F¿me1609_4
-* 
-äame
- = 
-check_ªd_ÿ¡
-<Ba£F¿me1609_4*>(
-v®ue
-);
-
-261 
-Mªeuv”Mes§ge
-* 
-	gmm
- = 
-check_ªd_ÿ¡
-<Mªeuv”Mes§ge*>(
-äame
-->
-g‘EnÿpsuÏ‹dPack‘
-());
-
-262 ià(
-	gäame
-) {
-
-263 
-	gjošMªeuv”
-->
-ÚFaedT¿nsmissiÚA‰em±
-(
-mm
-);
-
-264 
-	gm”geMªeuv”
-->
-ÚFaedT¿nsmissiÚA‰em±
-(
-mm
-);
-
-269 
-	gDi¡PÏtoÚšgAµ
-::
-scheduËS–fMsg
-(
-simtime_t
- 
-t
-, 
-cMes§ge
-* 
-msg
-)
-
-271 
-scheduËAt
-(
-t
-, 
-msg
-);
-
-274 
-	gDi¡PÏtoÚšgAµ
-::~
-Di¡PÏtoÚšgAµ
-()
-
-276 
-d–‘e
- 
-jošMªeuv”
-;
-
-277 
-d–‘e
- 
-	gm”geMªeuv”
-;
-
-	@apps/DistPlatooningApp.h
-
-22 #iâdeà
-DISTPLATOONAPP_H_
-
-
-23 
-	#DISTPLATOONAPP_H_
-
-
-	)
-
-25 
-	~<®gÜ™hm
->
-
-26 
-	~<memÜy
->
-
-28 
-	~"¶exe/­ps/Ba£Aµ.h
-"
-
-29 
-	~"¶exe/mªeuv”/JošMªeuv”.h
-"
-
-30 
-	~"¶exe/mªeuv”/Di¡JošAtBack.h
-"
-
-31 
-	~"¶exe/mªeuv”/M”geAtBack.h
-"
-
-33 
-	~"¶exe/mes§ges/Mªeuv”Mes§ge_m.h
-"
-
-34 
-	~"¶exe/mes§ges/Upd©ePÏtoÚD©a_m.h
-"
-
-36 
-	~"¶exe/sûÇrios/Ba£SûÇrio.h
-"
-
-38 
-	~"vešs/moduËs/mob™y/Œaci/T¿CICÚ¡ªts.h
-"
-
-39 
-	~"vešs/moduËs/ut™y/SigÇlMªag”.h
-"
-
-41 
-Çme¥aû
- 
-	g¶exe
- {
-
-44 şas 
-	cPÏtoÚRŞe
- : 
-size_t
- {
-
-45 
-NONE
-,
-
-46 
-	gLEADER
-,
-
-47 
-	gFOLLOWER
-,
-
-48 
-	gJOINER
-
-
-66 şas 
-	cDi¡PÏtoÚšgAµ
- : 
-public
- 
-Ba£Aµ
- {
-
-68 
-public
-:
-
-70 
-Di¡PÏtoÚšgAµ
-()
-
-71 : 
-šMªeuv”
-(
-çl£
-)
-
-72 , 
-aùiveMªeuv”
-(
-nuÎ±r
-)
-
-73 , 
-sûÇrio
-(
-nuÎ±r
-)
-
-74 , 
-rŞe
-(
-PÏtoÚRŞe
-::
-NONE
-)
-
-75 , 
-jošMªeuv”
-(
-nuÎ±r
-)
-
-76 , 
-m”geMªeuv”
-(
-nuÎ±r
-)
-
-81 
-	gvœtu®
- ~
-Di¡PÏtoÚšgAµ
-();
-
-89 cÚ¡ 
-	gPÏtoÚRŞe
-& 
-g‘PÏtoÚRŞe
-() const
-
-91  
-	grŞe
-;
-
-100 
-£tPÏtoÚRŞe
-(
-PÏtoÚRŞe
- 
-r
-);
-
-103 
-vœtu®
- 
-š™Ÿlize
-(
-¡age
-è
-	gov”ride
-;
-
-106 
-vœtu®
- 
-hªdËS–fMsg
-(
-cMes§ge
-* 
-msg
-è
-	gov”ride
-;
-
-115 
-¡¬tJošMªeuv”
-(
-¶©oÚId
-, 
-Ëad”Id
-, 
-pos™iÚ
-);
-
-124 
-¡¬tM”geMªeuv”
-(
-¶©oÚId
-, 
-Ëad”Id
-, 
-pos™iÚ
-);
-
-127 
-abÜtJošMªeuv”
-();
-
-133 
-boŞ
- 
-isInMªeuv”
-() const
-
-135  
-	gšMªeuv”
-;
-
-143 
-£tInMªeuv”
-(
-boŞ
- 
-b
-, 
-Mªeuv”
-* 
-mªeuv”
-)
-
-145 
-	gšMªeuv”
- = 
-b
-;
-
-146 ià(
-	gšMªeuv”
-)
-
-147 
-	gaùiveMªeuv”
- = 
-mªeuv”
-;
-
-149 
-	gaùiveMªeuv”
- = 
-nuÎ±r
-;
-
-152 
-Ba£Pos™iÚH–³r
-* 
-g‘Pos™iÚH–³r
-()
-
-154  
-	gpos™iÚH–³r
-;
-
-157 
-	gvešs
-::
-T¿CIMob™y
-* 
-g‘Mob™y
-()
-
-159  
-mob™y
-;
-
-162 
-	gvešs
-::
-T¿CICommªdIÁ”çû
-* 
-g‘T¿ci
-()
-
-164  
-Œaci
-;
-
-167 
-	gvešs
-::
-T¿CICommªdIÁ”çû
-::
-Vehişe
-* 
-g‘T¿ciVehişe
-()
-
-169  
-ŒaciVehişe
-;
-
-172 
-	gŒaci
-::
-CommªdIÁ”çû
-* 
-g‘PËxeT¿ci
-()
-
-174  
-¶exeT¿ci
-;
-
-177 
-	gŒaci
-::
-CommªdIÁ”çû
-::
-Vehişe
-* 
-g‘PËxeT¿ciVehişe
-()
-
-179  
-¶exeT¿ciVehişe
-.
-g‘
-();
-
-189 
-vœtu®
- 
-£ndUniÿ¡
-(
-cPack‘
-* 
-msg
-, 
-de¡š©iÚ
-);
-
-199 
-flMªeuv”Mes§ge
-(
-Mªeuv”Mes§ge
-* 
-msg
-, 
-vehişeId
-, 
-¡d
-::
-¡ršg
- 
-ex‹º®Id
-, 
-¶©oÚId
-, 
-de¡š©iÚId
-);
-
-211 
-Upd©ePÏtoÚFÜm©iÚ
-* 
-ü—‹Upd©ePÏtoÚFÜm©iÚ
-(
-vehişeId
-, 
-¡d
-::
-¡ršg
- 
-ex‹º®Id
-, 
-¶©oÚId
-, 
-de¡š©iÚId
-, 
-¶©oÚS³ed
-, 
-¶©oÚLªe
-, cÚ¡ std::
-veùÜ
-<>& 
-¶©oÚFÜm©iÚ
-);
-
-224 
-Upd©ePÏtoÚD©a
-* 
-ü—‹Upd©ePÏtoÚD©a
-(
-vehişeId
-, 
-¡d
-::
-¡ršg
- 
-ex‹º®Id
-, 
-¶©oÚId
-, 
-de¡š©iÚId
-, 
-¶©oÚS³ed
-, 
-¶©oÚLªe
-, cÚ¡ std::
-veùÜ
-<>& 
-¶©oÚFÜm©iÚ
-, 
-ÃwPÏtoÚId
-);
-
-232 
-vœtu®
- 
-hªdËUpd©ePÏtoÚD©a
-(cÚ¡ 
-Upd©ePÏtoÚD©a
-* 
-msg
-);
-
-240 
-vœtu®
- 
-hªdËUpd©ePÏtoÚFÜm©iÚ
-(cÚ¡ 
-Upd©ePÏtoÚFÜm©iÚ
-* 
-msg
-);
-
-242 
-boŞ
- 
-isJošAÎowed
-() const;
-
-247 
-ACTIVE_CONTROLLER
- 
-g‘CÚŒŞËr
-();
-
-252 
-g‘T¬g‘Di¡ªû
-(
-¥“d
-);
-
-254 
-	g´Ùeùed
-:
-
-256 
-vœtu®
- 
-hªdËLow”Msg
-(
-cMes§ge
-* 
-msg
-è
-ov”ride
-;
-
-263 
-vœtu®
- 
-ÚPÏtoÚB—cÚ
-(cÚ¡ 
-PÏtoÚšgB—cÚ
-* 
-pb
-è
-	gov”ride
-;
-
-270 
-vœtu®
- 
-ÚMªeuv”Mes§ge
-(
-Mªeuv”Mes§ge
-* 
-mm
-);
-
-273 
-boŞ
- 
-	gšMªeuv”
-;
-
-275 
-Mªeuv”
-* 
-	gaùiveMªeuv”
-;
-
-278 
-vœtu®
- 
-»ûiveSigÇl
-(
-cCompÚ’t
-* 
-¤c
-, 
-simsigÇl_t
- 
-id
-, 
-cObjeù
-* 
-v®ue
-, cObjeù* 
-d‘as
-è
-	gov”ride
-;
-
-281 
-vœtu®
- 
-scheduËS–fMsg
-(
-simtime_t
- 
-t
-, 
-cMes§ge
-* 
-msg
-);
-
-283 
-Ba£SûÇrio
-* 
-	gsûÇrio
-;
-
-285 
-	g´iv©e
-:
-
-287 
-PÏtoÚRŞe
- 
-rŞe
-;
-
-289 
-JošMªeuv”
-* 
-	gjošMªeuv”
-;
-
-291 
-JošMªeuv”
-* 
-	gm”geMªeuv”
-;
-
 	@apps/GeneralPlatooningApp.cc
 
 22 
@@ -4053,19 +2149,11 @@ boŞ
 isJošAÎowed
 () const
 
-74  ((
-rŞe
- =ğ
-PÏtoÚRŞe
-::
-LEADER
- ||„Ş=ğPÏtoÚRŞe::
-NONE
-è&& !
+75  !
 šMªeuv”
-);
+;
 
-77 
+78 
 ACTIVE_CONTROLLER
  
 	gG’”®PÏtoÚšgAµ
@@ -4073,13 +2161,13 @@ ACTIVE_CONTROLLER
 g‘CÚŒŞËr
 ()
 
-79  
+80  
 sûÇrio
 ->
 g‘CÚŒŞËr
 ();
 
-82 
+83 
 	gG’”®PÏtoÚšgAµ
 ::
 g‘T¬g‘Di¡ªû
@@ -4087,7 +2175,7 @@ g‘T¬g‘Di¡ªû
 ¥“d
 )
 
-84  
+85  
 sûÇrio
 ->
 g‘T¬g‘Di¡ªû
@@ -4095,7 +2183,7 @@ g‘T¬g‘Di¡ªû
 ¥“d
 );
 
-87 
+88 
 	gG’”®PÏtoÚšgAµ
 ::
 ¡¬tJošMªeuv”
@@ -4107,7 +2195,7 @@ g‘T¬g‘Di¡ªû
 pos™iÚ
 )
 
-89 
+90 
 ASSERT
 (
 g‘PÏtoÚRŞe
@@ -4117,19 +2205,19 @@ PÏtoÚRŞe
 NONE
 );
 
-90 
+91 
 ASSERT
 (!
 isInMªeuv”
 ());
 
-92 
+93 
 JošMªeuv”P¬am‘”s
  
 	g·¿ms
 ;
 
-93 
+94 
 	g·¿ms
 .
 	g¶©oÚId
@@ -4137,7 +2225,7 @@ JošMªeuv”P¬am‘”s
 ¶©oÚId
 ;
 
-94 
+95 
 	g·¿ms
 .
 	gËad”Id
@@ -4145,7 +2233,7 @@ JošMªeuv”P¬am‘”s
 Ëad”Id
 ;
 
-95 
+96 
 	g·¿ms
 .
 	gpos™iÚ
@@ -4153,7 +2241,7 @@ JošMªeuv”P¬am‘”s
 pos™iÚ
 ;
 
-96 
+97 
 	gjošMªeuv”
 ->
 ¡¬tMªeuv”
@@ -4161,7 +2249,7 @@ pos™iÚ
 ·¿ms
 );
 
-99 
+100 
 	gG’”®PÏtoÚšgAµ
 ::
 ¡¬tM”geMªeuv”
@@ -4173,7 +2261,7 @@ pos™iÚ
 pos™iÚ
 )
 
-101 
+102 
 ASSERT
 (
 g‘PÏtoÚRŞe
@@ -4183,19 +2271,19 @@ PÏtoÚRŞe
 LEADER
 );
 
-102 
+103 
 ASSERT
 (!
 isInMªeuv”
 ());
 
-104 
+105 
 JošMªeuv”P¬am‘”s
  
 	g·¿ms
 ;
 
-105 
+106 
 	g·¿ms
 .
 	g¶©oÚId
@@ -4203,7 +2291,7 @@ JošMªeuv”P¬am‘”s
 ¶©oÚId
 ;
 
-106 
+107 
 	g·¿ms
 .
 	gËad”Id
@@ -4211,7 +2299,7 @@ JošMªeuv”P¬am‘”s
 Ëad”Id
 ;
 
-107 
+108 
 	g·¿ms
 .
 	gpos™iÚ
@@ -4219,7 +2307,7 @@ JošMªeuv”P¬am‘”s
 pos™iÚ
 ;
 
-108 
+109 
 	gm”geMªeuv”
 ->
 ¡¬tMªeuv”
@@ -4227,7 +2315,7 @@ pos™iÚ
 ·¿ms
 );
 
-111 
+112 
 	gG’”®PÏtoÚšgAµ
 ::
 £ndUniÿ¡
@@ -4239,17 +2327,17 @@ msg
 de¡š©iÚ
 )
 
-113 
+114 
 EÁ”_M‘hod_S’t
 ();
 
-114 
+115 
 ke
 (
 msg
 );
 
-115 
+116 
 Ba£F¿me1609_4
 * 
 	gäame
@@ -4261,7 +2349,7 @@ msg
 g‘Kšd
 ());
 
-116 
+117 
 	gäame
 ->
 £tRec›ÁAdd»ss
@@ -4269,7 +2357,7 @@ g‘Kšd
 de¡š©iÚ
 );
 
-117 
+118 
 	gäame
 ->
 £tChªÃlNumb”
@@ -4281,7 +2369,7 @@ ChªÃl
 cch
 ));
 
-118 
+119 
 	gäame
 ->
 ’ÿpsuÏ‹
@@ -4289,7 +2377,7 @@ cch
 msg
 );
 
-120 
+121 
 PËxeIÁ”çûCÚŒŞInfo
 * 
 	gù¾
@@ -4297,7 +2385,7 @@ PËxeIÁ”çûCÚŒŞInfo
 Ãw
  PlexeInterfaceControlInfo();
 
-121 
+122 
 	gù¾
 ->
 £tIÁ”çûs
@@ -4307,7 +2395,7 @@ PËxeRadioIÁ”çûs
 VEINS_11P
 );
 
-122 
+123 
 	gäame
 ->
 £tCÚŒŞInfo
@@ -4315,13 +2403,107 @@ VEINS_11P
 ù¾
 );
 
-123 
+124 
 £ndDown
 (
 äame
 );
 
-126 
+127 
+	gG’”®PÏtoÚšgAµ
+::
+£ndBrßdÿ¡
+(
+cPack‘
+* 
+msg
+)
+
+129 
+EÁ”_M‘hod_S’t
+();
+
+130 
+ke
+(
+msg
+);
+
+131 
+Ba£F¿me1609_4
+* 
+	gäame
+ = 
+Ãw
+ Ba£F¿me1609_4("Ba£F¿me1609_4", 
+msg
+->
+g‘Kšd
+());
+
+132 
+	gäame
+->
+£tRec›ÁAdd»ss
+(
+LAdd»ss
+::
+L2BROADCAST
+());
+
+133 
+	gäame
+->
+£tChªÃlNumb”
+(
+¡©ic_ÿ¡
+<>(
+ChªÃl
+::
+cch
+));
+
+134 
+	gäame
+->
+’ÿpsuÏ‹
+(
+msg
+);
+
+135 
+PËxeIÁ”çûCÚŒŞInfo
+* 
+	gù¾
+ = 
+Ãw
+ PlexeInterfaceControlInfo();
+
+136 
+	gù¾
+->
+£tIÁ”çûs
+(
+PËxeRadioIÁ”çûs
+::
+ALL
+);
+
+137 
+	gäame
+->
+£tCÚŒŞInfo
+(
+ù¾
+);
+
+138 
+£ndDown
+(
+äame
+);
+
+141 
 	gG’”®PÏtoÚšgAµ
 ::
 hªdËLow”Msg
@@ -4331,7 +2513,7 @@ cMes§ge
 msg
 )
 
-128 
+143 
 Ba£F¿me1609_4
 * 
 äame
@@ -4341,7 +2523,7 @@ check_ªd_ÿ¡
 msg
 );
 
-130 
+145 
 cPack‘
 * 
 	g’c
@@ -4351,13 +2533,13 @@ cPack‘
 g‘EnÿpsuÏ‹dPack‘
 ();
 
-131 
+146 
 ASSERT2
 (
 ’c
 , "received‡ BaseFrame1609_4s with‚othing inside");
 
-133 ià(
+148 ià(
 	g’c
 ->
 g‘Kšd
@@ -4365,7 +2547,7 @@ g‘Kšd
 MANEUVER_TYPE
 ) {
 
-134 
+149 
 Mªeuv”Mes§ge
 * 
 mm
@@ -4377,7 +2559,7 @@ check_ªd_ÿ¡
 deÿpsuÏ‹
 ());
 
-135 ià(
+150 ià(
 Upd©ePÏtoÚD©a
 * 
 	gmsg
@@ -4387,19 +2569,19 @@ dyÇmic_ÿ¡
 mm
 )) {
 
-136 
+151 
 hªdËUpd©ePÏtoÚD©a
 (
 msg
 );
 
-137 
+152 
 d–‘e
  
 	gmsg
 ;
 
-139 ià(
+154 ià(
 Upd©ePÏtoÚFÜm©iÚ
 * 
 	gmsg
@@ -4409,31 +2591,31 @@ dyÇmic_ÿ¡
 mm
 )) {
 
-140 
+155 
 hªdËUpd©ePÏtoÚFÜm©iÚ
 (
 msg
 );
 
-141 
+156 
 d–‘e
  
 	gmsg
 ;
 
-144 
+159 
 ÚMªeuv”Mes§ge
 (
 mm
 );
 
-146 
+161 
 d–‘e
  
 	gäame
 ;
 
-149 
+164 
 	gBa£Aµ
 ::
 hªdËLow”Msg
@@ -4441,7 +2623,7 @@ hªdËLow”Msg
 msg
 );
 
-153 
+168 
 	gG’”®PÏtoÚšgAµ
 ::
 hªdËUpd©ePÏtoÚD©a
@@ -4451,7 +2633,7 @@ Upd©ePÏtoÚD©a
 msg
 )
 
-155 ià(
+170 ià(
 g‘PÏtoÚRŞe
 (è!ğ
 PÏtoÚRŞe
@@ -4459,7 +2641,7 @@ PÏtoÚRŞe
 FOLLOWER
 ) ;
 
-156 ià(
+171 ià(
 	gmsg
 ->
 g‘PÏtoÚId
@@ -4467,7 +2649,7 @@ g‘PÏtoÚId
 pos™iÚH–³r
 ->getPlatoonId()) ;
 
-157 ià(
+172 ià(
 	gmsg
 ->
 g‘VehişeId
@@ -4477,13 +2659,13 @@ pos™iÚH–³r
 g‘L—d”Id
 ()) ;
 
-159 
+174 
 hªdËUpd©ePÏtoÚFÜm©iÚ
 (
 msg
 );
 
-160 
+175 
 	gLOG
  << 
 	gpos™iÚH–³r
@@ -4497,7 +2679,7 @@ g‘PÏtoÚId
 g‘NewPÏtoÚId
 () << "\n";
 
-161 
+176 
 	gpos™iÚH–³r
 ->
 £tPÏtoÚId
@@ -4507,7 +2689,7 @@ msg
 g‘NewPÏtoÚId
 ());
 
-164 
+179 
 	gG’”®PÏtoÚšgAµ
 ::
 hªdËUpd©ePÏtoÚFÜm©iÚ
@@ -4517,7 +2699,7 @@ Upd©ePÏtoÚFÜm©iÚ
 msg
 )
 
-166 ià(
+181 ià(
 g‘PÏtoÚRŞe
 (è!ğ
 PÏtoÚRŞe
@@ -4525,7 +2707,7 @@ PÏtoÚRŞe
 FOLLOWER
 ) ;
 
-167 ià(
+182 ià(
 	gmsg
 ->
 g‘PÏtoÚId
@@ -4533,7 +2715,7 @@ g‘PÏtoÚId
 pos™iÚH–³r
 ->getPlatoonId()) ;
 
-168 ià(
+183 ià(
 	gmsg
 ->
 g‘VehişeId
@@ -4543,7 +2725,7 @@ pos™iÚH–³r
 g‘L—d”Id
 ()) ;
 
-171 
+186 
 	gLOG
  << 
 	gpos™iÚH–³r
@@ -4551,7 +2733,7 @@ g‘L—d”Id
 g‘Id
 () << " changing…latoon formation: ";
 
-172 
+187 
 	g¡d
 ::
 veùÜ
@@ -4559,7 +2741,7 @@ veùÜ
 f
 ;
 
-173 
+188 
 	gi
  = 0; i < 
 	gmsg
@@ -4567,7 +2749,7 @@ f
 g‘PÏtoÚFÜm©iÚA¼aySize
 (); i++) {
 
-174 
+189 
 	gf
 .
 push_back
@@ -4579,7 +2761,7 @@ g‘PÏtoÚFÜm©iÚ
 i
 ));
 
-175 
+190 
 	gLOG
  << 
 	gmsg
@@ -4589,11 +2771,11 @@ g‘PÏtoÚFÜm©iÚ
 i
 ) << " ";
 
-177 
+192 
 	gLOG
  << "\n";
 
-178 
+193 
 	gpos™iÚH–³r
 ->
 £tPÏtoÚFÜm©iÚ
@@ -4601,7 +2783,7 @@ i
 f
 );
 
-181 
+196 
 	gG’”®PÏtoÚšgAµ
 ::
 £tPÏtoÚRŞe
@@ -4611,13 +2793,13 @@ PÏtoÚRŞe
 r
 )
 
-183 
+198 
 rŞe
  = 
 r
 ;
 
-186 
+201 
 	gG’”®PÏtoÚšgAµ
 ::
 ÚPÏtoÚB—cÚ
@@ -4627,7 +2809,7 @@ PÏtoÚšgB—cÚ
 pb
 )
 
-188 
+203 
 jošMªeuv”
 ->
 ÚPÏtoÚB—cÚ
@@ -4635,7 +2817,7 @@ jošMªeuv”
 pb
 );
 
-189 
+204 
 	gm”geMªeuv”
 ->
 ÚPÏtoÚB—cÚ
@@ -4643,7 +2825,7 @@ pb
 pb
 );
 
-191 
+206 
 	gBa£Aµ
 ::
 ÚPÏtoÚB—cÚ
@@ -4651,7 +2833,7 @@ pb
 pb
 );
 
-194 
+209 
 	gG’”®PÏtoÚšgAµ
 ::
 ÚMªeuv”Mes§ge
@@ -4661,11 +2843,11 @@ Mªeuv”Mes§ge
 mm
 )
 
-196 ià(
+211 ià(
 aùiveMªeuv”
 ) {
 
-197 
+212 
 aùiveMªeuv”
 ->
 ÚMªeuv”Mes§ge
@@ -4673,7 +2855,7 @@ aùiveMªeuv”
 mm
 );
 
-200 
+215 
 	gjošMªeuv”
 ->
 ÚMªeuv”Mes§ge
@@ -4681,7 +2863,7 @@ mm
 mm
 );
 
-201 
+216 
 	gm”geMªeuv”
 ->
 ÚMªeuv”Mes§ge
@@ -4689,13 +2871,13 @@ mm
 mm
 );
 
-203 
+218 
 d–‘e
  
 	gmm
 ;
 
-206 
+221 
 	gG’”®PÏtoÚšgAµ
 ::
 flMªeuv”Mes§ge
@@ -4717,7 +2899,7 @@ ex‹º®Id
 de¡š©iÚId
 )
 
-208 
+223 
 	gmsg
 ->
 £tKšd
@@ -4725,7 +2907,7 @@ de¡š©iÚId
 MANEUVER_TYPE
 );
 
-209 
+224 
 	gmsg
 ->
 £tVehişeId
@@ -4733,7 +2915,7 @@ MANEUVER_TYPE
 vehişeId
 );
 
-210 
+225 
 	gmsg
 ->
 £tEx‹º®Id
@@ -4743,7 +2925,7 @@ ex‹º®Id
 c_¡r
 ());
 
-211 
+226 
 	gmsg
 ->
 £tPÏtoÚId
@@ -4751,7 +2933,7 @@ c_¡r
 ¶©oÚId
 );
 
-212 
+227 
 	gmsg
 ->
 £tDe¡š©iÚId
@@ -4759,7 +2941,7 @@ c_¡r
 de¡š©iÚId
 );
 
-215 
+230 
 Upd©ePÏtoÚD©a
 * 
 	gG’”®PÏtoÚšgAµ
@@ -4789,7 +2971,7 @@ veùÜ
 ÃwPÏtoÚId
 )
 
-217 
+232 
 Upd©ePÏtoÚD©a
 * 
 	gmsg
@@ -4797,7 +2979,7 @@ Upd©ePÏtoÚD©a
 Ãw
  UpdatePlatoonData("UpdatePlatoonData");
 
-218 
+233 
 flMªeuv”Mes§ge
 (
 msg
@@ -4811,7 +2993,7 @@ ex‹º®Id
 de¡š©iÚId
 );
 
-219 
+234 
 	gmsg
 ->
 £tPÏtoÚS³ed
@@ -4819,7 +3001,7 @@ de¡š©iÚId
 ¶©oÚS³ed
 );
 
-220 
+235 
 	gmsg
 ->
 £tPÏtoÚLªe
@@ -4827,7 +3009,7 @@ de¡š©iÚId
 ¶©oÚLªe
 );
 
-221 
+236 
 	gmsg
 ->
 £tPÏtoÚFÜm©iÚA¼aySize
@@ -4837,7 +3019,7 @@ de¡š©iÚId
 size
 ());
 
-222 
+237 
 	gi
  = 0; i < 
 	g¶©oÚFÜm©iÚ
@@ -4845,7 +3027,7 @@ size
 size
 (); i++) {
 
-223 
+238 
 	gmsg
 ->
 £tPÏtoÚFÜm©iÚ
@@ -4855,7 +3037,7 @@ i
 ¶©oÚFÜm©iÚ
 [i]);
 
-225 
+240 
 	gmsg
 ->
 £tNewPÏtoÚId
@@ -4863,11 +3045,11 @@ i
 ÃwPÏtoÚId
 );
 
-226  
+241  
 	gmsg
 ;
 
-229 
+244 
 Upd©ePÏtoÚFÜm©iÚ
 * 
 	gG’”®PÏtoÚšgAµ
@@ -4895,7 +3077,7 @@ veùÜ
 ¶©oÚFÜm©iÚ
 )
 
-231 
+246 
 Upd©ePÏtoÚFÜm©iÚ
 * 
 msg
@@ -4903,7 +3085,7 @@ msg
 Ãw
  UpdatePlatoonFormation("UpdatePlatoonFormation");
 
-232 
+247 
 flMªeuv”Mes§ge
 (
 msg
@@ -4917,7 +3099,7 @@ ex‹º®Id
 de¡š©iÚId
 );
 
-233 
+248 
 	gmsg
 ->
 £tPÏtoÚS³ed
@@ -4925,7 +3107,7 @@ de¡š©iÚId
 ¶©oÚS³ed
 );
 
-234 
+249 
 	gmsg
 ->
 £tPÏtoÚLªe
@@ -4933,7 +3115,7 @@ de¡š©iÚId
 ¶©oÚLªe
 );
 
-235 
+250 
 	gmsg
 ->
 £tPÏtoÚFÜm©iÚA¼aySize
@@ -4943,7 +3125,7 @@ de¡š©iÚId
 size
 ());
 
-236 
+251 
 	gi
  = 0; i < 
 	g¶©oÚFÜm©iÚ
@@ -4951,7 +3133,7 @@ size
 size
 (); i++) {
 
-237 
+252 
 	gmsg
 ->
 £tPÏtoÚFÜm©iÚ
@@ -4961,11 +3143,11 @@ i
 ¶©oÚFÜm©iÚ
 [i]);
 
-239  
+254  
 	gmsg
 ;
 
-242 
+257 
 	gG’”®PÏtoÚšgAµ
 ::
 »ûiveSigÇl
@@ -4985,7 +3167,7 @@ v®ue
 d‘as
 )
 
-244 ià(
+259 ià(
 	gid
  =ğ
 Mac1609_4
@@ -4993,7 +3175,7 @@ Mac1609_4
 sigR‘r›sExûeded
 ) {
 
-245 
+260 
 Ba£F¿me1609_4
 * 
 äame
@@ -5003,7 +3185,7 @@ check_ªd_ÿ¡
 v®ue
 );
 
-246 
+261 
 Mªeuv”Mes§ge
 * 
 	gmm
@@ -5015,11 +3197,11 @@ check_ªd_ÿ¡
 g‘EnÿpsuÏ‹dPack‘
 ());
 
-247 ià(
+262 ià(
 	gäame
 ) {
 
-248 
+263 
 	gjošMªeuv”
 ->
 ÚFaedT¿nsmissiÚA‰em±
@@ -5027,7 +3209,7 @@ g‘EnÿpsuÏ‹dPack‘
 mm
 );
 
-249 
+264 
 	gm”geMªeuv”
 ->
 ÚFaedT¿nsmissiÚA‰em±
@@ -5035,7 +3217,7 @@ mm
 mm
 );
 
-254 
+269 
 	gG’”®PÏtoÚšgAµ
 ::
 scheduËS–fMsg
@@ -5049,7 +3231,7 @@ cMes§ge
 msg
 )
 
-256 
+271 
 scheduËAt
 (
 t
@@ -5057,19 +3239,19 @@ t
 msg
 );
 
-259 
+274 
 	gG’”®PÏtoÚšgAµ
 ::~
 G’”®PÏtoÚšgAµ
 ()
 
-261 
+276 
 d–‘e
  
 jošMªeuv”
 ;
 
-262 
+277 
 d–‘e
  
 	gm”geMªeuv”
@@ -5413,6 +3595,16 @@ cPack‘
 msg
 , 
 de¡š©iÚ
+);
+
+190 
+vœtu®
+ 
+£ndBrßdÿ¡
+(
+cPack‘
+* 
+msg
 );
 
 199 
@@ -6025,14 +4217,14 @@ msg
 	gov”ride
 ;
 
-	@maneuver/DistJoinAtBack.cc
+	@maneuver/JoinAtBack.cc
 
 21 
-	~"¶exe/mªeuv”/Di¡JošAtBack.h
+	~"¶exe/mªeuv”/JošAtBack.h
 "
 
 22 
-	~"¶exe/­ps/Di¡PÏtoÚšgAµ.h
+	~"¶exe/­ps/G’”®PÏtoÚšgAµ.h
 "
 
 24 
@@ -6042,11 +4234,11 @@ msg
  {
 
 26 
-	gDi¡JošAtBack
+	gJošAtBack
 ::
-Di¡JošAtBack
+JošAtBack
 (
-Di¡PÏtoÚšgAµ
+G’”®PÏtoÚšgAµ
 * 
 ­p
 )
@@ -6068,7 +4260,7 @@ IDLE
 32 
 boŞ
  
-Di¡JošAtBack
+JošAtBack
 ::
 š™ŸlizeJošMªeuv”
 (cÚ¡ * 
@@ -6176,7 +4368,7 @@ J_WAIT_REPLY
 ;
 
 59 
-	gDi¡JošAtBack
+	gJošAtBack
 ::
 ¡¬tMªeuv”
 (cÚ¡ * 
@@ -6246,13 +4438,13 @@ y
 );
 
 70 
-	gDi¡JošAtBack
+	gJošAtBack
 ::
 abÜtMªeuv”
 ()
 
 74 
-Di¡JošAtBack
+JošAtBack
 ::
 ÚPÏtoÚB—cÚ
 (cÚ¡ 
@@ -6484,7 +4676,7 @@ J_WAIT_JOIN
 ;
 
 109 
-	gDi¡JošAtBack
+	gJošAtBack
 ::
 ÚFaedT¿nsmissiÚA‰em±
 (cÚ¡ 
@@ -6506,7 +4698,7 @@ g‘Name
 114 
 boŞ
  
-	gDi¡JošAtBack
+	gJošAtBack
 ::
 ´oûssJošReque¡
 (cÚ¡ 
@@ -6525,19 +4717,11 @@ pos™iÚH–³r
 çl£
 ;
 
-118 ià(
-	g­p
+119 ià(
+	gpos™iÚH–³r
 ->
-g‘PÏtoÚRŞe
-(è!ğ
-PÏtoÚRŞe
-::
-LEADER
- && 
-­p
-->g‘PÏtoÚRŞe(è!ğPÏtoÚRŞe::
-NONE
-è 
+g‘BackId
+(è!ğ-1è 
 çl£
 ;
 
@@ -6615,16 +4799,6 @@ g‘VehişeId
 this
 );
 
-130 
-	g­p
-->
-£tPÏtoÚRŞe
-(
-PÏtoÚRŞe
-::
-LEADER
-);
-
 133 
 	g¶exeT¿ciVehişe
 ->
@@ -6698,7 +4872,7 @@ L_WAIT_JOINER_IN_POSITION
 ;
 
 151 
-	gDi¡JošAtBack
+	gJošAtBack
 ::
 hªdËJošPÏtoÚReque¡
 (cÚ¡ 
@@ -6763,8 +4937,8 @@ još”D©a
 još”Id
 );
 
-160 
-	gDi¡JošAtBack
+161 
+	gJošAtBack
 ::
 hªdËM”gePÏtoÚReque¡
 (cÚ¡ 
@@ -6773,8 +4947,8 @@ M”gePÏtoÚReque¡
 msg
 )
 
-165 
-Di¡JošAtBack
+166 
+JošAtBack
 ::
 hªdËJošPÏtoÚRe¥Ú£
 (cÚ¡ 
@@ -6783,7 +4957,7 @@ JošPÏtoÚRe¥Ú£
 msg
 )
 
-167 ià(
+168 ià(
 ­p
 ->
 g‘PÏtoÚRŞe
@@ -6793,27 +4967,27 @@ PÏtoÚRŞe
 JOINER
 ) ;
 
-168 ià(
+169 ià(
 	gjošMªeuv”S‹
  !ğ
 JošMªeuv”S‹
 ::
 J_WAIT_REPLY
-) ;
-
-169 ià(
-	gmsg
-->
-g‘PÏtoÚId
-(è!ğ
-rg‘PÏtoÚD©a
-->
-¶©oÚId
 ) ;
 
 170 ià(
 	gmsg
 ->
+g‘PÏtoÚId
+(è!ğ
+rg‘PÏtoÚD©a
+->
+¶©oÚId
+) ;
+
+171 ià(
+	gmsg
+->
 g‘VehişeId
 (è!ğ
 rg‘PÏtoÚD©a
@@ -6821,13 +4995,13 @@ g‘VehişeId
 ¶©oÚL—d”
 ) ;
 
-173 ià(
+174 ià(
 	gmsg
 ->
 g‘P”m™‹d
 ()) {
 
-174 
+175 
 	gLOG
  << 
 	gpos™iÚH–³r
@@ -6835,7 +5009,7 @@ g‘P”m™‹d
 g‘Id
 () << "„eceived JoinPlatoonResponse (allowedo join)\n";
 
-176 
+177 
 	gjošMªeuv”S‹
  = 
 JošMªeuv”S‹
@@ -6843,7 +5017,7 @@ JošMªeuv”S‹
 J_WAIT_INFORMATION
 ;
 
-178 
+179 
 	g¶exeT¿ciVehişe
 ->
 £tFixedLªe
@@ -6853,7 +5027,7 @@ J_WAIT_INFORMATION
 g‘LªeIndex
 ());
 
-181 
+182 
 	gLOG
  << 
 	gpos™iÚH–³r
@@ -6861,7 +5035,7 @@ g‘LªeIndex
 g‘Id
 () << "„eceived JoinPlatoonResponse (not‡llowedo join)\n";
 
-183 
+184 
 	gjošMªeuv”S‹
  = 
 JošMªeuv”S‹
@@ -6869,7 +5043,7 @@ JošMªeuv”S‹
 IDLE
 ;
 
-184 
+185 
 	g­p
 ->
 £tPÏtoÚRŞe
@@ -6879,7 +5053,7 @@ PÏtoÚRŞe
 NONE
 );
 
-185 
+186 
 	g­p
 ->
 £tInMªeuv”
@@ -6889,8 +5063,8 @@ NONE
 nuÎ±r
 );
 
-189 
-	gDi¡JošAtBack
+190 
+	gJošAtBack
 ::
 hªdËMoveToPos™iÚ
 (cÚ¡ 
@@ -6899,7 +5073,7 @@ MoveToPos™iÚ
 msg
 )
 
-191 ià(
+192 ià(
 ­p
 ->
 g‘PÏtoÚRŞe
@@ -6909,27 +5083,27 @@ PÏtoÚRŞe
 JOINER
 ) ;
 
-192 ià(
+193 ià(
 	gjošMªeuv”S‹
  !ğ
 JošMªeuv”S‹
 ::
 J_WAIT_INFORMATION
-) ;
-
-193 ià(
-	gmsg
-->
-g‘PÏtoÚId
-(è!ğ
-rg‘PÏtoÚD©a
-->
-¶©oÚId
 ) ;
 
 194 ià(
 	gmsg
 ->
+g‘PÏtoÚId
+(è!ğ
+rg‘PÏtoÚD©a
+->
+¶©oÚId
+) ;
+
+195 ià(
+	gmsg
+->
 g‘VehişeId
 (è!ğ
 rg‘PÏtoÚD©a
@@ -6937,7 +5111,7 @@ g‘VehişeId
 ¶©oÚL—d”
 ) ;
 
-198 
+199 
 	grg‘PÏtoÚD©a
 ->
 äom
@@ -6945,7 +5119,7 @@ g‘VehişeId
 msg
 );
 
-204 
+205 
 	gcu¼’tLªe
  = 
 ŒaciVehişe
@@ -6953,7 +5127,7 @@ msg
 g‘LªeIndex
 ();
 
-205 ià(
+206 ià(
 	gcu¼’tLªe
  !ğ
 rg‘PÏtoÚD©a
@@ -6961,7 +5135,7 @@ g‘LªeIndex
 ¶©oÚLªe
 ) {
 
-206 
+207 
 ¶exeT¿ciVehişe
 ->
 £tFixedLªe
@@ -6971,7 +5145,7 @@ g‘LªeIndex
 ¶©oÚLªe
 );
 
-210 
+211 
 	gLOG
  << 
 	gpos™iÚH–³r
@@ -6979,13 +5153,13 @@ g‘LªeIndex
 g‘Id
 () << "„eceived MoveToPosition. Increasing speedo‡pproachhe…latoon\n";
 
-214 
+215 
 	g¶exeT¿ciVehişe
 ->
 £tCACCCÚ¡ªtS·cšg
 (15);
 
-217 
+218 
 	g¶exeT¿ciVehişe
 ->
 £tL—d”VehişeFakeD©a
@@ -6995,7 +5169,7 @@ g‘Id
 ¶©oÚS³ed
 );
 
-218 
+219 
 	g¶exeT¿ciVehişe
 ->
 £tFrÚtVehişeFakeD©a
@@ -7005,7 +5179,7 @@ g‘Id
 ¶©oÚS³ed
 , 15);
 
-220 
+221 
 	g¶exeT¿ciVehişe
 ->
 £tCrui£CÚŒŞDesœedS³ed
@@ -7015,7 +5189,7 @@ g‘Id
 ¶©oÚS³ed
  + (30 / 3.6));
 
-221 
+222 
 	g¶exeT¿ciVehişe
 ->
 £tAùiveCÚŒŞËr
@@ -7023,7 +5197,7 @@ g‘Id
 FAKED_CACC
 );
 
-223 
+224 
 	gjošMªeuv”S‹
  = 
 JošMªeuv”S‹
@@ -7031,8 +5205,8 @@ JošMªeuv”S‹
 J_MOVE_IN_POSITION
 ;
 
-226 
-	gDi¡JošAtBack
+227 
+	gJošAtBack
 ::
 hªdËMoveToPos™iÚAck
 (cÚ¡ 
@@ -7041,7 +5215,7 @@ MoveToPos™iÚAck
 msg
 )
 
-228 ià(
+229 ià(
 ­p
 ->
 g‘PÏtoÚRŞe
@@ -7051,7 +5225,7 @@ PÏtoÚRŞe
 LEADER
 ) ;
 
-229 ià(
+230 ià(
 	gjošMªeuv”S‹
  !ğ
 JošMªeuv”S‹
@@ -7059,7 +5233,7 @@ JošMªeuv”S‹
 L_WAIT_JOINER_IN_POSITION
 ) ;
 
-230 ià(
+231 ià(
 	gmsg
 ->
 g‘PÏtoÚId
@@ -7067,7 +5241,7 @@ g‘PÏtoÚId
 pos™iÚH–³r
 ->getPlatoonId()) ;
 
-231 ià(
+232 ià(
 	gmsg
 ->
 g‘VehişeId
@@ -7077,7 +5251,7 @@ još”D©a
 još”Id
 ) ;
 
-233 
+234 
 	gi
  = 0; i < 
 	gmsg
@@ -7099,7 +5273,7 @@ još”D©a
 ©
 (i));
 
-238 
+239 
 	gLOG
  << 
 	gpos™iÚH–³r
@@ -7111,7 +5285,7 @@ g‘Id
 	gjoš”Id
  << "\n";
 
-239 
+240 
 JošFÜm©iÚ
 * 
 	gjf
@@ -7139,7 +5313,7 @@ g‘LªeIndex
 ÃwFÜm©iÚ
 );
 
-240 
+241 
 	g­p
 ->
 £ndUniÿ¡
@@ -7151,7 +5325,7 @@ još”D©a
 još”Id
 );
 
-241 
+242 
 	gjošMªeuv”S‹
  = 
 JošMªeuv”S‹
@@ -7159,8 +5333,8 @@ JošMªeuv”S‹
 L_WAIT_JOINER_TO_JOIN
 ;
 
-244 
-	gDi¡JošAtBack
+245 
+	gJošAtBack
 ::
 hªdËJošFÜm©iÚ
 (cÚ¡ 
@@ -7169,7 +5343,7 @@ JošFÜm©iÚ
 msg
 )
 
-246 ià(
+247 ià(
 ­p
 ->
 g‘PÏtoÚRŞe
@@ -7179,27 +5353,27 @@ PÏtoÚRŞe
 JOINER
 ) ;
 
-247 ià(
+248 ià(
 	gjošMªeuv”S‹
  !ğ
 JošMªeuv”S‹
 ::
 J_WAIT_JOIN
-) ;
-
-248 ià(
-	gmsg
-->
-g‘PÏtoÚId
-(è!ğ
-rg‘PÏtoÚD©a
-->
-¶©oÚId
 ) ;
 
 249 ià(
 	gmsg
 ->
+g‘PÏtoÚId
+(è!ğ
+rg‘PÏtoÚD©a
+->
+¶©oÚId
+) ;
+
+250 ià(
+	gmsg
+->
 g‘VehişeId
 (è!ğ
 rg‘PÏtoÚD©a
@@ -7207,7 +5381,7 @@ g‘VehişeId
 ¶©oÚL—d”
 ) ;
 
-251 
+252 
 	gi
  = 0; i < 
 	gmsg
@@ -7227,7 +5401,7 @@ i
 ÃwFÜm©iÚ
 [i]);
 
-255 
+256 
 	g¶exeT¿ciVehişe
 ->
 £tAùiveCÚŒŞËr
@@ -7237,7 +5411,7 @@ i
 g‘CÚŒŞËr
 ());
 
-257 ià(
+258 ià(
 	g­p
 ->
 g‘CÚŒŞËr
@@ -7259,7 +5433,7 @@ g‘T¬g‘Di¡ªû
 ¶©oÚS³ed
 ));
 
-260 
+261 
 	gpos™iÚH–³r
 ->
 £tPÏtoÚId
@@ -7269,7 +5443,7 @@ msg
 g‘PÏtoÚId
 ());
 
-261 
+262 
 	gpos™iÚH–³r
 ->
 £tPÏtoÚLªe
@@ -7277,2113 +5451,9 @@ g‘PÏtoÚId
 rg‘PÏtoÚD©a
 ->
 ¶©oÚLªe
-);
-
-262 
-	gpos™iÚH–³r
-->
-£tPÏtoÚS³ed
-(
-rg‘PÏtoÚD©a
-->
-¶©oÚS³ed
 );
 
 263 
-	g¡d
-::
-veùÜ
-<> 
-fÜm©iÚ
-;
-
-264 
-	gi
- = 0; i < 
-	gmsg
-->
-g‘NewPÏtoÚFÜm©iÚA¼aySize
-(); i++è
-	gfÜm©iÚ
-.
-push_back
-(
-msg
-->
-g‘NewPÏtoÚFÜm©iÚ
-(
-i
-));
-
-265 
-	gpos™iÚH–³r
-->
-£tPÏtoÚFÜm©iÚ
-(
-fÜm©iÚ
-);
-
-268 
-	gLOG
- << 
-	gpos™iÚH–³r
-->
-g‘Id
-(è<< "„eûived JošFÜm©iÚ. S’dšg JošFÜm©iÚAck‡nd…”fÜmšg fš®‡µrßchØ¶©oÚ " <<…os™iÚH–³r->
-g‘PÏtoÚId
-() << "\n";
-
-269 
-JošFÜm©iÚAck
-* 
-	gjç
- = 
-ü—‹JošFÜm©iÚAck
-(
-pos™iÚH–³r
-->
-g‘Id
-(),…os™iÚH–³r->
-g‘Ex‹º®Id
-(),…os™iÚH–³r->
-g‘PÏtoÚId
-(), 
-rg‘PÏtoÚD©a
-->
-¶©oÚL—d”
-,…os™iÚH–³r->
-g‘PÏtoÚS³ed
-(), 
-ŒaciVehişe
-->
-g‘LªeIndex
-(), 
-fÜm©iÚ
-);
-
-270 
-	g­p
-->
-£ndUniÿ¡
-(
-jç
-, 
-pos™iÚH–³r
-->
-g‘L—d”Id
-());
-
-272 
-	g­p
-->
-£tPÏtoÚRŞe
-(
-PÏtoÚRŞe
-::
-FOLLOWER
-);
-
-273 
-	gjošMªeuv”S‹
- = 
-JošMªeuv”S‹
-::
-IDLE
-;
-
-275 
-	g­p
-->
-£tInMªeuv”
-(
-çl£
-, 
-nuÎ±r
-);
-
-280 
-	gDi¡JošAtBack
-::
-hªdËJošFÜm©iÚAck
-(cÚ¡ 
-JošFÜm©iÚAck
-* 
-msg
-)
-
-282 ià(
-­p
-->
-g‘PÏtoÚRŞe
-(è!ğ
-PÏtoÚRŞe
-::
-LEADER
-) ;
-
-283 ià(
-	gjošMªeuv”S‹
- !ğ
-JošMªeuv”S‹
-::
-L_WAIT_JOINER_TO_JOIN
-) ;
-
-284 ià(
-	gmsg
-->
-g‘PÏtoÚId
-(è!ğ
-pos™iÚH–³r
-->getPlatoonId()) ;
-
-285 ià(
-	gmsg
-->
-g‘VehişeId
-(è!ğ
-još”D©a
-->
-još”Id
-) ;
-
-286 
-	gi
- = 0; i < 
-	gmsg
-->
-g‘NewPÏtoÚFÜm©iÚA¼aySize
-(); i++è
-ASSERT
-(
-msg
-->
-g‘NewPÏtoÚFÜm©iÚ
-(
-i
-è=ğ
-još”D©a
-->
-ÃwFÜm©iÚ
-.
-©
-(i));
-
-290 
-	gpos™iÚH–³r
-->
-£tPÏtoÚFÜm©iÚ
-(
-još”D©a
-->
-ÃwFÜm©iÚ
-);
-
-292 
-	gLOG
- << 
-	gpos™iÚH–³r
-->
-g‘Id
-() << "„eceived JoinFormationAck. Sending UpdatePlatoonFormationo‡ll members\n";
-
-294 
-	gi
- = 1; i < 
-	gpos™iÚH–³r
-->
-g‘PÏtoÚSize
-(); i++) {
-
-295 
-Upd©ePÏtoÚFÜm©iÚ
-* 
-	gdup
- = 
-­p
-->
-ü—‹Upd©ePÏtoÚFÜm©iÚ
-(
-pos™iÚH–³r
-->
-g‘Id
-(),…os™iÚH–³r->
-g‘Ex‹º®Id
-(),…os™iÚH–³r->
-g‘PÏtoÚId
-(), -1,…os™iÚH–³r->
-g‘PÏtoÚS³ed
-(), 
-ŒaciVehişe
-->
-g‘LªeIndex
-(), 
-još”D©a
-->
-ÃwFÜm©iÚ
-);
-
-296 
-	gde¡
- = 
-pos™iÚH–³r
-->
-g‘Memb”Id
-(
-i
-);
-
-297 
-	gdup
-->
-£tDe¡š©iÚId
-(
-de¡
-);
-
-298 
-	g­p
-->
-£ndUniÿ¡
-(
-dup
-, 
-de¡
-);
-
-301 
-	gjošMªeuv”S‹
- = 
-JošMªeuv”S‹
-::
-IDLE
-;
-
-302 
-	g­p
-->
-£tInMªeuv”
-(
-çl£
-, 
-nuÎ±r
-);
-
-	@maneuver/DistJoinAtBack.h
-
-22 #iâdeà
-DISTJOINATBACK_H_
-
-
-23 
-	#DISTJOINATBACK_H_
-
-
-	)
-
-25 
-	~<®gÜ™hm
->
-
-27 
-	~"¶exe/mªeuv”/JošMªeuv”.h
-"
-
-28 
-	~"¶exe/ut™›s/Ba£Pos™iÚH–³r.h
-"
-
-30 
-	~"vešs/moduËs/mob™y/Œaci/T¿CICÚ¡ªts.h
-"
-
-31 
-	~"vešs/ba£/uts/CoÜd.h
-"
-
-33 
-usšg
- 
-Çme¥aû
- 
-	gvešs
-;
-
-35 
-Çme¥aû
- 
-	g¶exe
- {
-
-37 şas 
-	cDi¡JošAtBack
- : 
-public
- 
-JošMªeuv”
- {
-
-39 
-public
-:
-
-45 
-Di¡JošAtBack
-(
-Di¡PÏtoÚšgAµ
-* 
-­p
-);
-
-46 
-	gvœtu®
- ~
-Di¡JošAtBack
-(){};
-
-53 
-vœtu®
- 
-¡¬tMªeuv”
-(cÚ¡ * 
-·¿m‘”s
-è
-	gov”ride
-;
-
-59 
-vœtu®
- 
-abÜtMªeuv”
-(è
-	gov”ride
-;
-
-65 
-vœtu®
- 
-ÚPÏtoÚB—cÚ
-(cÚ¡ 
-PÏtoÚšgB—cÚ
-* 
-pb
-è
-	gov”ride
-;
-
-71 
-vœtu®
- 
-ÚFaedT¿nsmissiÚA‰em±
-(cÚ¡ 
-Mªeuv”Mes§ge
-* 
-mm
-è
-	gov”ride
-;
-
-78 
-vœtu®
- 
-hªdËJošPÏtoÚReque¡
-(cÚ¡ 
-JošPÏtoÚReque¡
-* 
-msg
-è
-	gov”ride
-;
-
-85 
-vœtu®
- 
-hªdËM”gePÏtoÚReque¡
-(cÚ¡ 
-M”gePÏtoÚReque¡
-* 
-msg
-è
-	gov”ride
-;
-
-92 
-vœtu®
- 
-hªdËJošPÏtoÚRe¥Ú£
-(cÚ¡ 
-JošPÏtoÚRe¥Ú£
-* 
-msg
-è
-	gov”ride
-;
-
-99 
-vœtu®
- 
-hªdËMoveToPos™iÚ
-(cÚ¡ 
-MoveToPos™iÚ
-* 
-msg
-è
-	gov”ride
-;
-
-106 
-vœtu®
- 
-hªdËMoveToPos™iÚAck
-(cÚ¡ 
-MoveToPos™iÚAck
-* 
-msg
-è
-	gov”ride
-;
-
-113 
-vœtu®
- 
-hªdËJošFÜm©iÚ
-(cÚ¡ 
-JošFÜm©iÚ
-* 
-msg
-è
-	gov”ride
-;
-
-120 
-vœtu®
- 
-hªdËJošFÜm©iÚAck
-(cÚ¡ 
-JošFÜm©iÚAck
-* 
-msg
-è
-	gov”ride
-;
-
-122 
-	g´Ùeùed
-:
-
-124 şas 
-	cJošMªeuv”S‹
- {
-
-125 
-IDLE
-,
-
-127 
-	gJ_WAIT_REPLY
-,
-
-128 
-	gJ_WAIT_INFORMATION
-,
-
-129 
-	gJ_MOVE_IN_POSITION
-,
-
-130 
-	gJ_WAIT_JOIN
-,
-
-132 
-	gL_WAIT_JOINER_IN_POSITION
-,
-
-133 
-	gL_WAIT_JOINER_TO_JOIN
-,
-
-137 
-	sT¬g‘PÏtoÚD©a
- {
-
-138 
-	g¶©oÚId
-;
-
-139 
-	g¶©oÚL—d”
-;
-
-140 
-	g¶©oÚLªe
-;
-
-141 
-	g¶©oÚS³ed
-;
-
-142 
-	gjošIndex
-;
-
-143 
-	g¡d
-::
-veùÜ
-<> 
-ÃwFÜm©iÚ
-;
-
-144 
-CoÜd
- 
-	gÏ¡FrÚtPos
-;
-
-147 
-T¬g‘PÏtoÚD©a
-()
-
-149 
-	g¶©oÚId
- = 
-INVALID_PLATOON_ID
-;
-
-150 
-	g¶©oÚL—d”
- = 
-T¿CICÚ¡ªts
-::
-INVALID_INT_VALUE
-;
-
-151 
-	g¶©oÚLªe
- = 
-T¿CICÚ¡ªts
-::
-INVALID_INT_VALUE
-;
-
-152 
-	g¶©oÚS³ed
- = 
-T¿CICÚ¡ªts
-::
-INVALID_DOUBLE_VALUE
-;
-
-153 
-	gjošIndex
- = 
-T¿CICÚ¡ªts
-::
-INVALID_INT_VALUE
-;
-
-163 
-äom
-(cÚ¡ 
-MoveToPos™iÚ
-* 
-msg
-)
-
-165 
-	g¶©oÚId
- = 
-msg
-->
-g‘PÏtoÚId
-();
-
-166 
-	g¶©oÚL—d”
- = 
-msg
-->
-g‘VehişeId
-();
-
-167 
-	g¶©oÚLªe
- = 
-msg
-->
-g‘PÏtoÚLªe
-();
-
-168 
-	g¶©oÚS³ed
- = 
-msg
-->
-g‘PÏtoÚS³ed
-();
-
-169 
-	gÃwFÜm©iÚ
-.
-»size
-(
-msg
-->
-g‘NewPÏtoÚFÜm©iÚA¼aySize
-());
-
-170 
-	gi
- = 0; i < 
-	gmsg
-->
-g‘NewPÏtoÚFÜm©iÚA¼aySize
-(); i++) {
-
-171 
-	gÃwFÜm©iÚ
-[
-i
-] = 
-msg
-->
-g‘NewPÏtoÚFÜm©iÚ
-(i);
-
-173 cÚ¡‡utØ
-	g™
- = 
-¡d
-::
-fšd
-(
-ÃwFÜm©iÚ
-.
-begš
-(),‚ewFÜm©iÚ.
-’d
-(), 
-msg
-->
-g‘De¡š©iÚId
-());
-
-174 ià(
-	g™
- !ğ
-ÃwFÜm©iÚ
-.
-’d
-()) {
-
-175 
-jošIndex
- = 
-¡d
-::
-di¡ªû
-(
-ÃwFÜm©iÚ
-.
-begš
-(), 
-™
-);
-
-176 
-ASSERT
-(
-ÃwFÜm©iÚ
-.
-©
-(
-jošIndex
-è=ğ
-msg
-->
-g‘De¡š©iÚId
-());
-
-185 
-äÚtId
-() const
-
-187  
-	gÃwFÜm©iÚ
-.
-©
-(
-jošIndex
- - 1);
-
-192 
-	sJoš”D©a
- {
-
-193 
-	gjoš”Id
-;
-
-194 
-	gjoš”Lªe
-;
-
-195 
-	g¡d
-::
-veùÜ
-<> 
-ÃwFÜm©iÚ
-;
-
-198 
-Još”D©a
-()
-
-200 
-	gjoš”Id
- = 
-T¿CICÚ¡ªts
-::
-INVALID_INT_VALUE
-;
-
-201 
-	gjoš”Lªe
- = 
-T¿CICÚ¡ªts
-::
-INVALID_INT_VALUE
-;
-
-211 
-äom
-(cÚ¡ 
-JošPÏtoÚReque¡
-* 
-msg
-)
-
-213 
-	gjoš”Id
- = 
-msg
-->
-g‘VehişeId
-();
-
-214 
-	gjoš”Lªe
- = 
-msg
-->
-g‘Cu¼’tLªeIndex
-();
-
-219 
-JošMªeuv”S‹
- 
-	gjošMªeuv”S‹
-;
-
-222 
-	g¡d
-::
-unique_±r
-<
-T¬g‘PÏtoÚD©a
-> 
-rg‘PÏtoÚD©a
-;
-
-225 
-	g¡d
-::
-unique_±r
-<
-Još”D©a
-> 
-još”D©a
-;
-
-228 
-boŞ
- 
-š™ŸlizeJošMªeuv”
-(cÚ¡ * 
-·¿m‘”s
-);
-
-231 
-boŞ
- 
-´oûssJošReque¡
-(cÚ¡ 
-JošPÏtoÚReque¡
-* 
-msg
-);
-
-	@maneuver/JoinAtBack.cc
-
-21 
-	~"¶exe/mªeuv”/JošAtBack.h
-"
-
-22 
-	~"¶exe/­ps/G’”®PÏtoÚšgAµ.h
-"
-
-24 
-Çme¥aû
- 
-	g¶exe
- {
-
-26 
-	gJošAtBack
-::
-JošAtBack
-(
-G’”®PÏtoÚšgAµ
-* 
-­p
-)
-
-27 : 
-JošMªeuv”
-(
-­p
-)
-
-28 , 
-jošMªeuv”S‹
-(
-JošMªeuv”S‹
-::
-IDLE
-)
-
-32 
-boŞ
- 
-JošAtBack
-::
-š™ŸlizeJošMªeuv”
-(cÚ¡ * 
-·¿m‘”s
-)
-
-34 
-JošMªeuv”P¬am‘”s
-* 
-·rs
- = (JošMªeuv”P¬am‘”s*è
-·¿m‘”s
-;
-
-35 ià(
-	gjošMªeuv”S‹
- =ğ
-JošMªeuv”S‹
-::
-IDLE
-) {
-
-36 ià(
-­p
-->
-isInMªeuv”
-()) {
-
-37 
-LOG
- << 
-pos™iÚH–³r
-->
-g‘Id
-() << " cannot beginhe maneuver because‡lready involved in‡nother one\n";
-
-38  
-	gçl£
-;
-
-41 
-	g­p
-->
-£tInMªeuv”
-(
-Œue
-, 
-this
-);
-
-42 
-	g­p
-->
-£tPÏtoÚRŞe
-(
-PÏtoÚRŞe
-::
-JOINER
-);
-
-45 
-	grg‘PÏtoÚD©a
-.
-»£t
-(
-Ãw
- 
-T¬g‘PÏtoÚD©a
-());
-
-46 
-	grg‘PÏtoÚD©a
-->
-	g¶©oÚId
- = 
-·rs
-->
-¶©oÚId
-;
-
-47 
-	grg‘PÏtoÚD©a
-->
-	g¶©oÚL—d”
- = 
-·rs
-->
-Ëad”Id
-;
-
-50 
-	gjošMªeuv”S‹
- = 
-JošMªeuv”S‹
-::
-J_WAIT_REPLY
-;
-
-52  
-	gŒue
-;
-
-55  
-	gçl£
-;
-
-59 
-	gJošAtBack
-::
-¡¬tMªeuv”
-(cÚ¡ * 
-·¿m‘”s
-)
-
-61 ià(
-š™ŸlizeJošMªeuv”
-(
-·¿m‘”s
-)) {
-
-63 
-LOG
- << 
-pos™iÚH–³r
-->
-g‘Id
-(è<< " s’dšg JošPÏtoÚReque¡ØtØ¶©oÚ w™h id " << 
-rg‘PÏtoÚD©a
-->
-¶©oÚId
- << " (Ëad” id " <<¬g‘PÏtoÚD©a->
-¶©oÚL—d”
- << ")\n";
-
-64 
-JošPÏtoÚReque¡
-* 
-	g»q
- = 
-ü—‹JošPÏtoÚReque¡
-(
-pos™iÚH–³r
-->
-g‘Id
-(),…os™iÚH–³r->
-g‘Ex‹º®Id
-(), 
-rg‘PÏtoÚD©a
-->
-¶©oÚId
-,¬g‘PÏtoÚD©a->
-¶©oÚL—d”
-, 
-ŒaciVehişe
-->
-g‘LªeIndex
-(), 
-mob™y
-->
-g‘Pos™iÚAt
-(
-simTime
-()).
-x
-, mob™y->g‘Pos™iÚAt(simTime()).
-y
-);
-
-65 
-	g­p
-->
-£ndUniÿ¡
-(
-»q
-, 
-rg‘PÏtoÚD©a
-->
-¶©oÚL—d”
-);
-
-69 
-	gJošAtBack
-::
-abÜtMªeuv”
-()
-
-73 
-JošAtBack
-::
-ÚPÏtoÚB—cÚ
-(cÚ¡ 
-PÏtoÚšgB—cÚ
-* 
-pb
-)
-
-75 ià(
-jošMªeuv”S‹
- =ğ
-JošMªeuv”S‹
-::
-J_MOVE_IN_POSITION
-) {
-
-77 
-ASSERT
-(
-­p
-->
-g‘PÏtoÚRŞe
-(è=ğ
-PÏtoÚRŞe
-::
-JOINER
-);
-
-80 ià(
-	gpb
-->
-g‘VehişeId
-(è=ğ
-rg‘PÏtoÚD©a
-->
-ÃwFÜm©iÚ
-.
-©
-(0)) {
-
-81 
-¶exeT¿ciVehişe
-->
-£tL—d”VehişeFakeD©a
-(
-pb
-->
-g‘CÚŒŞËrAcûË¿tiÚ
-(),…b->
-g‘AcûË¿tiÚ
-(),…b->
-g‘S³ed
-());
-
-84 
-	gäÚtPos™iÚ
- = 
-rg‘PÏtoÚD©a
-->
-jošIndex
- - 1;
-
-85 
-	gäÚtId
- = 
-rg‘PÏtoÚD©a
-->
-ÃwFÜm©iÚ
-.
-©
-(
-äÚtPos™iÚ
-);
-
-86 ià(
-	gpb
-->
-g‘VehişeId
-(è=ğ
-äÚtId
-) {
-
-88 
-CoÜd
- 
-äÚtPos™iÚ
-(
-pb
-->
-g‘Pos™iÚX
-(),…b->
-g‘Pos™iÚY
-(), 0);
-
-90 
-	gvešs
-::
-T¿CICoÜd
- 
-ŒaciPos™iÚ
- = 
-mob™y
-->
-g‘Mªag”
-()->
-g‘CÚÃùiÚ
-()->
-omÃt2Œaci
-(mob™y->
-g‘Pos™iÚAt
-(
-simTime
-()));
-
-91 
-CoÜd
- 
-pos™iÚ
-(
-ŒaciPos™iÚ
-.
-x
-,¿ciPos™iÚ.
-y
-);
-
-93 
-	gdi¡ªû
- = 
-pos™iÚ
-.
-di¡ªû
-(
-äÚtPos™iÚ
-è- 
-pb
-->
-g‘L’gth
-();
-
-94 
-	g¶exeT¿ciVehişe
-->
-£tFrÚtVehişeFakeD©a
-(
-pb
-->
-g‘CÚŒŞËrAcûË¿tiÚ
-(),…b->
-g‘AcûË¿tiÚ
-(),…b->
-g‘S³ed
-(), 
-di¡ªû
-);
-
-96 ià(
-	gdi¡ªû
- < 
-	g­p
-->
-g‘T¬g‘Di¡ªû
-(
-rg‘PÏtoÚD©a
-->
-¶©oÚS³ed
-) + 11) {
-
-99 
-	gLOG
- << 
-	gpos™iÚH–³r
-->
-g‘Id
-(è<< " s’dšg MoveToPos™iÚAckØ¶©oÚ w™h id " << 
-	grg‘PÏtoÚD©a
-->
-	g¶©oÚId
- << " (Ëad” id " <<¬g‘PÏtoÚD©a->
-	g¶©oÚL—d”
- << ")\n";
-
-100 
-MoveToPos™iÚAck
-* 
-	gack
- = 
-ü—‹MoveToPos™iÚAck
-(
-pos™iÚH–³r
-->
-g‘Id
-(),…os™iÚH–³r->
-g‘Ex‹º®Id
-(), 
-rg‘PÏtoÚD©a
-->
-¶©oÚId
-,¬g‘PÏtoÚD©a->
-¶©oÚL—d”
-,¬g‘PÏtoÚD©a->
-¶©oÚS³ed
-,¬g‘PÏtoÚD©a->
-¶©oÚLªe
-,¬g‘PÏtoÚD©a->
-ÃwFÜm©iÚ
-);
-
-101 
-	g­p
-->
-£ndUniÿ¡
-(
-ack
-, 
-rg‘PÏtoÚD©a
-->
-ÃwFÜm©iÚ
-.
-©
-(0));
-
-102 
-	gjošMªeuv”S‹
- = 
-JošMªeuv”S‹
-::
-J_WAIT_JOIN
-;
-
-108 
-	gJošAtBack
-::
-ÚFaedT¿nsmissiÚA‰em±
-(cÚ¡ 
-Mªeuv”Mes§ge
-* 
-mm
-)
-
-110 
-throw
- 
-cRuÁimeE¼Ü
-("ImpossibËØ£ndhi ·ck‘: %s. Maximum‚umb” oàuniÿ¡„‘r› »ached", 
-mm
-->
-g‘Name
-());
-
-113 
-boŞ
- 
-	gJošAtBack
-::
-´oûssJošReque¡
-(cÚ¡ 
-JošPÏtoÚReque¡
-* 
-msg
-)
-
-115 ià(
-msg
-->
-g‘PÏtoÚId
-(è!ğ
-pos™iÚH–³r
-->g‘PÏtoÚId()è 
-çl£
-;
-
-117 ià(
-	g­p
-->
-g‘PÏtoÚRŞe
-(è!ğ
-PÏtoÚRŞe
-::
-LEADER
- && 
-­p
-->g‘PÏtoÚRŞe(è!ğPÏtoÚRŞe::
-NONE
-è 
-çl£
-;
-
-119 
-boŞ
- 
-	g³rmissiÚ
- = 
-­p
-->
-isJošAÎowed
-();
-
-122 
-	gLOG
- << 
-	gpos™iÚH–³r
-->
-g‘Id
-(è<< " s’dšg JošPÏtoÚRe¥Ú£Øvehişw™h id " << 
-	gmsg
-->
-g‘VehişeId
-(è<< " (³rmissiÚØjoš: " << (
-	g³rmissiÚ
- ? "permitted" : "not…ermitted") << ")\n";
-
-123 
-JošPÏtoÚRe¥Ú£
-* 
-	g»¥Ú£
- = 
-ü—‹JošPÏtoÚRe¥Ú£
-(
-pos™iÚH–³r
-->
-g‘Id
-(),…os™iÚH–³r->
-g‘Ex‹º®Id
-(), 
-msg
-->
-g‘PÏtoÚId
-(), msg->
-g‘VehişeId
-(), 
-³rmissiÚ
-);
-
-124 
-	g­p
-->
-£ndUniÿ¡
-(
-»¥Ú£
-, 
-msg
-->
-g‘VehişeId
-());
-
-126 ià(!
-	g³rmissiÚ
-è 
-	gçl£
-;
-
-128 
-	g­p
-->
-£tInMªeuv”
-(
-Œue
-, 
-this
-);
-
-129 
-	g­p
-->
-£tPÏtoÚRŞe
-(
-PÏtoÚRŞe
-::
-LEADER
-);
-
-132 
-	g¶exeT¿ciVehişe
-->
-£tFixedLªe
-(
-ŒaciVehişe
-->
-g‘LªeIndex
-());
-
-133 
-	gpos™iÚH–³r
-->
-£tPÏtoÚLªe
-(
-ŒaciVehişe
-->
-g‘LªeIndex
-());
-
-136 
-	gjoš”D©a
-.
-»£t
-(
-Ãw
- 
-Još”D©a
-());
-
-137 
-	gjoš”D©a
-->
-äom
-(
-msg
-);
-
-142 
-	gjoš”D©a
-->
-	gÃwFÜm©iÚ
- = 
-pos™iÚH–³r
-->
-g‘PÏtoÚFÜm©iÚ
-();
-
-143 
-	gjoš”D©a
-->
-	gÃwFÜm©iÚ
-.
-push_back
-(
-još”D©a
-->
-još”Id
-);
-
-146 
-	gjošMªeuv”S‹
- = 
-JošMªeuv”S‹
-::
-L_WAIT_JOINER_IN_POSITION
-;
-
-147  
-	gŒue
-;
-
-150 
-	gJošAtBack
-::
-hªdËJošPÏtoÚReque¡
-(cÚ¡ 
-JošPÏtoÚReque¡
-* 
-msg
-)
-
-152 ià(
-´oûssJošReque¡
-(
-msg
-)) {
-
-153 
-LOG
- << 
-pos™iÚH–³r
-->
-g‘Id
-(è<< " s’dšg MoveToPos™iÚØvehişw™h id " << 
-msg
-->
-g‘VehişeId
-() << "\n";
-
-154 
-MoveToPos™iÚ
-* 
-	gm
- = 
-ü—‹MoveToPos™iÚ
-(
-pos™iÚH–³r
-->
-g‘Id
-(),…os™iÚH–³r->
-g‘Ex‹º®Id
-(),…os™iÚH–³r->
-g‘PÏtoÚId
-(), 
-još”D©a
-->
-još”Id
-,…os™iÚH–³r->
-g‘PÏtoÚS³ed
-(),…os™iÚH–³r->
-g‘PÏtoÚLªe
-(), još”D©a->
-ÃwFÜm©iÚ
-);
-
-155 
-	g­p
-->
-£ndUniÿ¡
-(
-m
-, 
-još”D©a
-->
-još”Id
-);
-
-159 
-	gJošAtBack
-::
-hªdËM”gePÏtoÚReque¡
-(cÚ¡ 
-M”gePÏtoÚReque¡
-* 
-msg
-)
-
-164 
-JošAtBack
-::
-hªdËJošPÏtoÚRe¥Ú£
-(cÚ¡ 
-JošPÏtoÚRe¥Ú£
-* 
-msg
-)
-
-166 ià(
-­p
-->
-g‘PÏtoÚRŞe
-(è!ğ
-PÏtoÚRŞe
-::
-JOINER
-) ;
-
-167 ià(
-	gjošMªeuv”S‹
- !ğ
-JošMªeuv”S‹
-::
-J_WAIT_REPLY
-) ;
-
-168 ià(
-	gmsg
-->
-g‘PÏtoÚId
-(è!ğ
-rg‘PÏtoÚD©a
-->
-¶©oÚId
-) ;
-
-169 ià(
-	gmsg
-->
-g‘VehişeId
-(è!ğ
-rg‘PÏtoÚD©a
-->
-¶©oÚL—d”
-) ;
-
-172 ià(
-	gmsg
-->
-g‘P”m™‹d
-()) {
-
-173 
-	gLOG
- << 
-	gpos™iÚH–³r
-->
-g‘Id
-() << "„eceived JoinPlatoonResponse (allowedo join)\n";
-
-175 
-	gjošMªeuv”S‹
- = 
-JošMªeuv”S‹
-::
-J_WAIT_INFORMATION
-;
-
-177 
-	g¶exeT¿ciVehişe
-->
-£tFixedLªe
-(
-ŒaciVehişe
-->
-g‘LªeIndex
-());
-
-180 
-	gLOG
- << 
-	gpos™iÚH–³r
-->
-g‘Id
-() << "„eceived JoinPlatoonResponse (not‡llowedo join)\n";
-
-182 
-	gjošMªeuv”S‹
- = 
-JošMªeuv”S‹
-::
-IDLE
-;
-
-183 
-	g­p
-->
-£tPÏtoÚRŞe
-(
-PÏtoÚRŞe
-::
-NONE
-);
-
-184 
-	g­p
-->
-£tInMªeuv”
-(
-çl£
-, 
-nuÎ±r
-);
-
-188 
-	gJošAtBack
-::
-hªdËMoveToPos™iÚ
-(cÚ¡ 
-MoveToPos™iÚ
-* 
-msg
-)
-
-190 ià(
-­p
-->
-g‘PÏtoÚRŞe
-(è!ğ
-PÏtoÚRŞe
-::
-JOINER
-) ;
-
-191 ià(
-	gjošMªeuv”S‹
- !ğ
-JošMªeuv”S‹
-::
-J_WAIT_INFORMATION
-) ;
-
-192 ià(
-	gmsg
-->
-g‘PÏtoÚId
-(è!ğ
-rg‘PÏtoÚD©a
-->
-¶©oÚId
-) ;
-
-193 ià(
-	gmsg
-->
-g‘VehişeId
-(è!ğ
-rg‘PÏtoÚD©a
-->
-¶©oÚL—d”
-) ;
-
-197 
-	grg‘PÏtoÚD©a
-->
-äom
-(
-msg
-);
-
-203 
-	gcu¼’tLªe
- = 
-ŒaciVehişe
-->
-g‘LªeIndex
-();
-
-204 ià(
-	gcu¼’tLªe
- !ğ
-rg‘PÏtoÚD©a
-->
-¶©oÚLªe
-) {
-
-205 
-¶exeT¿ciVehişe
-->
-£tFixedLªe
-(
-rg‘PÏtoÚD©a
-->
-¶©oÚLªe
-);
-
-209 
-	gLOG
- << 
-	gpos™iÚH–³r
-->
-g‘Id
-() << "„eceived MoveToPosition. Increasing speedo‡pproachhe…latoon\n";
-
-213 
-	g¶exeT¿ciVehişe
-->
-£tCACCCÚ¡ªtS·cšg
-(15);
-
-216 
-	g¶exeT¿ciVehişe
-->
-£tL—d”VehişeFakeD©a
-(0, 0, 
-rg‘PÏtoÚD©a
-->
-¶©oÚS³ed
-);
-
-217 
-	g¶exeT¿ciVehişe
-->
-£tFrÚtVehişeFakeD©a
-(0, 0, 
-rg‘PÏtoÚD©a
-->
-¶©oÚS³ed
-, 15);
-
-219 
-	g¶exeT¿ciVehişe
-->
-£tCrui£CÚŒŞDesœedS³ed
-(
-rg‘PÏtoÚD©a
-->
-¶©oÚS³ed
- + (30 / 3.6));
-
-220 
-	g¶exeT¿ciVehişe
-->
-£tAùiveCÚŒŞËr
-(
-FAKED_CACC
-);
-
-222 
-	gjošMªeuv”S‹
- = 
-JošMªeuv”S‹
-::
-J_MOVE_IN_POSITION
-;
-
-225 
-	gJošAtBack
-::
-hªdËMoveToPos™iÚAck
-(cÚ¡ 
-MoveToPos™iÚAck
-* 
-msg
-)
-
-227 ià(
-­p
-->
-g‘PÏtoÚRŞe
-(è!ğ
-PÏtoÚRŞe
-::
-LEADER
-) ;
-
-228 ià(
-	gjošMªeuv”S‹
- !ğ
-JošMªeuv”S‹
-::
-L_WAIT_JOINER_IN_POSITION
-) ;
-
-229 ià(
-	gmsg
-->
-g‘PÏtoÚId
-(è!ğ
-pos™iÚH–³r
-->getPlatoonId()) ;
-
-230 ià(
-	gmsg
-->
-g‘VehişeId
-(è!ğ
-još”D©a
-->
-još”Id
-) ;
-
-232 
-	gi
- = 0; i < 
-	gmsg
-->
-g‘NewPÏtoÚFÜm©iÚA¼aySize
-(); i++è
-ASSERT
-(
-msg
-->
-g‘NewPÏtoÚFÜm©iÚ
-(
-i
-è=ğ
-još”D©a
-->
-ÃwFÜm©iÚ
-.
-©
-(i));
-
-237 
-	gLOG
- << 
-	gpos™iÚH–³r
-->
-g‘Id
-(è<< " s’dšg JošFÜm©iÚØvehişw™h id " << 
-	gjoš”D©a
-->
-	gjoš”Id
- << "\n";
-
-238 
-JošFÜm©iÚ
-* 
-	gjf
- = 
-ü—‹JošFÜm©iÚ
-(
-pos™iÚH–³r
-->
-g‘Id
-(),…os™iÚH–³r->
-g‘Ex‹º®Id
-(),…os™iÚH–³r->
-g‘PÏtoÚId
-(), 
-još”D©a
-->
-još”Id
-,…os™iÚH–³r->
-g‘PÏtoÚS³ed
-(), 
-ŒaciVehişe
-->
-g‘LªeIndex
-(), još”D©a->
-ÃwFÜm©iÚ
-);
-
-239 
-	g­p
-->
-£ndUniÿ¡
-(
-jf
-, 
-još”D©a
-->
-još”Id
-);
-
-240 
-	gjošMªeuv”S‹
- = 
-JošMªeuv”S‹
-::
-L_WAIT_JOINER_TO_JOIN
-;
-
-243 
-	gJošAtBack
-::
-hªdËJošFÜm©iÚ
-(cÚ¡ 
-JošFÜm©iÚ
-* 
-msg
-)
-
-245 ià(
-­p
-->
-g‘PÏtoÚRŞe
-(è!ğ
-PÏtoÚRŞe
-::
-JOINER
-) ;
-
-246 ià(
-	gjošMªeuv”S‹
- !ğ
-JošMªeuv”S‹
-::
-J_WAIT_JOIN
-) ;
-
-247 ià(
-	gmsg
-->
-g‘PÏtoÚId
-(è!ğ
-rg‘PÏtoÚD©a
-->
-¶©oÚId
-) ;
-
-248 ià(
-	gmsg
-->
-g‘VehişeId
-(è!ğ
-rg‘PÏtoÚD©a
-->
-¶©oÚL—d”
-) ;
-
-250 
-	gi
- = 0; i < 
-	gmsg
-->
-g‘NewPÏtoÚFÜm©iÚA¼aySize
-(); i++è
-ASSERT
-(
-msg
-->
-g‘NewPÏtoÚFÜm©iÚ
-(
-i
-è=ğ
-rg‘PÏtoÚD©a
-->
-ÃwFÜm©iÚ
-[i]);
-
-254 
-	g¶exeT¿ciVehişe
-->
-£tAùiveCÚŒŞËr
-(
-­p
-->
-g‘CÚŒŞËr
-());
-
-256 ià(
-	g­p
-->
-g‘CÚŒŞËr
-(è=ğ
-CACC
- || 
-­p
-->g‘CÚŒŞËr(è=ğ
-FLATBED
-è
-¶exeT¿ciVehişe
-->
-£tCACCCÚ¡ªtS·cšg
-×µ->
-g‘T¬g‘Di¡ªû
-(
-rg‘PÏtoÚD©a
-->
-¶©oÚS³ed
-));
-
-259 
-	gpos™iÚH–³r
-->
-£tPÏtoÚId
-(
-msg
-->
-g‘PÏtoÚId
-());
-
-260 
-	gpos™iÚH–³r
-->
-£tPÏtoÚLªe
-(
-rg‘PÏtoÚD©a
-->
-¶©oÚLªe
-);
-
-261 
 	gpos™iÚH–³r
 ->
 £tPÏtoÚS³ed
@@ -9393,7 +5463,7 @@ g‘PÏtoÚId
 ¶©oÚS³ed
 );
 
-262 
+264 
 	g¡d
 ::
 veùÜ
@@ -9401,7 +5471,7 @@ veùÜ
 fÜm©iÚ
 ;
 
-263 
+265 
 	gi
  = 0; i < 
 	gmsg
@@ -9419,7 +5489,7 @@ g‘NewPÏtoÚFÜm©iÚ
 i
 ));
 
-264 
+266 
 	gpos™iÚH–³r
 ->
 £tPÏtoÚFÜm©iÚ
@@ -9427,7 +5497,7 @@ i
 fÜm©iÚ
 );
 
-267 
+269 
 	gLOG
  << 
 	gpos™iÚH–³r
@@ -9437,7 +5507,7 @@ g‘Id
 g‘PÏtoÚId
 () << "\n";
 
-268 
+270 
 JošFÜm©iÚAck
 * 
 	gjç
@@ -9464,22 +5534,22 @@ g‘LªeIndex
 (), 
 fÜm©iÚ
 );
-
-269 
-	g­p
-->
-£ndUniÿ¡
-(
-jç
-, 
-pos™iÚH–³r
-->
-g‘L—d”Id
-());
 
 271 
 	g­p
 ->
+£ndUniÿ¡
+(
+jç
+, 
+pos™iÚH–³r
+->
+g‘L—d”Id
+());
+
+273 
+	g­p
+->
 £tPÏtoÚRŞe
 (
 PÏtoÚRŞe
@@ -9487,7 +5557,7 @@ PÏtoÚRŞe
 FOLLOWER
 );
 
-272 
+274 
 	gjošMªeuv”S‹
  = 
 JošMªeuv”S‹
@@ -9495,7 +5565,7 @@ JošMªeuv”S‹
 IDLE
 ;
 
-274 
+276 
 	g­p
 ->
 £tInMªeuv”
@@ -9505,7 +5575,7 @@ IDLE
 nuÎ±r
 );
 
-279 
+281 
 	gJošAtBack
 ::
 hªdËJošFÜm©iÚAck
@@ -9515,7 +5585,7 @@ JošFÜm©iÚAck
 msg
 )
 
-281 ià(
+283 ià(
 ­p
 ->
 g‘PÏtoÚRŞe
@@ -9525,7 +5595,7 @@ PÏtoÚRŞe
 LEADER
 ) ;
 
-282 ià(
+284 ià(
 	gjošMªeuv”S‹
  !ğ
 JošMªeuv”S‹
@@ -9533,7 +5603,7 @@ JošMªeuv”S‹
 L_WAIT_JOINER_TO_JOIN
 ) ;
 
-283 ià(
+285 ià(
 	gmsg
 ->
 g‘PÏtoÚId
@@ -9541,7 +5611,7 @@ g‘PÏtoÚId
 pos™iÚH–³r
 ->getPlatoonId()) ;
 
-284 ià(
+286 ià(
 	gmsg
 ->
 g‘VehişeId
@@ -9551,7 +5621,7 @@ još”D©a
 još”Id
 ) ;
 
-285 
+287 
 	gi
  = 0; i < 
 	gmsg
@@ -9573,7 +5643,7 @@ još”D©a
 ©
 (i));
 
-289 
+291 
 	gpos™iÚH–³r
 ->
 £tPÏtoÚFÜm©iÚ
@@ -9583,7 +5653,7 @@ još”D©a
 ÃwFÜm©iÚ
 );
 
-291 
+293 
 	gLOG
  << 
 	gpos™iÚH–³r
@@ -9591,7 +5661,7 @@ još”D©a
 g‘Id
 () << "„eceived JoinFormationAck. Sending UpdatePlatoonFormationo‡ll members\n";
 
-293 
+295 
 	gi
  = 1; i < 
 	gpos™iÚH–³r
@@ -9599,7 +5669,7 @@ g‘Id
 g‘PÏtoÚSize
 (); i++) {
 
-294 
+296 
 Upd©ePÏtoÚFÜm©iÚ
 * 
 	gdup
@@ -9627,7 +5697,7 @@ još”D©a
 ÃwFÜm©iÚ
 );
 
-295 
+297 
 	gde¡
  = 
 pos™iÚH–³r
@@ -9637,7 +5707,7 @@ g‘Memb”Id
 i
 );
 
-296 
+298 
 	gdup
 ->
 £tDe¡š©iÚId
@@ -9645,7 +5715,7 @@ i
 de¡
 );
 
-297 
+299 
 	g­p
 ->
 £ndUniÿ¡
@@ -9655,7 +5725,7 @@ dup
 de¡
 );
 
-300 
+302 
 	gjošMªeuv”S‹
  = 
 JošMªeuv”S‹
@@ -9663,7 +5733,7 @@ JošMªeuv”S‹
 IDLE
 ;
 
-301 
+303 
 	g­p
 ->
 £tInMªeuv”
@@ -66943,10 +63013,10 @@ cMes§ge
 msg
 );
 
-	@scenarios/DistJoinManeuverScenario.cc
+	@scenarios/JoinManeuverScenario.cc
 
 21 
-	~"¶exe/sûÇrios/Di¡JošMªeuv”SûÇrio.h
+	~"¶exe/sûÇrios/JošMªeuv”SûÇrio.h
 "
 
 23 
@@ -66958,11 +63028,11 @@ msg
 25 
 Defše_ModuË
 (
-Di¡JošMªeuv”SûÇrio
+JošMªeuv”SûÇrio
 );
 
 27 
-	gDi¡JošMªeuv”SûÇrio
+	gJošMªeuv”SûÇrio
 ::
 š™Ÿlize
 (
@@ -66986,7 +63056,7 @@ Ba£SûÇrio
  = 
 FšdModuË
 <
-Di¡PÏtoÚšgAµ
+G’”®PÏtoÚšgAµ
 *>::
 fšdSubModuË
 (
@@ -66998,7 +63068,7 @@ g‘P¬’tModuË
 (0);
 
 38 
-	gDi¡JošMªeuv”SûÇrio
+	gJošMªeuv”SûÇrio
 ::
 £tupFÜm©iÚ
 ()
@@ -67013,7 +63083,7 @@ fÜm©iÚ
 
 41 
 	gi
- = 0; i < 5; i++è
+ = 0; i < 4; i++è
 	gfÜm©iÚ
 .
 push_back
@@ -67030,7 +63100,7 @@ fÜm©iÚ
 );
 
 45 
-	gDi¡JošMªeuv”SûÇrio
+	gJošMªeuv”SûÇrio
 ::
 ´•¬eMªeuv”C¬s
 (
@@ -67145,439 +63215,25 @@ SimTime
 ¡¬tMªeuv”
 );
 
-85 
-	gDi¡JošMªeuv”SûÇrio
-::~
-Di¡JošMªeuv”SûÇrio
-()
-
-87 
-ÿnûlAndD–‘e
-(
-¡¬tMªeuv”
-);
-
-88 
-	g¡¬tMªeuv”
- = 
-nuÎ±r
-;
-
-91 
-	gDi¡JošMªeuv”SûÇrio
-::
-hªdËS–fMsg
-(
-cMes§ge
-* 
-msg
-)
-
-95 
-Ba£SûÇrio
-::
-hªdËS–fMsg
-(
-msg
-);
-
-97 ià(
-	gmsg
- =ğ
-¡¬tMªeuv”
-è
-­p
-->
-¡¬tJošMªeuv”
-(0, 0, -1);
-
-	@scenarios/DistJoinManeuverScenario.h
-
-21 #iâdeà
-DISTJOINMANEUVERSCENARIO_H_
-
-
-22 
-	#DISTJOINMANEUVERSCENARIO_H_
-
-
-	)
-
-24 
-	~"¶exe/sûÇrios/Ba£SûÇrio.h
-"
-
-25 
-	~"¶exe/­ps/G’”®PÏtoÚšgAµ.h
-"
-
-26 
-	~"¶exe/mes§ges/Mªeuv”Mes§ge_m.h
-"
-
-28 
-Çme¥aû
- 
-	g¶exe
- {
-
-30 şas 
-	cDi¡JošMªeuv”SûÇrio
- : 
-public
- 
-Ba£SûÇrio
- {
-
-32 
-´Ùeùed
-:
-
-34 
-cMes§ge
-* 
-¡¬tMªeuv”
-;
-
-36 
-Di¡PÏtoÚšgAµ
-* 
-	g­p
-;
-
-38 
-	gpublic
-:
-
-39 cÚ¡ 
-MANEUVER_TYPE
- = 12347;
-
-41 
-vœtu®
- 
-š™Ÿlize
-(
-¡age
-è
-	gov”ride
-;
-
-43 
-	g´iv©e
-:
-
-44 
-public
-:
-
-45 
-Di¡JošMªeuv”SûÇrio
-()
-
-47 
-¡¬tMªeuv”
- = 
-nuÎ±r
-;
-
-48 
-	g­p
- = 
-nuÎ±r
-;
-
-50 
-	gvœtu®
- ~
-Di¡JošMªeuv”SûÇrio
-();
-
-52 
-	g´Ùeùed
-:
-
-53 
-vœtu®
- 
-hªdËS–fMsg
-(
-cMes§ge
-* 
-msg
-è
-ov”ride
-;
-
-55 
-´•¬eMªeuv”C¬s
-(
-¶©oÚLªe
-);
-
-56 
-£tupFÜm©iÚ
-();
-
-	@scenarios/JoinManeuverScenario.cc
-
-21 
-	~"¶exe/sûÇrios/JošMªeuv”SûÇrio.h
-"
-
-23 
-Çme¥aû
- 
-	g¶exe
- {
-
-25 
-Defše_ModuË
-(
-JošMªeuv”SûÇrio
-);
-
-27 
-	gJošMªeuv”SûÇrio
-::
-š™Ÿlize
-(
-¡age
-)
-
-30 
-Ba£SûÇrio
-::
-š™Ÿlize
-(
-¡age
-);
-
-32 ià(
-	g¡age
- == 2) {
-
-33 
-­p
- = 
-FšdModuË
-<
-G’”®PÏtoÚšgAµ
-*>::
-fšdSubModuË
-(
-g‘P¬’tModuË
-());
-
-34 
-´•¬eMªeuv”C¬s
-(0);
-
-38 
-	gJošMªeuv”SûÇrio
-::
-£tupFÜm©iÚ
-()
-
-40 
-¡d
-::
-veùÜ
-<> 
-fÜm©iÚ
-;
-
-41 
-	gi
- = 0; i < 5; i++è
-	gfÜm©iÚ
-.
-push_back
-(
-i
-);
-
-42 
-	gpos™iÚH–³r
-->
-£tPÏtoÚFÜm©iÚ
-(
-fÜm©iÚ
-);
-
-45 
-	gJošMªeuv”SûÇrio
-::
-´•¬eMªeuv”C¬s
-(
-¶©oÚLªe
-)
-
-48 
-pos™iÚH–³r
-->
-g‘Id
-()) {
-
-52 
-¶exeT¿ciVehişe
-->
-£tCrui£CÚŒŞDesœedS³ed
-(100.0 / 3.6);
-
-53 
-	g¶exeT¿ciVehişe
-->
-£tAùiveCÚŒŞËr
-(
-ACC
-);
-
-54 
-	g¶exeT¿ciVehişe
-->
-£tFixedLªe
-(
-¶©oÚLªe
-);
-
-55 
-	g­p
-->
-£tPÏtoÚRŞe
-(
-PÏtoÚRŞe
-::
-LEADER
-);
-
-63 
-¶exeT¿ciVehişe
-->
-£tCrui£CÚŒŞDesœedS³ed
-(130.0 / 3.6);
-
-64 
-	g¶exeT¿ciVehişe
-->
-£tAùiveCÚŒŞËr
-(
-CACC
-);
-
-65 
-	g¶exeT¿ciVehişe
-->
-£tFixedLªe
-(
-¶©oÚLªe
-);
-
-66 
-	g­p
-->
-£tPÏtoÚRŞe
-(
-PÏtoÚRŞe
-::
-FOLLOWER
-);
-
-72 
-¶exeT¿ciVehişe
-->
-£tCrui£CÚŒŞDesœedS³ed
-(100 / 3.6);
-
-73 
-	g¶exeT¿ciVehişe
-->
-£tFixedLªe
-(2);
-
-74 
-	g¶exeT¿ciVehişe
-->
-£tAùiveCÚŒŞËr
-(
-ACC
-);
-
-77 
-	g¡¬tMªeuv”
- = 
-Ãw
- 
-cMes§ge
-();
-
-78 
-scheduËAt
-(
-simTime
-(è+ 
-SimTime
-(10), 
-¡¬tMªeuv”
-);
-
-83 
-¶exeT¿ciVehişe
-->
-£tCrui£CÚŒŞDesœedS³ed
-(100 / 3.6);
-
-84 
-	g¶exeT¿ciVehişe
-->
-£tFixedLªe
-(3);
-
-85 
-	g¶exeT¿ciVehişe
-->
-£tAùiveCÚŒŞËr
-(
-ACC
-);
-
-88 
-	g¡¬tMªeuv”
- = 
-Ãw
- 
-cMes§ge
-();
-
-89 
-scheduËAt
-(
-simTime
-(è+ 
-SimTime
-(20), 
-¡¬tMªeuv”
-);
-
-95 
+96 
 	gJošMªeuv”SûÇrio
 ::~
 JošMªeuv”SûÇrio
 ()
-
-97 
-ÿnûlAndD–‘e
-(
-¡¬tMªeuv”
-);
 
 98 
+ÿnûlAndD–‘e
+(
+¡¬tMªeuv”
+);
+
+99 
 	g¡¬tMªeuv”
  = 
 nuÎ±r
 ;
 
-101 
+102 
 	gJošMªeuv”SûÇrio
 ::
 hªdËS–fMsg
@@ -67587,7 +63243,7 @@ cMes§ge
 msg
 )
 
-105 
+106 
 Ba£SûÇrio
 ::
 hªdËS–fMsg
@@ -67595,7 +63251,7 @@ hªdËS–fMsg
 msg
 );
 
-107 ià(
+108 ià(
 	gmsg
  =ğ
 ¡¬tMªeuv”
@@ -68608,6 +64264,254 @@ cMes§ge
 * 
 msg
 );
+
+	@scenarios/test.cc
+
+21 
+	~"¶exe/sûÇrios/JošMªeuv”SûÇrio.h
+"
+
+23 
+Çme¥aû
+ 
+	g¶exe
+ {
+
+25 
+Defše_ModuË
+(
+JošMªeuv”SûÇrio
+);
+
+27 
+	gJošMªeuv”SûÇrio
+::
+š™Ÿlize
+(
+¡age
+)
+
+30 
+Ba£SûÇrio
+::
+š™Ÿlize
+(
+¡age
+);
+
+32 ià(
+	g¡age
+ == 2) {
+
+33 
+­p
+ = 
+FšdModuË
+<
+G’”®PÏtoÚšgAµ
+*>::
+fšdSubModuË
+(
+g‘P¬’tModuË
+());
+
+34 
+´•¬eMªeuv”C¬s
+(0);
+
+38 
+	gJošMªeuv”SûÇrio
+::
+£tupFÜm©iÚ
+()
+
+40 
+¡d
+::
+veùÜ
+<> 
+fÜm©iÚ
+;
+
+41 
+	gi
+ = 0; i < 4; i++è
+	gfÜm©iÚ
+.
+push_back
+(
+i
+);
+
+42 
+	gpos™iÚH–³r
+->
+£tPÏtoÚFÜm©iÚ
+(
+fÜm©iÚ
+);
+
+45 
+	gJošMªeuv”SûÇrio
+::
+´•¬eMªeuv”C¬s
+(
+¶©oÚLªe
+)
+
+48 
+pos™iÚH–³r
+->
+g‘Id
+()) {
+
+52 
+¶exeT¿ciVehişe
+->
+£tCrui£CÚŒŞDesœedS³ed
+(100.0 / 3.6);
+
+53 
+	g¶exeT¿ciVehişe
+->
+£tAùiveCÚŒŞËr
+(
+ACC
+);
+
+54 
+	g¶exeT¿ciVehişe
+->
+£tFixedLªe
+(
+¶©oÚLªe
+);
+
+55 
+	g­p
+->
+£tPÏtoÚRŞe
+(
+PÏtoÚRŞe
+::
+LEADER
+);
+
+63 
+¶exeT¿ciVehişe
+->
+£tCrui£CÚŒŞDesœedS³ed
+(130.0 / 3.6);
+
+64 
+	g¶exeT¿ciVehişe
+->
+£tAùiveCÚŒŞËr
+(
+CACC
+);
+
+65 
+	g¶exeT¿ciVehişe
+->
+£tFixedLªe
+(
+¶©oÚLªe
+);
+
+66 
+	g­p
+->
+£tPÏtoÚRŞe
+(
+PÏtoÚRŞe
+::
+FOLLOWER
+);
+
+72 
+¶exeT¿ciVehişe
+->
+£tCrui£CÚŒŞDesœedS³ed
+(100 / 3.6);
+
+73 
+	g¶exeT¿ciVehişe
+->
+£tFixedLªe
+(2);
+
+74 
+	g¶exeT¿ciVehişe
+->
+£tAùiveCÚŒŞËr
+(
+ACC
+);
+
+77 
+	g¡¬tMªeuv”
+ = 
+Ãw
+ 
+cMes§ge
+();
+
+78 
+scheduËAt
+(
+simTime
+(è+ 
+SimTime
+(10), 
+¡¬tMªeuv”
+);
+
+84 
+	gJošMªeuv”SûÇrio
+::~
+JošMªeuv”SûÇrio
+()
+
+86 
+ÿnûlAndD–‘e
+(
+¡¬tMªeuv”
+);
+
+87 
+	g¡¬tMªeuv”
+ = 
+nuÎ±r
+;
+
+90 
+	gJošMªeuv”SûÇrio
+::
+hªdËS–fMsg
+(
+cMes§ge
+* 
+msg
+)
+
+94 
+Ba£SûÇrio
+::
+hªdËS–fMsg
+(
+msg
+);
+
+96 ià(
+	gmsg
+ =ğ
+¡¬tMªeuv”
+è
+­p
+->
+¡¬tJošMªeuv”
+(0, 0, -1);
 
 	@traffic/JoinTrafficManager.cc
 
@@ -72837,15 +68741,13 @@ Ba£Pos™iÚH–³r
 1
 .
 0
-101
-3029
+96
+2868
 CC_Const.h
 PlexeManager.cc
 PlexeManager.h
 apps/BaseApp.cc
 apps/BaseApp.h
-apps/DistPlatooningApp.cc
-apps/DistPlatooningApp.h
 apps/GeneralPlatooningApp.cc
 apps/GeneralPlatooningApp.h
 apps/SimplePlatooningApp.cc
@@ -72853,8 +68755,6 @@ apps/SimplePlatooningApp.h
 driver/PlexeRadioDriverInterface.h
 driver/Veins11pRadioDriver.cc
 driver/Veins11pRadioDriver.h
-maneuver/DistJoinAtBack.cc
-maneuver/DistJoinAtBack.h
 maneuver/JoinAtBack.cc
 maneuver/JoinAtBack.h
 maneuver/JoinManeuver.cc
@@ -72916,8 +68816,6 @@ scenarios/BaseScenario.cc
 scenarios/BaseScenario.h
 scenarios/BrakingScenario.cc
 scenarios/BrakingScenario.h
-scenarios/DistJoinManeuverScenario.cc
-scenarios/DistJoinManeuverScenario.h
 scenarios/JoinManeuverScenario.cc
 scenarios/JoinManeuverScenario.h
 scenarios/MergeManeuverScenario.cc
@@ -72926,6 +68824,7 @@ scenarios/SimpleScenario.cc
 scenarios/SimpleScenario.h
 scenarios/SinusoidalScenario.cc
 scenarios/SinusoidalScenario.h
+scenarios/test.cc
 traffic/JoinTrafficManager.cc
 traffic/JoinTrafficManager.h
 traffic/PlatoonsPlusHumanTraffic.cc
