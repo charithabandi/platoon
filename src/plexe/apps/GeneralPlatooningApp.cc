@@ -71,7 +71,8 @@ void GeneralPlatooningApp::handleSelfMsg(cMessage* msg)
 
 bool GeneralPlatooningApp::isJoinAllowed() const
 {
-    return ((role == PlatoonRole::LEADER || role == PlatoonRole::NONE) && !inManeuver);
+//    return ((role == PlatoonRole::LEADER || role == PlatoonRole::NONE) && !inManeuver);
+    return !inManeuver;	
 }
 
 enum ACTIVE_CONTROLLER GeneralPlatooningApp::getController()
@@ -128,7 +129,7 @@ void GeneralPlatooningApp::sendBroadcast(cPacket* msg)
     Enter_Method_Silent();
     take(msg);
     BaseFrame1609_4* frame = new BaseFrame1609_4("BaseFrame1609_4", msg->getKind());
-    frame->setRecipientAddress(destination);
+    frame->setRecipientAddress(LAddress::L2BROADCAST());
     frame->setChannelNumber(static_cast<int>(Channel::cch));
     frame->encapsulate(msg);
     PlexeInterfaceControlInfo* ctrl = new PlexeInterfaceControlInfo();

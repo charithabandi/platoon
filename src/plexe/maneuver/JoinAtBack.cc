@@ -62,7 +62,8 @@ void JoinAtBack::startManeuver(const void* parameters)
         // send join request to leader
         LOG << positionHelper->getId() << " sending JoinPlatoonRequesto to platoon with id " << targetPlatoonData->platoonId << " (leader id " << targetPlatoonData->platoonLeader << ")\n";
         JoinPlatoonRequest* req = createJoinPlatoonRequest(positionHelper->getId(), positionHelper->getExternalId(), targetPlatoonData->platoonId, targetPlatoonData->platoonLeader, traciVehicle->getLaneIndex(), mobility->getPositionAt(simTime()).x, mobility->getPositionAt(simTime()).y);
-        app->sendUnicast(req, targetPlatoonData->platoonLeader);
+        //app->sendUnicast(req, targetPlatoonData->platoonLeader); CHERRY
+        app->sendBroadcast(req);
     }
 }
 
@@ -98,7 +99,7 @@ void JoinAtBack::onPlatoonBeacon(const PlatooningBeacon* pb)
                 // send move to position response to confirm the parameters
                 LOG << positionHelper->getId() << " sending MoveToPositionAck to platoon with id " << targetPlatoonData->platoonId << " (leader id " << targetPlatoonData->platoonLeader << ")\n";
                 MoveToPositionAck* ack = createMoveToPositionAck(positionHelper->getId(), positionHelper->getExternalId(), targetPlatoonData->platoonId, targetPlatoonData->platoonLeader, targetPlatoonData->platoonSpeed, targetPlatoonData->platoonLane, targetPlatoonData->newFormation);
-                app->sendUnicast(ack, targetPlatoonData->newFormation.at(0));
+                app->sendUnicast(ack, targetPlatoonData->newFormation.at(targetPlatoonData->platoonLeader));
                 joinManeuverState = JoinManeuverState::J_WAIT_JOIN;
             }
         }
@@ -114,8 +115,8 @@ bool JoinAtBack::processJoinRequest(const JoinPlatoonRequest* msg)
 {
     if (msg->getPlatoonId() != positionHelper->getPlatoonId()) return false;
 
-    if (app->getPlatoonRole() != PlatoonRole::LEADER && app->getPlatoonRole() != PlatoonRole::NONE) return false;
-
+ //   if (app->getPlatoonRole() != PlatoonRole::LEADER && app->getPlatoonRole() != PlatoonRole::NONE) return false;
+    if (positionHelper->getBackId() != -1) return false;
     bool permission = app->isJoinAllowed();
 
     // send response to the joiner
@@ -126,7 +127,7 @@ bool JoinAtBack::processJoinRequest(const JoinPlatoonRequest* msg)
     if (!permission) return false;
 
     app->setInManeuver(true, this);
-    app->setPlatoonRole(PlatoonRole::LEADER);
+//    app->setPlatoonRole(PlatoonRole::LEADER); CHERRY
 
     // disable lane changing during maneuver
     plexeTraciVehicle->setFixedLane(traciVehicle->getLaneIndex());
@@ -152,7 +153,8 @@ void JoinAtBack::handleJoinPlatoonRequest(const JoinPlatoonRequest* msg)
     if (processJoinRequest(msg)) {
         LOG << positionHelper->getId() << " sending MoveToPosition to vehicle with id " << msg->getVehicleId() << "\n";
         MoveToPosition* mtp = createMoveToPosition(positionHelper->getId(), positionHelper->getExternalId(), positionHelper->getPlatoonId(), joinerData->joinerId, positionHelper->getPlatoonSpeed(), positionHelper->getPlatoonLane(), joinerData->newFormation);
-        app->sendUnicast(mtp, joinerData->joinerId);
+        app->sendUnicast(mtp, joinerData->joinerId); //CHERRY
+        //app->sendBroadcast(mtp);
     }
 }
 
@@ -166,7 +168,8 @@ void JoinAtBack::handleJoinPlatoonResponse(const JoinPlatoonResponse* msg)
     if (app->getPlatoonRole() != PlatoonRole::JOINER) return;
     if (joinManeuverState != JoinManeuverState::J_WAIT_REPLY) return;
     if (msg->getPlatoonId() != targetPlatoonData->platoonId) return;
-    if (msg->getVehicleId() != targetPlatoonData->platoonLeader) return;
+//    if (msg->getVehicleId() != targetPlatoonData->platoonLeader) return;
+//    Ensure that all the further messages are from this car.
 
     // evaluate permission
     if (msg->getPermitted()) {
@@ -175,6 +178,7 @@ void JoinAtBack::handleJoinPlatoonResponse(const JoinPlatoonResponse* msg)
         joinManeuverState = JoinManeuverState::J_WAIT_INFORMATION;
         // disable lane changing during maneuver
         plexeTraciVehicle->setFixedLane(traciVehicle->getLaneIndex());
+	targetPlatoonData->platoonLeader = msg->getVehicleId();
     }
     else {
         LOG << positionHelper->getId() << " received JoinPlatoonResponse (not allowed to join)\n";
@@ -224,7 +228,7 @@ void JoinAtBack::handleMoveToPosition(const MoveToPosition* msg)
 
 void JoinAtBack::handleMoveToPositionAck(const MoveToPositionAck* msg)
 {
-    if (app->getPlatoonRole() != PlatoonRole::LEADER) return;
+//    if (app->getPlatoonRole() != PlatoonRole::LEADER) return;
     if (joinManeuverState != JoinManeuverState::L_WAIT_JOINER_IN_POSITION) return;
     if (msg->getPlatoonId() != positionHelper->getPlatoonId()) return;
     if (msg->getVehicleId() != joinerData->joinerId) return;

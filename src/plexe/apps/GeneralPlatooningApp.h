@@ -187,7 +187,7 @@ public:
      * @param int destination of the message
      */
     virtual void sendUnicast(cPacket* msg, int destination);
-
+    virtual void sendBroadcast(cPacket* msg);
     /**
      * Fills members of a ManeuverMessage
      *

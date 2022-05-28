@@ -136,6 +136,7 @@ protected:
     /** data that a joiner stores about a Platoon it wants to join */
     struct TargetPlatoonData {
         int platoonId; ///< the id of the platoon to join
+	// In dist join this leader is the tail vehicle of the platoon
         int platoonLeader; ///< the if ot the leader of the platoon
         int platoonLane; ///< the lane the platoon is driving on
         double platoonSpeed; ///< the speed of the platoon
