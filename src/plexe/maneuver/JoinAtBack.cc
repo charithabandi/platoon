@@ -35,6 +35,7 @@ bool JoinAtBack::initializeJoinManeuver(const void* parameters)
     if (joinManeuverState == JoinManeuverState::IDLE) {
         if (app->isInManeuver()) {
             LOG << positionHelper->getId() << " cannot begin the maneuver because already involved in another one\n";
+	    printf("JoinManeuver by [%d] failed as its already involved in another Maneuver\n", positionHelper->getId());
             return false;
         }
 
@@ -58,12 +59,15 @@ bool JoinAtBack::initializeJoinManeuver(const void* parameters)
 
 void JoinAtBack::startManeuver(const void* parameters)
 {
+    printf("Initializing Join Maneuver by: %d\n", positionHelper->getId());
     if (initializeJoinManeuver(parameters)) {
         // send join request to leader
         LOG << positionHelper->getId() << " sending JoinPlatoonRequesto to platoon with id " << targetPlatoonData->platoonId << " (leader id " << targetPlatoonData->platoonLeader << ")\n";
         JoinPlatoonRequest* req = createJoinPlatoonRequest(positionHelper->getId(), positionHelper->getExternalId(), targetPlatoonData->platoonId, targetPlatoonData->platoonLeader, traciVehicle->getLaneIndex(), mobility->getPositionAt(simTime()).x, mobility->getPositionAt(simTime()).y);
         //app->sendUnicast(req, targetPlatoonData->platoonLeader); CHERRY
+        printf("[%d] broadcasted JoinPlatoonRequest\n", positionHelper->getId());
         app->sendBroadcast(req);
+	
     }
 }
 
@@ -113,12 +117,16 @@ void JoinAtBack::onFailedTransmissionAttempt(const ManeuverMessage* mm)
 
 bool JoinAtBack::processJoinRequest(const JoinPlatoonRequest* msg)
 {
+    printf("[%d] received JoinPlatoonRequest from [%d] \n", positionHelper->getId(), msg->getVehicleId());
     if (msg->getPlatoonId() != positionHelper->getPlatoonId()) return false;
 
  //   if (app->getPlatoonRole() != PlatoonRole::LEADER && app->getPlatoonRole() != PlatoonRole::NONE) return false;
     if (positionHelper->getBackId() != -1) return false;
     bool permission = app->isJoinAllowed();
-
+    if (msg->getXPos() >= mobility->getPositionAt(simTime()).x) {
+	permission = false;
+    }
+    printf("sending JoinPlatoonResponse with permission to join [%d] \n", permission);
     // send response to the joiner
     LOG << positionHelper->getId() << " sending JoinPlatoonResponse to vehicle with id " << msg->getVehicleId() << " (permission to join: " << (permission ? "permitted" : "not permitted") << ")\n";
     JoinPlatoonResponse* response = createJoinPlatoonResponse(positionHelper->getId(), positionHelper->getExternalId(), msg->getPlatoonId(), msg->getVehicleId(), permission);
@@ -153,6 +161,7 @@ void JoinAtBack::handleJoinPlatoonRequest(const JoinPlatoonRequest* msg)
     if (processJoinRequest(msg)) {
         LOG << positionHelper->getId() << " sending MoveToPosition to vehicle with id " << msg->getVehicleId() << "\n";
         MoveToPosition* mtp = createMoveToPosition(positionHelper->getId(), positionHelper->getExternalId(), positionHelper->getPlatoonId(), joinerData->joinerId, positionHelper->getPlatoonSpeed(), positionHelper->getPlatoonLane(), joinerData->newFormation);
+	printf("[%d] Sending MoveToPosition request to [%d] \n", positionHelper->getId(), joinerData->joinerId);
         app->sendUnicast(mtp, joinerData->joinerId); //CHERRY
         //app->sendBroadcast(mtp);
     }
@@ -163,8 +172,37 @@ void JoinAtBack::handleMergePlatoonRequest(const MergePlatoonRequest* msg)
     // do nothing. This implementation is meant for single joining cars
 }
 
+void JoinAtBack::handleExitPlatoonRequest(const ExitPlatoonRequest* msg)
+{
+	printf("[%d] Received PlatoonRequest from [%d]\n", positionHelper->getId(), msg->getVehicleId());
+        // The message should be received by the front car to the sender.
+//        if (app->isInManeuver()) return;
+        if (positionHelper->getId() != msg->getFrontId()) return;
+        if (traciVehicle->getLaneIndex() != msg->getCurrentLaneIndex()) return;
+        positionHelper->setBackId(-1);
+        ExitPlatoonResponse *resp = createExitPlatoonResponse(positionHelper->getId(), positionHelper->getExternalId(),
+                                                              positionHelper->getPlatoonId(), msg->getVehicleId(),
+                                                              traciVehicle->getLaneIndex());
+        printf("[%d] send PlatoonResponse to [%d]", positionHelper->getId(), msg->getVehicleId());
+        app->sendUnicast(resp, msg->getVehicleId());
+
+}
+
+void JoinAtBack::handleExitPlatoonResponse(const ExitPlatoonResponse* msg)
+{
+	//change lane
+        //set mode to ACC
+        //remove the frontId
+        printf("[%d] Received PlatoonResponse from [%d]\n", positionHelper->getId(), msg->getVehicleId());
+        positionHelper->setFrontId(-1);
+        positionHelper->setPlatoonLane(msg->getCurrentLaneIndex() + 1);
+        app->setPlatoonRole(PlatoonRole::NONE);
+        plexeTraciVehicle->setActiveController(ACC);
+}
+
 void JoinAtBack::handleJoinPlatoonResponse(const JoinPlatoonResponse* msg)
 {
+    printf("Received JoinPlatoonResponse with permission: [%d] \n", msg->getPermitted());
     if (app->getPlatoonRole() != PlatoonRole::JOINER) return;
     if (joinManeuverState != JoinManeuverState::J_WAIT_REPLY) return;
     if (msg->getPlatoonId() != targetPlatoonData->platoonId) return;
@@ -191,6 +229,7 @@ void JoinAtBack::handleJoinPlatoonResponse(const JoinPlatoonResponse* msg)
 
 void JoinAtBack::handleMoveToPosition(const MoveToPosition* msg)
 {
+    printf("[%d] received MoveToPosition packet from [%d] to move to lane: [%d] \n", positionHelper->getId(), msg->getVehicleId(), msg->getPlatoonLane());
     if (app->getPlatoonRole() != PlatoonRole::JOINER) return;
     if (joinManeuverState != JoinManeuverState::J_WAIT_INFORMATION) return;
     if (msg->getPlatoonId() != targetPlatoonData->platoonId) return;
@@ -229,6 +268,7 @@ void JoinAtBack::handleMoveToPosition(const MoveToPosition* msg)
 void JoinAtBack::handleMoveToPositionAck(const MoveToPositionAck* msg)
 {
 //    if (app->getPlatoonRole() != PlatoonRole::LEADER) return;
+    printf("[%d] received MoveToPositionAck and is now in the position to join the platoon \n", positionHelper->getId());
     if (joinManeuverState != JoinManeuverState::L_WAIT_JOINER_IN_POSITION) return;
     if (msg->getPlatoonId() != positionHelper->getPlatoonId()) return;
     if (msg->getVehicleId() != joinerData->joinerId) return;

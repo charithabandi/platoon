@@ -38,10 +38,66 @@ void JoinManeuverScenario::initialize(int stage)
 void JoinManeuverScenario::setupFormation()
 {
     std::vector<int> formation;
-    for (int i = 0; i < 5; i++) formation.push_back(i);
+    for (int i = 0; i < 4; i++) formation.push_back(i);
     positionHelper->setPlatoonFormation(formation);
 }
 
+#if 1 //working example
+void JoinManeuverScenario::prepareManeuverCars(int platoonLane)
+{
+
+    switch (positionHelper->getId()) {
+
+    case 0: {
+        // this is the leader
+        plexeTraciVehicle->setCruiseControlDesiredSpeed(100.0 / 3.6);
+        plexeTraciVehicle->setActiveController(ACC);
+        plexeTraciVehicle->setFixedLane(platoonLane);
+        app->setPlatoonRole(PlatoonRole::LEADER);
+        break;
+    }
+
+    case 1:
+    case 2: 
+    case 3: {
+        // these are the followers which are already in the platoon
+        plexeTraciVehicle->setCruiseControlDesiredSpeed(130.0 / 3.6);
+        plexeTraciVehicle->setActiveController(PLOEG);
+        plexeTraciVehicle->setFixedLane(platoonLane);
+        app->setPlatoonRole(PlatoonRole::FOLLOWER);
+        break;
+    }
+
+    case 4: {
+        // this is the car which will join
+        plexeTraciVehicle->setCruiseControlDesiredSpeed(100 / 3.6);
+        plexeTraciVehicle->setFixedLane(2);
+        plexeTraciVehicle->setActiveController(ACC);
+
+        // after 30 seconds of simulation, start the maneuver
+        startManeuver = new cMessage();
+        scheduleAt(simTime() + SimTime(10), startManeuver);
+	exitManeuver = new cMessage();
+	scheduleAt(simTime() + SimTime(30), exitManeuver);
+        break;
+    }
+
+    case 5: {
+        // this is the car which will join
+        plexeTraciVehicle->setCruiseControlDesiredSpeed(100 / 3.6);
+        plexeTraciVehicle->setFixedLane(3);
+        plexeTraciVehicle->setActiveController(ACC);
+
+        // after 30 seconds of simulation, start the maneuver
+        startManeuver = new cMessage();
+        scheduleAt(simTime() + SimTime(10), startManeuver);
+        break;
+    } 
+    }
+}
+#endif
+
+#if 0 
 void JoinManeuverScenario::prepareManeuverCars(int platoonLane)
 {
 
@@ -76,22 +132,13 @@ void JoinManeuverScenario::prepareManeuverCars(int platoonLane)
         // after 30 seconds of simulation, start the maneuver
         startManeuver = new cMessage();
         scheduleAt(simTime() + SimTime(10), startManeuver);
+	scheduleAt(simTime() + SimTime(30), exitManeuver);
         break;
-    }
-
-    case 5: {
-	plexeTraciVehicle->setCruiseControlDesiredSpeed(100 / 3.6);
-        plexeTraciVehicle->setFixedLane(3);
-        plexeTraciVehicle->setActiveController(ACC);
-
-        // after 30 seconds of simulation, start the maneuver
-        startManeuver = new cMessage();
-        scheduleAt(simTime() + SimTime(20), startManeuver);
-        break;	
     }
 
     }
 }
+#endif
 
 JoinManeuverScenario::~JoinManeuverScenario()
 {
@@ -106,6 +153,7 @@ void JoinManeuverScenario::handleSelfMsg(cMessage* msg)
     BaseScenario::handleSelfMsg(msg);
 
     if (msg == startManeuver) app->startJoinManeuver(0, 0, -1);
+    else if (msg == exitManeuver) app->startExitManeuver();
 }
 
 } // namespace plexe

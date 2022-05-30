@@ -31,6 +31,8 @@
 #include "plexe/messages/MoveToPositionAck_m.h"
 #include "plexe/messages/MoveToPosition_m.h"
 #include "plexe/messages/MergePlatoonRequest_m.h"
+#include "plexe/messages/ExitPlatoonRequest_m.h"
+#include "plexe/messages/ExitPlatoonResponse_m.h"
 
 namespace plexe {
 
@@ -38,6 +40,11 @@ struct JoinManeuverParameters {
     int platoonId;
     int leaderId;
     int position;
+};
+
+struct ExitManeuverParameters {
+    int platoonId;
+    int frontId;
 };
 
 class JoinManeuver : public Maneuver {
@@ -110,6 +117,12 @@ protected:
      * the join maneuver
      */
     MoveToPositionAck* createMoveToPositionAck(int vehicleId, std::string externalId, int platoonId, int destinationId, double platoonSpeed, int platoonLane, const std::vector<int>& newPlatoonFormation);
+
+
+    ExitPlatoonRequest* createExitPlatoonRequest(int vehicleId, std::string externalId, int platoonId, int destinationId, int currentLaneIndex, int frontId);
+
+    ExitPlatoonResponse* createExitPlatoonResponse(int vehicleId, std::string externalId, int platoonId, int destinationId, int currentLaneIndex);
+
 
     /**
      * Creates a JoinFormation message
@@ -185,6 +198,8 @@ protected:
      * @param JoinFormationAck msg to handle
      */
     virtual void handleJoinFormationAck(const JoinFormationAck* msg) = 0;
+    virtual void handleExitPlatoonRequest(const ExitPlatoonRequest* msg) = 0;
+    virtual void handleExitPlatoonResponse(const ExitPlatoonResponse* msg) = 0;
 };
 
 } // namespace plexe

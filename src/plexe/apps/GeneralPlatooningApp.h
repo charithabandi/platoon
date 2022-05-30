@@ -29,6 +29,7 @@
 #include "plexe/maneuver/JoinManeuver.h"
 #include "plexe/maneuver/JoinAtBack.h"
 #include "plexe/maneuver/MergeAtBack.h"
+#include "plexe/maneuver/ExitAtBack.h"
 
 #include "plexe/messages/ManeuverMessage_m.h"
 #include "plexe/messages/UpdatePlatoonData_m.h"
@@ -74,6 +75,7 @@ public:
         , role(PlatoonRole::NONE)
         , joinManeuver(nullptr)
         , mergeManeuver(nullptr)
+	, exitManeuver(nullptr)
     {
     }
 
@@ -113,7 +115,7 @@ public:
      * Depending on the implementation, this parameter might be ignored
      */
     void startJoinManeuver(int platoonId, int leaderId, int position);
-
+    void startExitManeuver();
     /**
      * Request start of MergeManeuver to leader
      * @param int platoonId the id of the platoon to join
@@ -289,6 +291,7 @@ private:
     JoinManeuver* joinManeuver;
     /** platoons merge maneuver implementation */
     JoinManeuver* mergeManeuver;
+    JoinManeuver* exitManeuver;
 };
 
 } // namespace plexe

@@ -52,6 +52,13 @@ void JoinManeuver::onManeuverMessage(const ManeuverMessage* mm)
     else if (const JoinFormationAck* msg = dynamic_cast<const JoinFormationAck*>(mm)) {
         handleJoinFormationAck(msg);
     }
+
+    else if (const ExitPlatoonRequest* msg = dynamic_cast<const ExitPlatoonRequest*>(mm)) {
+        handleExitPlatoonRequest(msg);
+    }
+    else if (const ExitPlatoonResponse* msg = dynamic_cast<const ExitPlatoonResponse*>(mm)) {
+        handleExitPlatoonResponse(msg);
+    }
 }
 
 JoinPlatoonRequest* JoinManeuver::createJoinPlatoonRequest(int vehicleId, std::string externalId, int platoonId, int destinationId, int currentLaneIndex, double xPos, double yPos)
@@ -76,6 +83,23 @@ MergePlatoonRequest* JoinManeuver::createMergePlatoonRequest(int vehicleId, std:
         for (size_t i = 0; i < members.size(); i++)
             msg->setMembers(i, members[i]);
     }
+    return msg;
+}
+
+ExitPlatoonRequest* JoinManeuver::createExitPlatoonRequest(int vehicleId, std::string externalId, int platoonId, int destinationId, int currentLaneIndex, int frontId)
+{
+    ExitPlatoonRequest* msg = new ExitPlatoonRequest("ExitPlatoonRequest");
+    app->fillManeuverMessage(msg, vehicleId, externalId, platoonId, destinationId);
+    msg->setCurrentLaneIndex(currentLaneIndex);
+    msg->setFrontId(frontId);
+    return msg; 
+}
+
+ExitPlatoonResponse* JoinManeuver::createExitPlatoonResponse(int vehicleId, std::string externalId, int platoonId, int destinationId, int currentLaneIndex)
+{
+    ExitPlatoonResponse* msg = new ExitPlatoonResponse("ExitPlatoonResponse");
+    app->fillManeuverMessage(msg, vehicleId, externalId, platoonId, destinationId);
+    msg->setCurrentLaneIndex(currentLaneIndex);
     return msg;
 }
 

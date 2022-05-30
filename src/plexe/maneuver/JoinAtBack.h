@@ -119,6 +119,9 @@ public:
      */
     virtual void handleJoinFormationAck(const JoinFormationAck* msg) override;
 
+    virtual void handleExitPlatoonRequest(const ExitPlatoonRequest* msg) override;
+    virtual void handleExitPlatoonResponse(const ExitPlatoonResponse* msg) override;
+
 protected:
     /** Possible states a vehicle can be in during a join maneuver */
     enum class JoinManeuverState {
@@ -131,6 +134,9 @@ protected:
         // Leader
         L_WAIT_JOINER_IN_POSITION, ///< The leader waits for the joiner to be in position, the followers made space already
         L_WAIT_JOINER_TO_JOIN, ///< The leader waits for the joiner to join
+	L_START_EXIT,
+	L_WAIT_FOR_EXIT_RESP,
+	L_RCVD_EXIT_RESP,
     };
 
     /** data that a joiner stores about a Platoon it wants to join */

@@ -32,6 +32,7 @@ class JoinManeuverScenario : public BaseScenario {
 protected:
     // message used to start the maneuver
     cMessage* startManeuver;
+    cMessage* exitManeuver;
     // pointer to protocol
     GeneralPlatooningApp* app;
 
@@ -44,7 +45,7 @@ private:
 public:
     JoinManeuverScenario()
     {
-        startManeuver = nullptr;
+        startManeuver = exitManeuver = nullptr;
         app = nullptr;
     }
     virtual ~JoinManeuverScenario();

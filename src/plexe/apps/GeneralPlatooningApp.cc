@@ -53,16 +53,18 @@ void GeneralPlatooningApp::initialize(int stage)
             throw new cRuntimeError("Invalid join maneuver implementation chosen");
 
         std::string mergeManeuverName = par("mergeManeuver").stdstringValue();
-        if (mergeManeuverName == "MergeAtBack")
-            mergeManeuver = new MergeAtBack(this);
+        if (mergeManeuverName == "ExitAtBack")
+            mergeManeuver = new ExitAtBack(this);
         else
             throw new cRuntimeError("Invalid merge maneuver implementation chosen");
 
-		if (exitManeuverName == "ExitAtBack")
+/*	
+        std::string exitManeuverName = par("exitManeuver").stdstringValue();
+	if (exitManeuverName == "ExitAtBack")
             exitManeuver = new ExitAtBack(this);
         else
             throw new cRuntimeError("Invalid exit maneuver implementation chosen");
-
+*/
         scenario = FindModule<BaseScenario*>::findSubModule(getParentModule());
     }
 }
@@ -71,6 +73,8 @@ void GeneralPlatooningApp::handleSelfMsg(cMessage* msg)
 {
     if (joinManeuver && joinManeuver->handleSelfMsg(msg)) return;
     if (mergeManeuver && mergeManeuver->handleSelfMsg(msg)) return;
+    if (exitManeuver && exitManeuver->handleSelfMsg(msg)) return;
+
     BaseApp::handleSelfMsg(msg);
 }
 
@@ -114,16 +118,18 @@ void GeneralPlatooningApp::startMergeManeuver(int platoonId, int leaderId, int p
     mergeManeuver->startManeuver(&params);
 }
 
+
 void GeneralPlatooningApp::startExitManeuver()
 {
-	ASSERT(positionHelper->getBackId() != -1) return;
+	ASSERT(positionHelper->getBackId() == -1);
 	ASSERT(!isInManeuver());
 
 	ExitManeuverParameters params;
-	params.platoonId = platoonId;
+	params.platoonId = positionHelper->getPlatoonId();
 	params.frontId = positionHelper->getFrontId();
-	exitManeuver->startExitManeuver(&params);
+	mergeManeuver->startManeuver(&params);
 }
+
 
 void GeneralPlatooningApp::sendUnicast(cPacket* msg, int destination)
 {

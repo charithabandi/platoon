@@ -34,6 +34,7 @@ OBJS = \
     $O/plexe/maneuver/JoinManeuver.o \
     $O/plexe/maneuver/Maneuver.o \
     $O/plexe/maneuver/MergeAtBack.o \
+    $O/plexe/maneuver/ExitAtBack.o \
     $O/plexe/mobility/CommandInterface.o \
     $O/plexe/mobility/SumoTrafficManager.o \
     $O/plexe/mobility/TestTrafficManager.o \
@@ -70,8 +71,9 @@ OBJS = \
     $O/plexe/messages/PlexeInterfaceControlInfo_m.o \
     $O/plexe/messages/UpdatePlatoonData_m.o \
     $O/plexe/messages/UpdatePlatoonFormation_m.o \
-    $O/plexe/messages/UpdatePlatoonFormationAck_m.o
-
+    $O/plexe/messages/UpdatePlatoonFormationAck_m.o \
+    $O/plexe/messages/ExitPlatoonRequest_m.o \
+    $O/plexe/messages/ExitPlatoonResponse_m.o 
 # Message files
 MSGFILES = \
     plexe/messages/InterferingBeacon.msg \
@@ -87,7 +89,9 @@ MSGFILES = \
     plexe/messages/PlexeInterfaceControlInfo.msg \
     plexe/messages/UpdatePlatoonData.msg \
     plexe/messages/UpdatePlatoonFormation.msg \
-    plexe/messages/UpdatePlatoonFormationAck.msg
+    plexe/messages/UpdatePlatoonFormationAck.msg \
+    plexe/messages/ExitPlatoonRequest.msg \
+    plexe/messages/ExitPlatoonResponse.msg
 
 # SM files
 SMFILES =
